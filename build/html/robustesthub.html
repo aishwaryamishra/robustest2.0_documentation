@@ -1,0 +1,150 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>12. RobusTest Hub &#8212; RobusTest 2.0 Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="13. Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="11. Scheduling your tests" href="scheduling.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="robustest-hub">
+<h1>12. RobusTest Hub<a class="headerlink" href="#robustest-hub" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><img alt="_images/buildURL.png" src="_images/buildURL.png" />
+</div></blockquote>
+<p>Configuration</p>
+<p>Using RobusTest Hub, you can run your own Appium tests on devices connected to the RobusTest device cloud. You need make changes at a few places in your test script to get going. More specifically these changes need to be made to the desired capabilities that are specified before starting an Appium Server. Following are the values that need to be provided/updated in the desired capabilities object</p>
+<ol class="arabic simple">
+<li>app - You can set the app value to the build URL that is created for every build that is uploaded to RobusTest. In case you wish to execute your tests on a specific build, you just need to select that build from the Project Dashboard and copy the link to the build by clicking on the Selected Build URL button. The URL will look something like</li>
+</ol>
+<p><a class="reference external" href="http://192.168.1.1:8081/build/581b074e7ec1653a30d1f438/581ae4a37ec165084ea9cdc3/581b074e7ec1653a30d1f439.apk">http://192.168.1.1:8081/build/581b074e7ec1653a30d1f438/581ae4a37ec165084ea9cdc3/581b074e7ec1653a30d1f439.apk</a></p>
+<p>You can also use the standard URL for the latest build by using the Latest Build URL available on the Project Dashboard. The URL will look something like</p>
+<p><a class="reference external" href="http://192.168.1.1:8081/build/581b074e7ec1653a30d1f438/581ae4a37ec165084ea9cdc3/latest.apk">http://192.168.1.1:8081/build/581b074e7ec1653a30d1f438/581ae4a37ec165084ea9cdc3/latest.apk</a></p>
+<ol class="arabic simple" start="2">
+<li>device - set this value to the name of the device that you wish to run on. The list of names of devices available for use can be obtained from the device dialog available when you click on Record button on the project page. You can also get the list of available devices using the device list API</li>
+</ol>
+<p><a class="reference external" href="http://192.168.1.1:3142/devices">http://192.168.1.1:3142/devices</a></p>
+<p>The response of the above API looks like below</p>
+<p>{“available”: [{“available”: “Yes”, “supportHub”: “Yes”, “gmsversion”: “5.0.2”, “name”: “SM-G530H”, “supportManual”: “Yes”, “supportAutomation”: “Yes”, “adb_id”: “404b6569”, “reservedForProject”: [], “os”: “android”}], “busy”: [], “totalOffline”: 0, “offline”: [], “total”: 1, “totalBusy”: 0, “totalAvailable”: 1}</p>
+<p>From the response, one can find out details like availability of device for RobusTest Hub, device name, Android version, etc., This response can be used to filter out devices that can be used to run Appium tests on the Hub.</p>
+<ol class="arabic simple" start="3">
+<li>Change the Appium URL to point to the RobusTest Hub. If you are running your tests on a local instance of Appium using devices connected to your system, the Appium URL will look like</li>
+</ol>
+<p><a class="reference external" href="http://localhost:4723/wd/hub">http://localhost:4723/wd/hub</a></p>
+<p>Change this value to point to the RobusTest Hub.</p>
+<p>After the change, your RobusTest Hub URL will look like</p>
+<p><a class="reference external" href="http://192.168.1.1:3142/wd/hub">http://192.168.1.1:3142/wd/hub</a></p>
+<p>Test Execution</p>
+<p>Once you have made the above changes, run the tests as you would normally do i.e. as you a pre-configured job or from your system.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RobusTest 2.0 Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">4. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcase.html">5. Recording Test Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcaseadvanced.html">6. Advanced Recording Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">7. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">8. Running Automation Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">9. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">10. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">11. Scheduling your tests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">12. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">13. Troubleshooting</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="scheduling.html" title="previous chapter">11. Scheduling your tests</a></li>
+      <li>Next: <a href="troubleshooting.html" title="next chapter">13. Troubleshooting</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Izinga Software Pvt Ltd.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/robustesthub.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

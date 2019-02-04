@@ -1,0 +1,171 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>6. Advanced Recording Concepts &#8212; RobusTest 2.0 Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Live View" href="liveview.html" />
+    <link rel="prev" title="5. Recording Test Case" href="recordingtestcase.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="advanced-recording-concepts">
+<h1>6. Advanced Recording Concepts<a class="headerlink" href="#advanced-recording-concepts" title="Permalink to this headline">¶</a></h1>
+<p><em>Recording a test case involving OTP verification</em></p>
+<p>In some test cases, the device receives an OTP from the server as a text message or as an email. The user needs to input the secret number into a text field for verification. RobusTest has libraries to support such scenarios and following is a brief idea on how such a test case can be recorded.</p>
+<p>Recording a test case with OTP received as text message</p>
+<ol class="arabic">
+<li><p class="first">Proceed to record the test case</p>
+</li>
+<li><p class="first">Once you receive the OTP message on your phone as a text message, pause the recording.</p>
+</li>
+<li><p class="first">Read the message to find the OTP</p>
+</li>
+<li><p class="first">Return to the application sceen</p>
+</li>
+<li><p class="first">Enter the OTP that you have read from the Text message in the OTP text field</p>
+</li>
+<li><p class="first">Proceed to record the rest of the test case</p>
+</li>
+<li><p class="first">Once the test case recording it complete, save the test and exit the test session</p>
+</li>
+<li><p class="first">Go to the Test Script tab in the test details page</p>
+</li>
+<li><p class="first">Look for the step where you requested for an OTP - this is most probably a button click</p>
+</li>
+<li><p class="first">Right below the step where the request to get an OTP is made, paste the following piece of code</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#wait for 30 seconds to get SMS. Change it according to your app
+time.sleep(30)
+#invoke the function to get OTP from the device
+#provide the sender name as it appears on the device and a complete sample message
+otp = self.getOTPFromSMS(‘&lt;SENDER&gt;’, &#39;&lt;SAMPLE MESSAGE&gt;&#39;)
+</pre></div>
+</div>
+</li>
+</ol>
+<p>e.g. If your server sends an OTP message from <strong>TD-SAMPLEAPP</strong> and the message sent is “Thank you for signing up. Your OTP is 234567” then your invocation statement should look like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">otp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getOTPFromSMS</span><span class="p">(</span><span class="s1">&#39;TD-SAMPLEAPP&#39;</span><span class="p">,</span> <span class="s1">&#39;Thank you for signing up. Your OTP is 234567&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The value of the OTP gets captured in the variable “otp”</p>
+<p>In the next statement in the code, where the OTP value is entered in the text field, replace the variable used to enter OTP with the otp variable.</p>
+<p>e.g. The statement to enter a value in the text field may look like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type_123456_in_EditText_vericode1_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;Type_123456_in_EditText_vericode1_&quot;</span><span class="p">,</span> <span class="s2">&quot;EditText com.flipkart.android:id/vericod&quot;</span><span class="p">)</span>
+<span class="n">Type_123456_in_EditText_vericode1_</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">userData</span><span class="p">[</span><span class="s2">&quot;EditText com.flipkart.android:id/vericod&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>After replacing it with the variable “otp”, the statement looks like</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Type_123456_in_EditText_vericode1_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">getElement</span><span class="p">(</span><span class="s2">&quot;Type_123456_in_EditText_vericode1_&quot;</span><span class="p">,</span> <span class="s2">&quot;EditText com.flipkart.android:id/vericod&quot;</span><span class="p">)</span>
+<span class="n">Type_123456_in_EditText_vericode1_</span><span class="o">.</span><span class="n">send_keys</span><span class="p">(</span><span class="n">otp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RobusTest 2.0 Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">4. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcase.html">5. Recording Test Case</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Advanced Recording Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">7. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">8. Running Automation Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">9. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">10. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">11. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">12. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">13. Troubleshooting</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="recordingtestcase.html" title="previous chapter">5. Recording Test Case</a></li>
+      <li>Next: <a href="liveview.html" title="next chapter">7. Live View</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Izinga Software Pvt Ltd.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/recordingtestcaseadvanced.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

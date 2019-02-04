@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -7,7 +6,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Index &#8212; RobusTest 2.0 Documentation  documentation</title>
+    <title>11. Scheduling your tests &#8212; RobusTest 2.0 Documentation  documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -15,8 +14,10 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <script type="text/javascript" src="_static/language_data.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="12. RobusTest Hub" href="robustesthub.html" />
+    <link rel="prev" title="10. Automation Reports" href="automationreports.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -33,11 +34,25 @@
 
           <div class="body" role="main">
             
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
+  <div class="section" id="scheduling-your-tests">
+<h1>11. Scheduling your tests<a class="headerlink" href="#scheduling-your-tests" title="Permalink to this headline">¶</a></h1>
+<p>You can use RobusTest to schedule your automation tests.
+To schedule your tests you should follow the steps below</p>
+<ol class="arabic simple">
+<li>Create a test suite - Create a test suite by adding all the test cases that you wish to be part of the test run</li>
+<li>Create a test run - Run the test suite created above by selecting the devices that you wish to run it on</li>
+<li>Get the “Run ID” - For the run that was just created, a unique Run ID is generated. To get the Run ID, click on the Reports icon for the run. In the Reports page, copy the last part of the URL. e.g. if the Reports link is</li>
+</ol>
+<p><a class="reference external" href="http://mobile.robustest.com/#/project/57d0f2e4aca33b21f5724cd7/report/58498732aca33b11ca655660">http://mobile.robustest.com/#/project/57d0f2e4aca33b21f5724cd7/report/58498732aca33b11ca655660</a></p>
+<p>the Run ID is 58498732aca33b11ca655660
+4. Customize the scheduling API - Scheduling API looks like</p>
+<p><a class="reference external" href="http:/">http:/</a>/&lt;RobusTest URL&gt;/api/1/run/&lt;Run ID&gt;?updateFromTestSuite=true&amp;build=latest</p>
+<p>e.g if you Run ID is 58498732aca33b11ca655660 and your RobusTest URL is <a class="reference external" href="http://192.168.1.1:8081">http://192.168.1.1:8081</a>, then your scheduling API will look like</p>
+<p><a class="reference external" href="http://192.168.1.1:8081/api/1/run/58498732aca33b11ca655660?updateFromTestSuite=true&amp;build=latest">http://192.168.1.1:8081/api/1/run/58498732aca33b11ca655660?updateFromTestSuite=true&amp;build=latest</a></p>
+<p>Every time above API is called, the test suite will be run on the devices selected on the latest build of the project.</p>
+<ol class="arabic simple" start="5">
+<li>Schedule run API - Once you have customized the run API, you need to add it as a cron job on your test run server.</li>
+</ol>
 </div>
 
 
@@ -57,7 +72,7 @@
 
 
 <h3>Navigation</h3>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
@@ -68,7 +83,7 @@
 <li class="toctree-l1"><a class="reference internal" href="runningautomation.html">8. Running Automation Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performancetesting.html">9. Performance Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationreports.html">10. Automation Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scheduling.html">11. Scheduling your tests</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">11. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">12. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">13. Troubleshooting</a></li>
 </ul>
@@ -77,6 +92,8 @@
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="automationreports.html" title="previous chapter">10. Automation Reports</a></li>
+      <li>Next: <a href="robustesthub.html" title="next chapter">12. RobusTest Hub</a></li>
   </ul></li>
 </ul>
 </div>
@@ -111,6 +128,9 @@
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
+      |
+      <a href="_sources/scheduling.rst.txt"
+          rel="nofollow">Page source</a>
     </div>
 
     

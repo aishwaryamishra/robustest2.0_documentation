@@ -1,0 +1,180 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>5. Recording Test Case &#8212; RobusTest 2.0 Documentation  documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Advanced Recording Concepts" href="recordingtestcaseadvanced.html" />
+    <link rel="prev" title="4. Manual Testing" href="manualtesting.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="recording-test-case">
+<h1>5. Recording Test Case<a class="headerlink" href="#recording-test-case" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><img alt="_images/recording_main.png" src="_images/recording_main.png" />
+</div></blockquote>
+<p>On the project page, click on the Record button to start a recording session. In the recording session, you can record a new test case. On the device selection screen, select the device you wish to record on. Remember that the test case that you record will run on any device irrespective of the device that you recorded your test case on.</p>
+<p>After selecting the mobile device, you will be taken to the record session page. The page consists of the device screen, a table of automation steps that is generated as actions are recorded and a header with options for creation for automation tests.</p>
+<p>There are various options available in the header that help in creation of your automation test</p>
+<img alt="_images/recording_header.png" src="_images/recording_header.png" />
+<ol class="arabic simple">
+<li>Information button - Hovering over the information button gives you information on the app, its version and the device details.</li>
+<li>Back button - records an action of a back button being pressed</li>
+<li>Enter value - allows user to send input to an input object on the app</li>
+<li>Background app - sends the app to the background for 10 seconds</li>
+<li>Reset Application - resets the application to make it a fresh installation</li>
+<li>Search Key - Click on this button to add an action for tapping on Search Key on the device keyboard.</li>
+<li>Enter Key - Click on this button to add an action for tapping on Enter Key on the device keyboard.</li>
+<li>Hide Keyboard - hides the keyboard on the screen to allow the user to access other objects</li>
+<li>Swipe - Used for recording a swipe action on the device screen. To record a swipe action, just click on this button and record the swipe action on the screen.</li>
+<li>Pause Recording - pauses the recording to enable the user to perform actions on the device or app which s/he does not want to be recorded in the test script.</li>
+</ol>
+<p>When you hover your mouse pointer over the app that you are testing, you will notice a rectangular placeholder overlaid on top of various objects on the screen. You can also find the name of the object that is currently selected in the header. When a particular object is highlighted using the placeholder, it is selected and you can record various actions related to that object. Upon clicking on an object, you will get recording options related to that object. Some of the popular actions are</p>
+<ol class="arabic simple">
+<li><strong>Tap</strong> - this records a Tap action on the object that you have selected.</li>
+<li><strong>Click</strong> - this records a Click action on the object that you have selected.</li>
+<li><strong>Long Press</strong> - this records a Long Press action on the object that you have selected.</li>
+<li><strong>Zoom</strong> - this records a Zoom In action on the screen</li>
+<li><strong>Pinch</strong> - this records a Zoom Out action on the screen</li>
+<li><strong>Verify Object</strong> - this option allows user to create a check (or an assertion as automation engineers would call them) on an object. In the verify dialog, you will notice all the attributes for the object is selected, along with their respective values. If you wish to place a check on a particular object attribute(s), just check the box next to it. When the test case runs, it will check to ensure that the value for that attribute is as expected. In case the value is not as expected, the test step fails.</li>
+<li><strong>Inspect Element</strong> - this option allows user to study the object and its attributes. This is useful for advanced users and for debugging.</li>
+</ol>
+<p>Every action that you record on the app is added as a step in the test case table.
+There are many useful option available as part of the Recording session.</p>
+<ol class="arabic simple">
+<li>If you wish to delete a step you can do that by clicking on the delete button.</li>
+<li>If you wish to re-run a step or a group of steps, you can do that by selecting the steps and clicking on the Run Steps button in the header.</li>
+<li>You can save your test case and continue the recording session. Once you have saved your test case, you could either update it or create a new one.</li>
+<li>You can also edit the name of the test step to make it more intuitive.</li>
+<li>An orange highlighter points to the location of the current execution pointer</li>
+<li>The pin icon in the Action column enables user to select the current execution point</li>
+</ol>
+<p>When a user clicks on a text field, the system shows a text box to enter the text value.
+When user enters a value in the text box, this is recorded as an input value for the field.</p>
+<p>After a test case has been created, click on the Save button to provide a name and save this test case. Click on End session to close the recording session without saving the test case.</p>
+<p>Upon saving the test case, you will see your saved test case along with the actual test script and related information. There are four tabs on the test case page.</p>
+<ol class="arabic simple">
+<li>Test Step: This tab lists the steps of the test case</li>
+<li>Test Script: This tab shows the test script to be executed when the automated test case runs. The script is shown in a smart script editor. If the user wishes to add custom code to his/her test scripts, s/he can do that in this script editor. The editor also checks for syntax correctness.</li>
+<li>Meta Data: The test script has been designed in a modular way to separate the app objects from the test script. This ensures that the test case can be easily updated and maintained as builds change over time.</li>
+<li>User Data: In line with the modular design, the user data too is separated out from the test script and is available in the User Data tab.</li>
+</ol>
+<p>You can click on the End Session button to end the recording session.</p>
+<p><strong>Re-record a test case</strong></p>
+<p>Re-record is a feature used to edit an existing test case without writing any code.
+It can also be used to create a new test case by extending an existing one.</p>
+<p>When a user clicks on Re-record, the device selection menu is displayed.
+Upon selection of a device, the re-record screen is shown.</p>
+<p>The re-record screen resembles the record screen with a few additions.</p>
+<p><strong>Play</strong>: Clicking on the Play button executes one step at a time. When a user wants to insert a new step, s/he just needs to Play until they reach the step after which they need to record the new step. Then they can record their action as they would do while originally recording a test case. After adding new steps or deleting an existing step, the user can click on Save to update the existing test case. Alternatively, the user can also use Save As to save as a new test case.</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">RobusTest 2.0 Documentation</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">4. Manual Testing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Recording Test Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcaseadvanced.html">6. Advanced Recording Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">7. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">8. Running Automation Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">9. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">10. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">11. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">12. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">13. Troubleshooting</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="manualtesting.html" title="previous chapter">4. Manual Testing</a></li>
+      <li>Next: <a href="recordingtestcaseadvanced.html" title="next chapter">6. Advanced Recording Concepts</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Izinga Software Pvt Ltd.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.8.4</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/recordingtestcase.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
