@@ -16,6 +16,7 @@ Contents:
    introduction
    gettingstarted
    project
+   createproject_2.0
    manualtesting
    recordingtestcase
    recordingtestcaseadvanced
