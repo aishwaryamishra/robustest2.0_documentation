@@ -27,6 +27,8 @@ Contents:
    scheduling
    robustesthub
    troubleshooting
+   testsessiondevicemanagement
+   testsessiontestcasemanagement
 
 
 .. Indices and tables

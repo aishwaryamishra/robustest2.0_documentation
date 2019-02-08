@@ -1,0 +1,262 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>15. Test Session - Device Management &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="16. Test Session - Test Case Management" href="testsessiontestcasemanagement.html" />
+    <link rel="prev" title="14. Troubleshooting" href="troubleshooting.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject_2.0.html">4. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcase.html">6. Recording Test Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcaseadvanced.html">7. Advanced Recording Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">8. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">9. Running Automation Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">12. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">13. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">14. Troubleshooting</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">15. Test Session - Device Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testsessiontestcasemanagement.html">16. Test Session - Test Case Management</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>15. Test Session - Device Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/testsessiondevicemanagement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-session-device-management">
+<h1>15. Test Session - Device Management<a class="headerlink" href="#test-session-device-management" title="Permalink to this headline">¶</a></h1>
+<p><strong>1. Pause/Resume Automation session</strong></p>
+<p>While in an automation test session, you may, at times, choose/need to access the device in Manual mode.</p>
+<p>You may toggle between Automation and Manual test modes by clicking on the ‘Pause/Resume’ button</p>
+<img alt="_images/pause_resume_button_1.png" src="_images/pause_resume_button_1.png" />
+<p>On clicking the ‘Pause’ button, the device is switched to Manual mode and a corresponding message is displayed. You can now access the device screen directly as if you were aceessing it manually</p>
+<img alt="_images/pause_resume_button_2.png" src="_images/pause_resume_button_2.png" />
+<p>You can see that the icon for the button has now changed. On clicking on the ‘Resume’ button, the device is switched to automation mode</p>
+<img alt="_images/pause_resume_button_3.png" src="_images/pause_resume_button_3.png" />
+<p><strong>2. Show/Hide Navigation Menu</strong></p>
+<p>RobusTest provides you a device navigation menu on the device screen when in Automation mode</p>
+<img alt="_images/navigation_menu_on_device_1.png" src="_images/navigation_menu_on_device_1.png" />
+<p>On clicking the ‘Hide Navigation Menu’ button, the menu is no longer displayed on the device screen. Clicking on this button again, enables the menu.</p>
+<img alt="_images/navigation_menu_on_device_2.png" src="_images/navigation_menu_on_device_2.png" />
+<p>On starting an automation test session, by default, the navigation menu is enabled</p>
+<p><strong>3. Increase/Decrease device screen size</strong></p>
+<p>You can manipulate the size of the device screen by using the resizing buttons on the horizontal menu, as shown in the screenshot below</p>
+<img alt="_images/devicescreensize.png" src="_images/devicescreensize.png" />
+<p><strong>4. Capture device information</strong></p>
+<p>Information about the device can be captured by clicking on the ‘Store device information’ button. On clicking this button, a test step is seen to be recorded</p>
+<img alt="_images/storedeviceinformation1.png" src="_images/storedeviceinformation1.png" />
+<p>Now, expand the test step and click on the ‘Return Data’ tab. All information about the device can be viewed on this tab. You can scroll down to see more information</p>
+<img alt="_images/storedeviceinformation2.png" src="_images/storedeviceinformation2.png" />
+<p><strong>5. Change Device Orientation</strong></p>
+<p>You can toggle between the Landscape and Portrait modes by clicking on the ‘Change Device Orientation’ button</p>
+<dl class="docutils">
+<dt>To change  to Landscape mode:</dt>
+<dd><ol class="first last arabic simple">
+<li>Click on the ‘Change Device Orientation’ button</li>
+<li>Choose 90 degrees on the pop up window</li>
+<li>Click on the ‘Save’ button</li>
+</ol>
+</dd>
+</dl>
+<img alt="_images/changeorientation1.png" src="_images/changeorientation1.png" />
+<img alt="_images/changeorientation2.png" src="_images/changeorientation2.png" />
+<p>&lt;Add image of device screen in Landscape mode here&gt;</p>
+<p><strong>6. Location Simulation</strong></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="testsessiontestcasemanagement.html" class="btn btn-neutral float-right" title="16. Test Session - Test Case Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="troubleshooting.html" class="btn btn-neutral" title="14. Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
