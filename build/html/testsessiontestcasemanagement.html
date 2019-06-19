@@ -26,8 +26,10 @@
 
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="17. Verifying element attribute values" href="verification.html" />
     <link rel="prev" title="15. Test Session - Device Management" href="testsessiondevicemanagement.html" /> 
 
   
@@ -94,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">14. Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testsessiondevicemanagement.html">15. Test Session - Device Management</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">16. Test Session - Test Case Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verification.html">17. Verifying element attribute values</a></li>
 </ul>
 
             
@@ -166,15 +169,51 @@
 <p>At times, you may want to execute commands through the device keyboard. You can use the ‘Send Instruction to device’ button to execute actions performed on the device keyboard.</p>
 <img alt="_images/sendinstructiontodevice.png" src="_images/sendinstructiontodevice.png" />
 <p><strong>4. Hide keyboard if displayed</strong></p>
+<p>Clicking on the ‘Hide Keyboard’ button, minimizes the device keyboard that is open on the app</p>
+<img alt="_images/hidekeyboard1.png" src="_images/hidekeyboard1.png" />
+<img alt="_images/hidekeyboard2.png" src="_images/hidekeyboard2.png" />
 <p><strong>5. Send app to background for 10 secs</strong></p>
+<p>The ‘Send App to background’ button, enables you to send the app into the background for a specified duration.</p>
+<img alt="_images/sendapptobackground1.png" src="_images/sendapptobackground1.png" />
+<p>If the ‘Resume mobile app’ option is selected, the app is brought back to the forefront at the end of the duration</p>
+<img alt="_images/sendapptobackground2.png" src="_images/sendapptobackground2.png" />
 <p><strong>6. Reset app and clear user data</strong></p>
+<p>On clicking on the ‘Reset app and clear user data’ button, all data related to the app that has been cached is cleared and the app is then relaunched. The app then behaves as if it has been launched for the first time</p>
+<img alt="_images/resetappandcleardata.png" src="_images/resetappandcleardata.png" />
 <p><strong>7. Pause Test Execution</strong></p>
+<p>You can add a pause time or a wait period after a test step by clicking on the ‘Pause test execution’ button</p>
+<img alt="_images/pausetestexecution1.png" src="_images/pausetestexecution1.png" />
+<p>You can provide a duration (in seconds) for which test execution will be paused</p>
+<img alt="_images/pausetestexecution2.png" src="_images/pausetestexecution2.png" />
+<img alt="_images/pausetestexecution3.png" src="_images/pausetestexecution3.png" />
 <p><strong>8. Capture device screenshot</strong></p>
+<p>You can record a test step to capture a screenshot of the device screen at any point during the execution of a test case. This can be done by clicking on the ‘Capture Device Screen’ button</p>
+<img alt="_images/capturedevicescreen1.png" src="_images/capturedevicescreen1.png" />
+<p>When this test step is executed in a test run, the screenshot captured is available in the functional reports</p>
 <p><strong>9. Configure Device Network</strong></p>
+<p>RobusTest provides you an option to choose a network configuration on your device as part of your test case.</p>
+<p>To do so, click on the ‘Configure Device Network’ button</p>
+<img alt="_images/configuredevicenetwork1.png" src="_images/configuredevicenetwork1.png" />
+<p>On Clicking on this button, a pop-up window opens from which you may select one of the following options:</p>
+<ol class="arabic simple">
+<li>No Connection    - This disables both Wifi and Mobile Data networks on the device</li>
+<li>Airplane Mode    - This enables Airplane mode on the device</li>
+<li>Wifi Only        - This enables Wifi network on the device</li>
+<li>Data Only        - This enables the Mobile Data network on the device</li>
+<li>All Networks On  - This enables both Wifi and Mobile Data networks on the device</li>
+</ol>
+<img alt="_images/configuredevicenetwork2.png" src="_images/configuredevicenetwork2.png" />
+<p>Once an option is selected, a test step is created to enable/disable the selected option</p>
 <p><strong>10. Execute ADB command</strong></p>
 <p><strong>11. Verification</strong></p>
 <p><strong>12. Execute REST API</strong></p>
 <p><strong>13. Import Function</strong></p>
+<p>User can import functions created by clicking on the ‘Import Function’ button</p>
+<img alt="_images/importfunction1.png" src="_images/importfunction1.png" />
+<p>On the window that pops up, a list of functions is displayed. Click on the required function and click on the ‘Save’ button.</p>
+<img alt="_images/importfunction2.png" src="_images/importfunction2.png" />
+<p>The function is now seen in a test step as part of the test case</p>
+<img alt="_images/importfunction3.png" src="_images/importfunction3.png" />
 <p><strong>14. Execute Deeplink</strong></p>
 <p><strong>15. Get Current Context</strong></p>
 <p><strong>16. Set Current Context</strong></p>
@@ -189,6 +228,8 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="verification.html" class="btn btn-neutral float-right" title="17. Verifying element attribute values" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="testsessiondevicemanagement.html" class="btn btn-neutral" title="15. Test Session - Device Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

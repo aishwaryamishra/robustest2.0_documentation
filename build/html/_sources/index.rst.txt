@@ -4,12 +4,12 @@
    contain the root `toctree` directive.
 
 Welcome to RobusTest 2.0 Documentation!
-===================================
+=======================================
 
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :numbered: 1
    :includehidden:
 
@@ -29,6 +29,8 @@ Contents:
    troubleshooting
    testsessiondevicemanagement
    testsessiontestcasemanagement
+   verification
+
 
 
 .. Indices and tables

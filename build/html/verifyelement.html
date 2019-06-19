@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. Using the ‘Verify Element’ option &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Using the ‘Verification’ button option" href="verificationglobal.html" />
+    <link rel="prev" title="17. Verification" href="verification.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject_2.0.html">4. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcase.html">6. Recording Test Case</a></li>
+<li class="toctree-l1"><a class="reference internal" href="recordingtestcaseadvanced.html">7. Advanced Recording Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">8. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">9. Running Automation Tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">12. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">13. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">14. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testsessiondevicemanagement.html">15. Test Session - Device Management</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testsessiontestcasemanagement.html">16. Test Session - Test Case Management</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="verification.html">17. Verification</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. Using the ‘Verify Element’ option</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verificationglobal.html">2. Using the ‘Verification’ button option</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="verification.html">17. Verification</a> &raquo;</li>
+        
+      <li>1. Using the ‘Verify Element’ option</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/verifyelement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-the-verify-element-option">
+<span id="verify-element"></span><h1>1. Using the ‘Verify Element’ option<a class="headerlink" href="#using-the-verify-element-option" title="Permalink to this headline">¶</a></h1>
+<p>In an Automation test session, as you move the mouse pointer over the device screen, you will see different rectangular boxes being displayed.</p>
+<p>Each box highlights an element on the current app screen/page.</p>
+<img alt="_images/verifyelement1.png" src="_images/verifyelement1.png" />
+<p>Hover the pointer over an element (so that a rectangle is displayed) and perform a left-click. You will see a context menu open up.</p>
+<p>On the context menu, click on the option ‘Verify Element’</p>
+<img alt="_images/verifyelement2.png" src="_images/verifyelement2.png" />
+<p>You now see a ‘Create Verification’ window pop up</p>
+<img alt="_images/verifyelement3.png" src="_images/verifyelement3.png" />
+<p>On this window you can see the following:-</p>
+<ol class="arabic simple">
+<li>Source</li>
+<li>Target</li>
+<li>‘Add Verification Step’ button</li>
+<li>‘Invert Verification Result’ checkbox</li>
+</ol>
+<p>We shall understand each of the above terms as we proceed further</p>
+<p>The first step for any verification is to identify the ‘Source’ element</p>
+<p>When executing a ‘Verify Element’ action, the ‘Source’ is always going to be the element on which the left-click was performed.
+Hence, the ‘Source’ field on the top left corner of the window is disabled by default.</p>
+<p>If the Source element has a value present for its ‘text’ attribute, then, this value will be displayed under ‘Source’. In the example above, the element has the value ‘Login’ for its ‘text’ attribute.</p>
+<p>The second step is to identify a ‘Target’ element</p>
+<p>This can be done in two ways:-</p>
+<ol class="arabic simple">
+<li>By directly using the ‘Add Verification Step’ button</li>
+<li>By using the ‘Target’ drop down</li>
+</ol>
+<p><strong>1. Directly using the ‘Add Verification Step’ button</strong></p>
+<blockquote>
+<div><p>The ‘Add Verification Step’ option is used when you want to compare the value of the Source attribute against:</p>
+<ol class="loweralpha simple">
+<li>its default value populated; or;</li>
+<li>a custom value</li>
+</ol>
+<p>Click on the ‘Add Verification Step’ button. A verificaiton row is seen added</p>
+<img alt="_images/verifyelement4.png" src="_images/verifyelement4.png" />
+<p>On the verification row, you need to select 3 values:-</p>
+<ol class="loweralpha simple">
+<li>the Source attribute</li>
+<li>the condition to be evaluated (or comparison criterion)</li>
+<li>the Target attribute</li>
+</ol>
+<p><strong>a. the Source attribute</strong></p>
+<blockquote>
+<div><p>On clicking on the ‘Source’ attribute drop down, a list of all the attributes associated with the source element, along with their values, are displayed.</p>
+<p>Select the attribute whose value you want to compare by clicking on it.</p>
+<p>Let us click on the ‘text’ attribute in this example</p>
+<img alt="_images/verifyelement5.png" src="_images/verifyelement5.png" />
+</div></blockquote>
+<p><strong>b. the condition to be evaluated</strong></p>
+<blockquote>
+<div><p>Click on the ‘Conditions’ drop down. A list of various conditions can be seen.</p>
+<p>The conditions ‘<em>is exactly</em>’, ‘<em>contains</em>’ and ‘<em>is contained in</em>’ are used for string comparisons</p>
+<p>The conditions ‘<em>=</em>’, ‘<em>&lt;</em>’, ‘<em>&gt;</em>’, ‘<em>&lt;=</em>’ and ‘<em>&gt;=</em>’ are used for numeric comparisons</p>
+<p>Select the condition to be checked by clicking on it.</p>
+<p>Let us click on the condition ‘is exactly’ in this example</p>
+<img alt="_images/verifyelement6.png" src="_images/verifyelement6.png" />
+</div></blockquote>
+<p><strong>c. the Target attribute</strong></p>
+<blockquote>
+<div><p>By default, the Target element in this case is the same as the Source element</p>
+<p>On clicking on the ‘Target’ attribute drop down, a list of all the values associated with the attributes of the element are displayed.</p>
+<p>Also note that the text in this drop down is editable.</p>
+<p>You now have two options here:-</p>
+<ol class="arabic">
+<li><p class="first">Click on a value on the drop down. This value will be compared against the Source attribute value</p>
+<blockquote>
+<div><p>OR</p>
+</div></blockquote>
+</li>
+<li><p class="first">Manually enter a value in the target attribute field to be compared against</p>
+</li>
+</ol>
+<p><strong>1. Click on a value on the drop down.</strong></p>
+<blockquote>
+<div><img alt="_images/verifyelement7.png" src="_images/verifyelement7.png" />
+<p>This option can be used to ensure that the expected/default value is being displayed or populated for that attribute</p>
+<img alt="_images/verifyelement8.png" src="_images/verifyelement8.png" />
+<p>The above verification can be read as follows:</p>
+<p><em>Is the value in the text attribute of the Source element exactly the same as the value present in the Target attribute field ?</em></p>
+<p>E.g. Is the text on the Login button exactly the same as ‘Login’</p>
+</div></blockquote>
+<p><strong>2. Manually enter a value in the target attribute field</strong></p>
+<blockquote>
+<div><p>This option can be used to enter custom values in the target attribute field   manually</p>
+<img alt="_images/verifyelement9.png" src="_images/verifyelement9.png" />
+</div></blockquote>
+</div></blockquote>
+</div></blockquote>
+<p><strong>2. By using the ‘Target’ drop down</strong></p>
+<blockquote>
+<div><p>This option may be used when you want to compare the value of the Source attribute with that of a value stored in a previous test step</p>
+<p>The previous test step, in this case, should always be a ‘Store Element’ test step. Hence you need to perform a ‘Store Element’ action on that element.</p>
+<p>The details of the attribute values available for comparison may be viewed in the ‘Return Data’ section of the ‘Store Element’ test step that is recorded</p>
+<p>The Target element may be selected from the list of test steps displayed in the Target drop down.</p>
+<img alt="_images/verifyelement13.png" src="_images/verifyelement13.png" />
+<p>On clicking on the ‘Add Verification Step’ button. A verification row is seen</p>
+<p>Select the Source attribute, the comparison criterion and Target attribute from their resppective drop downs.</p>
+<img alt="_images/verifyelement14.png" src="_images/verifyelement14.png" />
+<p>We now have the following comparison recorded:</p>
+<img alt="_images/verifyelement15.png" src="_images/verifyelement15.png" />
+<p>The above verification can be read as follows:</p>
+<p><em>Is the value in the text attribute of the Source element exactly the same as the value present in the text attribute of the Target element ?</em></p>
+<p>E.g. Is the item name on the product page exactly the same as the item name on the search list</p>
+<p><strong>Note:</strong> <span class="bolditalic">The Target element will always be a ‘Store’ test step.</span></p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="verificationglobal.html" class="btn btn-neutral float-right" title="2. Using the ‘Verification’ button option" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="verification.html" class="btn btn-neutral" title="17. Verification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
