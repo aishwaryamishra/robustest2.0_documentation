@@ -1,12 +1,13 @@
-Manual Testing
-==============
+Manual Testing 2.0
+==================
+ .. image:: _static/deviceselection.png
 
 
 Now that you have created a project and selected a build to test, you may want to get right into it and perform some manual testing on your app.
 
 To start a Manual test session:
 
-1. Click on the 'Manual' icon on the Project Dashboard
+1. Click on the 'Manual' tile on the Project Dashboard
    
    A device selection screen now pops up. You may search for a device on the 'Device selection screen' based on device name, platform version, screen size, hardware configuration (e.g. Memory and CPU),  node name, node IP, etc.
  

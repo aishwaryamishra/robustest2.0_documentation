@@ -20,6 +20,9 @@ Contents:
    manualtesting
    recordingtestcase
    recordingtestcaseadvanced
+   testsessiondevicemanagement
+   testsessiontestcasemanagement
+   verification
    liveview
    runningautomation
    performancetesting
@@ -27,9 +30,6 @@ Contents:
    scheduling
    robustesthub
    troubleshooting
-   testsessiondevicemanagement
-   testsessiontestcasemanagement
-   verification
 
 
 

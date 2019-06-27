@@ -19,6 +19,8 @@ At times, you may want to execute commands through the device keyboard. You can 
 
 Clicking on the 'Hide Keyboard' button, minimizes the device keyboard that is open on the app
 
+.. image:: _static/hidekeyboard.png
+
 .. image:: _static/hidekeyboard1.png
 
 .. image:: _static/hidekeyboard2.png
