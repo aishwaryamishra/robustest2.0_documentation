@@ -2,6 +2,15 @@ Manual Testing
 ==============
 
 
+.. role:: bolditalic
+   :class: bolditalic
+
+.. role:: underline
+    :class: underline
+
+
+
+
 Now that you have created a project and selected a build to test, you may want to get right into it and perform some manual testing on your app.
 
 To start a Manual test session:
@@ -45,7 +54,7 @@ The Manual Test Session, consists of 2 parts:
 
   This menu provides you options to perform various configurations related to the device. Let's have a look at each of them
 
-  *1. Location Simulation*
+  :bolditalic:`1. Location Simulation`
 
   This feature allows you to test as if the device is present at a different location than where it actually is. This is done by simulating the location on the device.
 
@@ -67,21 +76,21 @@ The Manual Test Session, consists of 2 parts:
 
   You device will now behave as if it is situated at the location chosen by you
 
-  *2. Run ADB commands on device*
+  :bolditalic:`2. Run ADB commands on device`
 
    Sometimes, as part of your testing, you may want to run a few ADB commands on the device under testing. You can do so by clicking on the 'Run ADB commands on device' button.
 
    This brings up the Command Line Interfce from where you can execute adb commands directly on the device.
 
-  *3. Enable/Disable Navigation menu on device*
+  :bolditalic:`3. Enable/Disable Navigation menu on device`
 
    This button enables/disables the Android navigation menu bar at the botton of the device screen.
 
-  *4. Device screen size configuration*
+  :bolditalic:`4. Device screen size configuration`
 
    These buttons enable you to increase the screen size, decrease the screen size and to reset the device screen size to its default setting. This is useful in case you want to look at the app in more detail and want to verify the rendering of various objects on the screen.
 
-  *5. Device screen ratio configuration*
+  :bolditalic:`5. Device screen ratio configuration`
 
    These buttons enable you to increase or decrease the screen ratio. 
 
@@ -91,7 +100,7 @@ The Manual Test Session, consists of 2 parts:
 
    Decreasing the screen ratio enables the user to test on the device screen at higher reslution
 
-  *6. Device screen rotation*
+  :bolditalic:`6. Device screen rotation`
 
    You can test the device in Landscape and Portrait modes by rotating the device screen using these buttons
 
@@ -99,7 +108,7 @@ The Manual Test Session, consists of 2 parts:
 
   This menu provides the user information that would aid in the testing process. Let's go through each of them.
 
-  *1. Session Information*
+  :bolditalic:`1. Session Information`
 
    Clicking on this button provides you all details regarding the manual test session in progress. This includes information about:-
 
@@ -107,30 +116,30 @@ The Manual Test Session, consists of 2 parts:
    b. the device - Device name, ADB ID, OS version, etc,
    c. the project - Project name, Last build uploaded, etc
 
-  *2. Focused View*
+  :bolditalic:`2. Focused View`
 
    Clicking on this button provides you a distraction-free view of the device screen so that you can focus solely on your testing 
    
-  *3. View Contacts*
+  :bolditalic:`3. View Contacts`
 
    The 'Contacts' feature is useful in use cases where you need to make calls or send SMSs to specific contacts or phone numbers.
 
    You can add names to the contact list and specify their contact numbers. Now you can call or send an SMS to these contacts from the device on which you are testing.
 
-  *4. Device Screenshot*
+  :bolditalic:`4. Device Screenshot`
 
    This feature enables you to take capture the device screen at any point during testing. You can use this to highlight an issue and share it with your colleagues
 
-  *5. Device Log*
+  :bolditalic:`5. Device Log`
 
    You can view the logcat report in a tabular format with options to filter by the log level. You also have the option to download the log in CSV format.
 
 
-  *6. ANR Log*
+  :bolditalic:`6. ANR Log`
 
    The ANR log or the 'Application Not Responding' report is generated in the event that your app crashes. This log gives you significant information in determining the casue of the crash and is also availble for download.
 
-  *7. Share Test Session*
+  :bolditalic:`7. Share Test Session`
 
    If you encounter a situation where you find a specific scenario in your app flows that you would like to cross-check with or show to your colleagues but they aren't nearby, don;t worry, we got your back.
 
@@ -143,7 +152,7 @@ The Manual Test Session, consists of 2 parts:
    Once your colleagues click on the link you shared or fininsh scanning the QR code, not only can they see you perform various actions on the device screen, they can also interact with the same device screen through their computer or mobile device. 
 
 
-  *8. Connecting to ADB remotely*
+  :bolditalic:`8. Connecting to ADB remotely`
 
    This feature was developed with the intention to help your dev team.
 
@@ -153,20 +162,20 @@ The Manual Test Session, consists of 2 parts:
 
    This feature is also of use to developers who may want to test their code while developing on Android Studio
 
-  *9. Switch to multiplexing*    
+  :bolditalic:`9. Switch to multiplexing`    
 
-  You can toggle between multi-device testing and testing in a single device using this button
+   You can toggle between multi-device testing and testing in a single device using this button
 
-  *10. Log bug*    
+  :bolditalic:`10. Log bug`    
 
-  Use this feature to directly logs bugs that you encounter while testing into your bug tracking system, without moving away from your test session.
+   Use this feature to directly logs bugs that you encounter while testing into your bug tracking system, without moving away from your test session.
 
-  RobusTest supports API integration with a host of third-party bug tracking software such as JIRA, Bugzilla, etc.
+   RobusTest supports API integration with a host of third-party bug tracking software such as JIRA, Bugzilla, etc.
 
-  Once integration with the bug tracking software is enabled from the Admin Console, you can start logging bugs.
+   Once integration with the bug tracking software is enabled from the Admin Console, you can start logging bugs.
 
-  While logging the bug, you can choose the the Assignee, the reporter, the type of issue, a summary of the issue and a detailed description. You also have the option to attach the device logs, the ANR log and screenshots as well.
+   While logging the bug, you can choose the the Assignee, the reporter, the type of issue, a summary of the issue and a detailed description. You also have the option to attach the device logs, the ANR log and screenshots as well.
 
-  At the time of logging of the bug, in addition to the above details, RobusTest will add more information to the ticket pertaining to the app, app version, OS version, device details, project details, etc
+   At the time of logging of the bug, in addition to the above details, RobusTest will add more information to the ticket pertaining to the app, app version, OS version, device details, project details, etc
 
 Once your testing is complete, you can click on 'End Session' button to exit the Manual test session.

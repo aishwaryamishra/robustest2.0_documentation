@@ -9,7 +9,7 @@ Welcome to RobusTest 2.0 Documentation!
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
    :numbered: 1
    :includehidden:
 
@@ -18,13 +18,11 @@ Contents:
    project
    createproject_2.0
    manualtesting
-   recordingtestcase
-   recordingtestcaseadvanced
-   testsessiondevicemanagement
-   testsessiontestcasemanagement
-   verification
+   automationtesting
+   advancedautomationconcepts
+   runsettings
+   testrunexecution
    liveview
-   runningautomation
    performancetesting
    automationreports
    scheduling
