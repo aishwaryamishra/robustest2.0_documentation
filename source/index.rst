@@ -27,6 +27,10 @@ Contents:
    automationreports
    scheduling
    robustesthub
+   userprofile
+   healthpage
+   adminconsole
+   bugtrackerintegration
    troubleshooting
 
 
