@@ -15,8 +15,7 @@ Contents:
 
    introduction
    gettingstarted
-   project
-   createproject_2.0
+   createproject
    projectdashboard
    manualtesting
    automationtesting

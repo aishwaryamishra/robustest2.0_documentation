@@ -1,6 +1,12 @@
 Manual Testing
 ==============
 
+.. toctree::
+   :maxdepth: 2
+   :numbered:
+   :hidden:
+   
+   multidevicetesting
 
 .. role:: bolditalic
    :class: bolditalic
