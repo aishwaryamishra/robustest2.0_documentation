@@ -17,6 +17,7 @@ Contents:
    gettingstarted
    project
    createproject_2.0
+   projectdashboard
    manualtesting
    automationtesting
    advancedautomationconcepts
