@@ -1,9 +1,5 @@
-.. _hub-appium:
-
-Run test cases on Appium
-========================
-
-
+Appium
+======
  .. image:: _static/buildURL.png
 
 Configuration
