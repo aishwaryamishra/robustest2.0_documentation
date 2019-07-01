@@ -1,3 +1,5 @@
+.. _test-session-session-management:
+
 Test Session - Session Management
 =================================
 

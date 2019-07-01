@@ -1,3 +1,5 @@
+.. _manage-testcases:
+
 Creating and Managing Test Cases
 ================================
 

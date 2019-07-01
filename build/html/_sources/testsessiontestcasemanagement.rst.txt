@@ -1,3 +1,5 @@
+.. _test-session-testcase-management:
+
 Test Session - Test Case Management
 ===================================
 
