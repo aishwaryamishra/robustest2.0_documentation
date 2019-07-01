@@ -9,13 +9,6 @@ Run Settings
     :class: underline
 
 
-1. Manual Run settings
-2. Automation Run Setting
-3. Configuring Run Settings
-   a. Manual
-   b. Automation
-
-
 Whenever you start a new test session - whether Manual or Automation - there are certain default configuration values that are being used to determine the way your test session behaves.
 
 'Run Settings' enable users to customise these default configuration values

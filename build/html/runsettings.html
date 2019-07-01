@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="9. Advanced Recording Concepts" href="recordingtestcaseadvanced.html" />
-    <link rel="prev" title="2. Parametrisation of Data" href="dataparametrisation.html" /> 
+    <link rel="next" title="9. Executing Test Runs" href="testrunexecution.html" />
+    <link rel="prev" title="3. Parametrisation of Data" href="dataparametrisation.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -82,21 +82,23 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
-<li class="toctree-l1"><a class="reference internal" href="project.html">3. Create Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="createproject_2.0.html">4. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="recordingtestcaseadvanced.html">9. Advanced Recording Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="verification.html">10. Verification</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">11. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runningautomation.html">12. Running Automation Tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">13. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">14. Automation Reports</a></li>
-<li class="toctree-l1"><a class="reference internal" href="scheduling.html">15. Scheduling your tests</a></li>
-<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">16. RobusTest Hub</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">17. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
 </ul>
 
             
@@ -163,13 +165,88 @@
             
   <div class="section" id="run-settings">
 <h1>8. Run Settings<a class="headerlink" href="#run-settings" title="Permalink to this headline">¶</a></h1>
+<p>Whenever you start a new test session - whether Manual or Automation - there are certain default configuration values that are being used to determine the way your test session behaves.</p>
+<p>‘Run Settings’ enable users to customise these default configuration values</p>
+<p>You can create a new Run Setting by clicking on the ‘Run Settings’ icon on the Project Dashboard</p>
+<p>RobusTest allows you to create 2 types of Run Settings:</p>
 <ol class="arabic simple">
-<li>Manual Run settings</li>
-<li>Automation Run setting</li>
-<li>Configuring Run Settings
-a. Manual
-b. Automation</li>
+<li>Manual Runs Setting; and;</li>
+<li>Automation Run Setting</li>
 </ol>
+<p><strong>1. Manual Run Setting</strong></p>
+<p>Manual Run Settings are used when starting a new Manual Test Session</p>
+<p>A Manual Run Setting consists of only one kind of setting called ‘General Settings’.</p>
+<p>By default, the ‘General Settings’ section has the following parameters and values:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>Parameter: <em>reset</em> - default value: <em>no</em> - ensures that the app is not reset</li>
+<li>Parameter: <em>uninstallAppAfterRun</em> - default value: <em>yes</em> - this ensures that the app is uninstalled from the device at the end of the test session</li>
+<li>Parameter: <em>uninstallAppBeforeRun</em> - default value: <em>yes</em> - this ensures that the app, if already installed, is uninstalled from the device at the beginning of a new test session</li>
+</ol>
+</div></blockquote>
+<p>You can add/modify/delete other parameters to your run setting</p>
+<p><strong>2. Automation Run Setting</strong></p>
+<p>An Automation Run Setting is used while starting an Automation Test Session or when running automation tests.</p>
+<p>The default automation run setting consists of the following 3 groups of settings:</p>
+<blockquote>
+<div><blockquote>
+<div><ol class="arabic simple">
+<li>General Settings</li>
+<li>Automation Framework Settings</li>
+<li>Automation Notification Settings</li>
+</ol>
+<p><span class="bolditalic">1. General Settings</span></p>
+<p>This is the same as described for Manual Run Setting described above</p>
+<p><span class="bolditalic">2. Automation Framework Settings</span></p>
+<p>This section enables users to customise values for parameters to be passed to the Appium Automation Framework. This includes various <em>Appium Desrired Capabilities</em> such as ‘<em>automationName</em>’, ‘<em>fullReset</em>’, ‘<em>noReset</em>’, etc.</p>
+<p><span class="bolditalic">3. Automation Notification Settings</span></p>
+<p>This section enables users to send out notification emails, at the end of a test run, to a group of email IDs</p>
+<p>For each ‘key’ in the setting, the user can enter one or more email IDs in the ‘Value’ field separated by commas.</p>
+<p>There are 3 keys provided:</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li><em>onComplete</em> - An email notification is sent to the the email IDs on completion of a test run</li>
+<li><em>onFail</em> - An email notification is sent to the group of email IDs only if at least one test case, being executed as part of the run, has failed</li>
+<li><em>onPass</em> - An email notification is sent to the group of email IDs only if all test cases being executed as part of the run have passed</li>
+</ol>
+</div></blockquote>
+</div></blockquote>
+<p><strong>Configuring Run Settings</strong></p>
+<p>Now that you have created a run setting, let’s see how you can configure your test sessions to use a customised run setting</p>
+<ol class="loweralpha simple">
+<li><em>Manual Test session</em></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the ‘Manual’ icon on the Project Dashboard. The device selcetion screen now comes up.</li>
+<li>While on the device selection dialog, clcik on the ‘Configure Session’ icon on the top right corner.</li>
+<li>On the pop window that opens up, you will find a drop down called ‘Run Settings’. You can select the Manual Run Setting that you would like to use by clicking on it in this drop down.</li>
+<li>You can view the various key-value pairs in a selected run setting by clicking on the information icon to the right of the dropdown.</li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><em>Automation Test session</em></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the ‘Automation’ icon on the Project Dashboard. The device selcetion screen now comes up</li>
+<li>While on the device selection dialog, clcik on the ‘Configure Session’ icon on the top right corner.</li>
+<li>On the pop window that opens up, you will find a drop down called ‘Run Settings’. You can select the Automation Run Setting that you would like to use by clicking on it in this drop down.</li>
+<li>You can view the various key-value pairs in a selected run setting by clicking on the information icon to the right of the dropdown.</li>
+</ul>
+</div></blockquote>
+<ol class="loweralpha simple" start="3">
+<li><em>Automation Test Run</em></li>
+</ol>
+<blockquote>
+<div><ul class="simple">
+<li>Click on the ‘Test Suite’ icon on the Project Dashboard.</li>
+<li>Click on the ‘Play’ icon corresponding to the test suite you would like to execute</li>
+<li>On the page that opens up, select the automation run setting of your choice from the ‘Run Settings’ drop down</li>
+<li>You can view the various key-value pairs in a selected run setting by clicking on the information icon to the right of the dropdown.</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
 </div>
 
 
@@ -180,10 +257,10 @@ b. Automation</li>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="recordingtestcaseadvanced.html" class="btn btn-neutral float-right" title="9. Advanced Recording Concepts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="testrunexecution.html" class="btn btn-neutral float-right" title="9. Executing Test Runs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dataparametrisation.html" class="btn btn-neutral" title="2. Parametrisation of Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="dataparametrisation.html" class="btn btn-neutral" title="3. Parametrisation of Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
