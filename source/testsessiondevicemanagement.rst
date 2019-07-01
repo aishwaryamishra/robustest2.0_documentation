@@ -1,3 +1,5 @@
+.. _test-session-device-management:
+
 Test Session - Device Management
 ================================
 

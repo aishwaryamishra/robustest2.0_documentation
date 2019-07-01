@@ -1,3 +1,5 @@
+.. _teststep-management:
+
 Test Step Management
 ====================
 
