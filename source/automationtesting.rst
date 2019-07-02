@@ -27,7 +27,6 @@ Automation testing
 
 
 
-
 Creating and running automation test cases considerably speeds up the testing process and helps reduce human error.
 
 RobusTest enables you to create automation test cases in a quick and easy way with minimal to zero coding.
