@@ -31,6 +31,7 @@ Contents:
    healthpage
    adminconsole
    bugtrackerintegration
+   otherusefulinfo
    troubleshooting
 
 

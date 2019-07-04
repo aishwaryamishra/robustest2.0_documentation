@@ -176,23 +176,6 @@
             
   <div class="section" id="test-step-management">
 <span id="teststep-management"></span><h1>2. Test Step Management<a class="headerlink" href="#test-step-management" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic simple">
-<li>Create test step</li>
-<li>Play Test steps - Run individual test steps, group play</li>
-<li>Delete Test steps - Delete individual test steps, group delete</li>
-<li>Copy Test steps</li>
-<li>Rearrange test steps</li>
-<li>Test Step Details
-a. Basic
-b. Settings
-c. User Data
-d. Return Data
-e. XPath
-f. Script
-g. References
-h. Dependencies
-i. Function Steps</li>
-</ol>
 <p>For each action you record on the app, a corresponding test step is created in the ‘test step table’ to the right of the device screen</p>
 <img alt="_images/teststep1.png" src="_images/teststep1.png" />
 <p>As you can see, RobusTest provides a default test step name for each test step by attempting to identify the user action. You can customise the name as required (more on this later).</p>
@@ -216,92 +199,26 @@ i. Function Steps</li>
 <dt><em>Re-arrange icon</em> - this icon helps in two ways:</dt>
 <dd><ol class="first last loweralpha">
 <li>By pressing and holding the mouse pointer over this icon and then dragging it, the user can re-arrange the position of this specific test step within the test case.</li>
-<li>By clicking on this icon, the user can pin the test step. This means that any new test step that is recorded will be positioned after the pinned test step.</li>
+<li>By clicking on this icon, the user can pin the test step. This means that any new test step that is now recorded will be positioned after the pinned test step.</li>
 </ol>
 </dd>
 </dl>
 </li>
 </ul>
-<p>Older text:</p>
+<img alt="_images/teststep4.png" src="_images/teststep4.png" />
+<ul>
+<li><p class="first"><em>Checkbox to select test step</em> - when the checkbox on a test step is selected, two more buttons become at the top of the Test Step table - ‘Group Play’ button and the ‘Group Delete’ button</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Group Play button</em> - when this button is clicked, all test steps in the test case, that have been selected by enabling the checkbox on the test step, are executed in the order in which they are present in the test case.</li>
+<li><em>Group Delete button</em> - when this button is clicked, all test steps in the test case, that have been selected by enabling the checkbox on the test step, are deleted in the order in which they are present in the test case.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="_images/teststep5.png" src="_images/teststep5.png" />
 <ul class="simple">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<p>Every action that you record on the app is added as a step in the test case table.
-There are many useful option available as part of the Recording session.</p>
-<ol class="arabic simple">
-<li>If you wish to delete a step you can do that by clicking on the delete button.</li>
-<li>If you wish to re-run a step or a group of steps, you can do that by selecting the steps and clicking on the Run Steps button in the header.</li>
-<li>You can save your test case and continue the recording session. Once you have saved your test case, you could either update it or create a new one.</li>
-<li>You can also edit the name of the test step to make it more intuitive.</li>
-<li>An orange highlighter points to the location of the current execution pointer</li>
-<li>The pin icon in the Action column enables user to select the current execution point</li>
-</ol>
-<p>When a user clicks on a text field, the system shows a text box to enter the text value.
-When user enters a value in the text box, this is recorded as an input value for the field.</p>
-<p>After a test case has been created, click on the Save button to provide a name and save this test case. Click on End session to close the recording session without saving the test case.</p>
-<p>Upon saving the test case, you will see your saved test case along with the actual test script and related information. There are four tabs on the test case page.</p>
-<ol class="arabic simple">
-<li>Test Step: This tab lists the steps of the test case</li>
-<li>Test Script: This tab shows the test script to be executed when the automated test case runs. The script is shown in a smart script editor. If the user wishes to add custom code to his/her test scripts, s/he can do that in this script editor. The editor also checks for syntax correctness.</li>
-<li>Meta Data: The test script has been designed in a modular way to separate the app objects from the test script. This ensures that the test case can be easily updated and maintained as builds change over time.</li>
-<li>User Data: In line with the modular design, the user data too is separated out from the test script and is available in the User Data tab.</li>
-</ol>
-<ul class="simple">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li><ul class="first">
-<li></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
+<li><em>test step execution status</em> this icon indicates the status after execution of the test step.</li>
 </ul>
 </div>
 

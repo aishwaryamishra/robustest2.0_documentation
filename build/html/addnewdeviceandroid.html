@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>20. Troubleshooting &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>Adding new devices to RobusTest - Android &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -29,8 +29,7 @@
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Best Practices in Automating Tests using RobusTest" href="bestpracticesautomation.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -79,7 +78,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
@@ -98,8 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">20. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
 </ul>
 
             
@@ -145,13 +143,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>20. Troubleshooting</li>
+      <li>Adding new devices to RobusTest - Android</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/troubleshooting.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/addnewdeviceandroid.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -164,56 +162,67 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="troubleshooting">
-<h1>20. Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h1>
-<blockquote>
-<div><img alt="_images/dilbert_troubleshooting.png" src="_images/dilbert_troubleshooting.png" />
-<p><a class="reference external" href="http://dilbert.com/strip/2014-11-22">Image credit-Dilbert</a></p>
-<blockquote>
-<div></div></blockquote>
-</div></blockquote>
-<p>There are two ways to deal with this. We either say that you will never land in inexpliciable situations with our product or we give you a list of possible places where you may be stuck and subtly shift the blame on you. We will take the latter route.</p>
-<p>Following are some issues that you may come across when using RobusTest. In case you do not find the issue you are facing on this page, log a support ticket by clicking <a class="reference external" href="http://robustest.freshdesk.com">here</a></p>
-<blockquote>
-<div><p><strong>I tried to click on Manual or Automation buttons but I get a message Unable to reach node server</strong></p>
-<blockquote>
-<div>This may happen because your computer is accessing RobusTest through a proxy server and the server is blocking WebSocket protocol</div></blockquote>
-</div></blockquote>
-<p>I ran my automation tests on the RobusTest Hub but I do not see anything in Live View</p>
-<blockquote>
-<div>A build URL is generated uniquely for every build and user. So, this could be because the build URL you are using to run your tests belongs to another person (and s/he is the one seeing an entry in his/her live view)</div></blockquote>
-<p>I am unable to see the test steps in the Live View for my device</p>
-<blockquote>
-<div><p>In case you are using RobusTest from behind a firewall, it is possible that the information related to test steps execution is being stopped. One check for this would be to run the following command</p>
-<p>telnet &lt;RobusTest Installation Address&gt; &lt;port#&gt;</p>
-<p>In case the connection is not successful, it is probable that the reason for not being able to view the test steps in Live View is the stopping of information by the firewall.</p>
-</div></blockquote>
-<dl class="docutils">
-<dt>I am unable to access RobusTest</dt>
-<dd><blockquote class="first">
-<div><p>Make sure your computer is connected to the network.
-Check if the server is running and reachable by executing a ping command on the RobusTest server</p>
-<p>ping &lt;RobusTest server IP address&gt;</p>
-<p>If the ping command is unsuccessful and you are unable to get a response from the server, it either means that the server is
-unreachable or that the server is down. Please check on this with your IT team
-If the ping command is successful and you are able to reach the server, then we check if the RobusTest server is running
-successfully.</p>
-<p>Visit the RobusTest processes page and ensure that all processes are running as expected
-The URL for RobusTest processes page looks as below</p>
-<p><a class="reference external" href="http:/">http:/</a>/&lt;robustest server url&gt;:9001</p>
-<p>Make sure all the processes are in running state.
-In case the URL above is not reachable, it means the RobusTest server is not running.
-Start the RobusTest application by running the following command on the system. You will need to login to the RobusTest server
-using putty or similar tool.</p>
-<blockquote>
-<div># cd /opt/code/RobusTest
-# screen -S FrontEnd
-# sudo su (enter the password when prompted)
-# ./StartServer.sh</div></blockquote>
-</div></blockquote>
-<p class="last">To find out the IP addresses of the deployment servers other such details, please contact your RobusTest administrator.</p>
-</dd>
-</dl>
+  <div class="section" id="adding-new-devices-to-robustest-android">
+<span id="adding-new-devices-android"></span><h1>Adding new devices to RobusTest - Android<a class="headerlink" href="#adding-new-devices-to-robustest-android" title="Permalink to this headline">¶</a></h1>
+<p>When adding a new Andorid device to the RobusTest platform for the first time, you need to first prepare the device by performing the following set of actions on it:</p>
+<ol class="arabic simple">
+<li>Turn on Developer Mode<ul>
+<li>Go to the ‘About Phone’ section under Settings on your mobile device</li>
+<li>Now, tap on the build number field 7 times continuously to turn on ‘Developer Options’</li>
+</ul>
+</li>
+<li>Stay Awake should be turned on</li>
+<li>USB Debugging should be turned on</li>
+<li>Allow mock locations</li>
+<li>Set USB connection behavior to act as media device</li>
+<li>Set location as only GPS (option may be “only device” on some devices)</li>
+<li>Remove any lock screen</li>
+<li>Security settings - Allow installation from unknown sources</li>
+<li>Set as true “Do not verify apps installed over USB”</li>
+<li>Display - Set rotation as off</li>
+<li>Display - Set screen timeout to Never (in case Never is not an option set it to maximum possible time available)</li>
+</ol>
+<p>12. Once the above steps are completed, plug the device into the node server through a USB cable. Make sure you use a good quality
+cable for better data transfer, reliable connectivity and better device charging.</p>
+<ol class="arabic simple" start="13">
+<li>Upon connecting the device, an alert message with the title “Allow USB Debugging?” should show up on the device screen. Select the checkbox to “Always allow from this computer”. Tap on OK on the device</li>
+<li>Once the device is plugged in, the system will take upto 2 minutes to identify the device and add it to devices list.</li>
+<li>Confirm that you are able to view the device in your device list from manual and automation testing.</li>
+</ol>
+<p><strong>Additional Steps for Xiaomi or MI devices:</strong></p>
+<p><em>Instructions for Mi/Xiaomi devices</em></p>
+<p>1.Security App</p>
+<ol class="loweralpha simple">
+<li>Tap on the Security App</li>
+<li>Tap on the Permissions Icon</li>
+<li>Tap on the Settings icon on the top right</li>
+<li>Make sure Install via USB is TURNED OFF</li>
+</ol>
+<ol class="arabic simple" start="2">
+<li>Developer Settings</li>
+</ol>
+<ol class="loweralpha simple">
+<li>Tap on Settings</li>
+<li>Tap on Additional Settings</li>
+<li>Tap on Developer Options</li>
+<li>Developer Options - TURN ON</li>
+<li>USB Debugging - TURN ON</li>
+<li>Install via USB - TURN ON</li>
+<li>USB Debugging (Security Settings) - TURN ON</li>
+<li>Verify apps over USB - Turn OFF</li>
+<li>Turn on MIUI Optimization - TURN OFF</li>
+</ol>
+<ol class="arabic simple" start="3">
+<li>Privacy</li>
+</ol>
+<ol class="loweralpha simple">
+<li>Tap on Settings</li>
+<li>Tap on Additional Settings</li>
+<li>Tap on Privacy</li>
+<li>Unknown Sources - TURN ON</li>
+</ol>
+<hr class="docutils" />
+<p><em>P.S. Some older MI devices may have only one of the above options (i.e., i and ii) available and/or may be named differently. Enable the relevant option</em></p>
 </div>
 
 
@@ -221,13 +230,6 @@ using putty or similar tool.</p>
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="bestpracticesautomation.html" class="btn btn-neutral" title="Best Practices in Automating Tests using RobusTest" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
