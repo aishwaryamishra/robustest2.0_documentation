@@ -3,6 +3,14 @@
 Adding new devices to RobusTest - Android
 =========================================
 
+
+.. role:: bolditalic
+   :class: bolditalic
+
+.. role:: underline
+    :class: underline
+
+
 When adding a new Andorid device to the RobusTest platform for the first time, you need to first prepare the device by performing the following set of actions on it:
 
 1.  Turn on Developer Mode
@@ -41,16 +49,16 @@ cable for better data transfer, reliable connectivity and better device charging
 
 **Additional Steps for Xiaomi or MI devices:**
 
-*Instructions for Mi/Xiaomi devices*
+:bolditalic:`Instructions for Mi/Xiaomi devices`
 
-1.Security App
+:bolditalic:`1.Security App`
 
 a. Tap on the Security App
 b. Tap on the Permissions Icon
 c. Tap on the Settings icon on the top right
 d. Make sure Install via USB is TURNED OFF
 
-2. Developer Settings
+:bolditalic:`2. Developer Settings`
 
 a. Tap on Settings
 b. Tap on Additional Settings
@@ -62,7 +70,7 @@ g. USB Debugging (Security Settings) - TURN ON
 h. Verify apps over USB - Turn OFF
 i. Turn on MIUI Optimization - TURN OFF
 
-3. Privacy
+:bolditalic:`3. Privacy`
 
  
 a. Tap on Settings

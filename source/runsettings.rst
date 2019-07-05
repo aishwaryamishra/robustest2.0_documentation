@@ -1,3 +1,5 @@
+.. _run-settings:
+
 Run Settings
 ============
 
@@ -72,7 +74,7 @@ The default automation run setting consists of the following 3 groups of setting
 
   Now that you have created a run setting, let's see how you can configure your test sessions to use a customised run setting
 
-  a. *Manual Test session*
+  :bolditalic:`a. Manual Test session`
 
     * Click on the 'Manual' icon on the Project Dashboard. The device selcetion screen now comes up.
 
@@ -82,7 +84,7 @@ The default automation run setting consists of the following 3 groups of setting
 
     * You can view the various key-value pairs in a selected run setting by clicking on the information icon to the right of the dropdown.
 
-  b. *Automation Test session*
+  :bolditalic:`b. Automation Test session`
 
     * Click on the 'Automation' icon on the Project Dashboard. The device selcetion screen now comes up
 
@@ -92,7 +94,7 @@ The default automation run setting consists of the following 3 groups of setting
 
     * You can view the various key-value pairs in a selected run setting by clicking on the information icon to the right of the dropdown.
 
-  c. *Automation Test Run*
+  :bolditalic:`c. Automation Test Run`
 
     * Click on the 'Test Suite' icon on the Project Dashboard. 
 

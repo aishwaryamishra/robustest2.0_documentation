@@ -17,3 +17,10 @@ Other Useful  Information
 
 .. role:: underline
     :class: underline
+
+
+1. :ref:`adding-new-devices-android`
+
+2. :ref:`adding-new-devices-ios`
+
+3. :ref:`best-practices-in-automation`

@@ -173,7 +173,7 @@
            <div itemprop="articleBody">
             
   <div class="section" id="best-practices-in-automating-tests-using-robustest">
-<h1>Best Practices in Automating Tests using RobusTest<a class="headerlink" href="#best-practices-in-automating-tests-using-robustest" title="Permalink to this headline">¶</a></h1>
+<span id="best-practices-in-automation"></span><h1>Best Practices in Automating Tests using RobusTest<a class="headerlink" href="#best-practices-in-automating-tests-using-robustest" title="Permalink to this headline">¶</a></h1>
 <p><strong>1. Name test steps appropriately</strong></p>
 <ul>
 <li><p class="first">When recording a test case, RobusTest automatically generates test steps based on the actions performed. Test steps are created with the intention of being easily understandable.</p>
@@ -263,15 +263,15 @@
 <p><strong>10. Use Reports for debugging functional and performance issues</strong></p>
 <ul>
 <li><p class="first">The Functional and Analytic reports can help a lot in debugging errors in scripts</p>
-<ol class="loweralpha simple">
-<li><em>Functional Reports</em><ul>
+<p><span class="bolditalic">a. Functional Reports</span></p>
+<blockquote>
+<div><ul class="simple">
 <li>The error message at the top of the functional report for a test case run tells you why the test case failed.</li>
 <li>The test step at which the test case failed can be seen in ‘Red’.</li>
 <li>Make sure you have a look at the test step and screenshot just before the above failed step. Often the real reason for failure can be observed in this step.</li>
 </ul>
-</li>
-</ol>
-<p>b, <em>Analytic Reports</em></p>
+</div></blockquote>
+<p><span class="bolditalic">b. Analytic Reports</span></p>
 <blockquote>
 <div><ul class="simple">
 <li>If you observe that the app suddenly gives way to the device Home screen, have a look at the device logcat section within the Analytic report</li>

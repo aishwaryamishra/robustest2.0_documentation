@@ -1,5 +1,13 @@
+.. _best-practices-in-automation:
+
 Best Practices in Automating Tests using RobusTest
 ==================================================
+
+.. role:: bolditalic
+   :class: bolditalic
+
+.. role:: underline
+    :class: underline
 
 **1. Name test steps appropriately**
 
@@ -87,13 +95,14 @@ Best Practices in Automating Tests using RobusTest
 
 * The Functional and Analytic reports can help a lot in debugging errors in scripts
 
-  a. *Functional Reports*
+
+  :bolditalic:`a. Functional Reports`
 
      * The error message at the top of the functional report for a test case run tells you why the test case failed.
      * The test step at which the test case failed can be seen in ‘Red’. 
      * Make sure you have a look at the test step and screenshot just before the above failed step. Often the real reason for failure can be observed in this step.
 
-  b, *Analytic Reports*
+  :bolditalic:`b. Analytic Reports`
 
      * If you observe that the app suddenly gives way to the device Home screen, have a look at the device logcat section within the Analytic report
      * Go to the section named ‘Log’ under Analytic report and scroll down to the bottom. If the last few entries in this section show that the app is being closed or a ‘Kill App’ instruction is being executed, it means that the App is crashing at this point.
