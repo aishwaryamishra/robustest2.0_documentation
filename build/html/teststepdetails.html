@@ -166,15 +166,15 @@
   <div class="section" id="test-step-details">
 <span id="id1"></span><h1>Test Step Details<a class="headerlink" href="#test-step-details" title="Permalink to this headline">¶</a></h1>
 <p>For any recorded test step, if you click on the ‘Show Step Details’ button, you can see that the test step expands to reveal the following tabs:</p>
-<p><strong>a. Basic</strong>
-<strong>b. Settings</strong>
-<strong>c. User Data</strong>
-<strong>d. Return Data</strong>
-<strong>e. XPath</strong>
-<strong>f. Script</strong>
-<strong>g. References</strong>
-<strong>h. Dependencies</strong>
-<strong>i. Function Steps</strong></p>
+<p><strong>a. Basic</strong></p>
+<p><strong>b. Settings</strong></p>
+<p><strong>c. User Data</strong></p>
+<p><strong>d. Return Data</strong></p>
+<p><strong>e. XPath</strong></p>
+<p><strong>f. Script</strong></p>
+<p><strong>g. References</strong></p>
+<p><strong>h. Dependencies</strong></p>
+<p><strong>i. Function Steps</strong></p>
 <p>These tabs provide you more information about and control over the automation test steps you have created. Let’s have a look at each of these tabs in detail.</p>
 <p><strong>a. Basic</strong></p>
 <p>This tab let’s you provide a name and a description for the test step that has been recorded.</p>
@@ -182,15 +182,21 @@
 <p>In such cases, the user can go to the Test Step Name field under the ‘Basic’ tab and rename the step to something more intuitive and meaningful. E.g. ‘Tap on Play button icon’</p>
 <p><strong>b. Settings</strong></p>
 <p>For test steps that record a user action such as a tap, type, swipe, etc, the ‘Settings’ tab provides certain configurable paramters.</p>
-<ul class="simple">
-<li><dl class="first docutils">
-<dt><em>onFail</em> - This prameter determines what action should be performed at the end of execution of a test step. This field can have the following values:</dt>
-<dd><ul class="first last">
+<ul>
+<li><p class="first"><em>onFail</em> - This prameter determines what action should be performed at the end of execution of a test step.</p>
+<p>This field can have the following values:</p>
+<blockquote>
+<div><ul class="simple">
 <li><em>Fail</em> - This is the default value. If the test step is not executed successfully, the succeeding test steps <em>are not</em> executed and the test case is considered to have failed.</li>
 <li><em>Continue</em> - In this case, even if the test step is not executed successfully, the succeeding test steps <em>are</em> still executed.  and the test case is considered to have failed.</li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
+</li>
+<li><p class="first"><em>waitforElement</em> - This time parameter (in units of seconds) indicates the period of time RobusTest will wait to find the element on which an action has been recorded in the current test step. This value will override the default value set for automation at the platform level. You can modify this value to increase or decrease the time taken to find this element.</p>
+</li>
+<li><p class="first"><em>failType</em> -</p>
+</li>
+<li><p class="first"><em>messageOnFail</em> -</p>
 </li>
 </ul>
 <p><strong>c. User Data</strong></p>

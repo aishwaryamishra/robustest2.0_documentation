@@ -6,13 +6,21 @@ Test Step Details
 For any recorded test step, if you click on the 'Show Step Details' button, you can see that the test step expands to reveal the following tabs:
 
 **a. Basic** 
+
 **b. Settings**
+
 **c. User Data**
+
 **d. Return Data** 
+
 **e. XPath** 
+
 **f. Script** 
+
 **g. References** 
+
 **h. Dependencies**
+
 **i. Function Steps**
 
 These tabs provide you more information about and control over the automation test steps you have created. Let's have a look at each of these tabs in detail.
@@ -29,9 +37,18 @@ In such cases, the user can go to the Test Step Name field under the 'Basic' tab
 
 For test steps that record a user action such as a tap, type, swipe, etc, the 'Settings' tab provides certain configurable paramters.
 
-* *onFail* - This prameter determines what action should be performed at the end of execution of a test step. This field can have the following values:
+* *onFail* - This prameter determines what action should be performed at the end of execution of a test step. 
+
+  This field can have the following values:
+
    * *Fail* - This is the default value. If the test step is not executed successfully, the succeeding test steps *are not* executed and the test case is considered to have failed.
    * *Continue* - In this case, even if the test step is not executed successfully, the succeeding test steps *are* still executed.  and the test case is considered to have failed.
+
+* *waitforElement* - This time parameter (in units of seconds) indicates the period of time RobusTest will wait to find the element on which an action has been recorded in the current test step. This value will override the default value set for automation at the platform level. You can modify this value to increase or decrease the time taken to find this element.
+
+* *failType* - 
+
+* *messageOnFail* - 
 
 **c. User Data**
 
