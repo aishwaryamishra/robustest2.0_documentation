@@ -1,6 +1,19 @@
 Automation Reports
 ==================
 
+.. toctree::
+   :maxdepth: 2
+   :hidden:
+
+   debuggingfailures
+
+.. role:: bolditalic
+   :class: bolditalic
+
+.. role:: underline
+    :class: underline
+
+
 Once your test run completes its run, you can view the detailed execution report in the Reports section.
 
 Reports are categorized by devices and test cases.
