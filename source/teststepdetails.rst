@@ -16,6 +16,45 @@ Test Step Details
    i. Function Steps
 
 
+For any recorded test step, if you click on the 'Show Step Details' button, you can see that the test step expands to reveal the following tabs:
+
+**a. Basic** 
+**b. Settings**
+**c. User Data**
+**d. Return Data** 
+**e. XPath** 
+**f. Script** 
+**g. References** 
+**h. Dependencies**
+**i. Function Steps**
+
+These tabs provide you more information about and control over the automation test steps you have created. Let's have a look at each of these tabs in detail.
+
+**a. Basic** 
+
+This tab let's you provide a name and a description for the test step that has been recorded.
+
+Whenever you record a test step, by default, RobusTest provides you a test step name depending on the element and the action that was performed. Sometimes, this default test step may not be easy to understand. E.g. a step named 'Tap on Relative Layout'.
+
+In such cases, the user can go to the Test Step Name field under the 'Basic' tab and rename the step to something more meaningful. E.g. 'Tap on Play button icon'
+
+**b. Settings**
+
+For test steps that record a user action such as a tap, type, swipe, etc, the 'Settings' tab provides certain configurable paramters.
+
+* *onFail* - This prameter determines what action should be performed at the end of execution of a test step. This field can have the following values:
+   * *Fail* - This is the default value. If the test step is not executed successfully, the succeeding test steps *are not* executed and the test case is considered to have failed.
+   * *Continue* - In this case, even if the test step is not executed successfully, the succeeding test steps *are* still executed.  and the test case is considered to have failed.
+   
+
+
+**c. User Data**
+**d. Return Data** 
+**e. XPath** 
+**f. Script** 
+**g. References** 
+**h. Dependencies**
+**i. Function Steps**
 
 
 
