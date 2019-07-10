@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>3. Create Project &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>Create Project &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Project Dashboard" href="projectdashboard.html" />
-    <link rel="prev" title="2. Getting Started" href="gettingstarted.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,10 +78,10 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
@@ -146,13 +144,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>3. Create Project</li>
+      <li>Create Project</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/createproject.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/createprojectold.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -166,49 +164,23 @@
            <div itemprop="articleBody">
             
   <div class="section" id="create-project">
-<h1>3. Create Project<a class="headerlink" href="#create-project" title="Permalink to this headline">¶</a></h1>
-<p>On RobusTest, all activity related to the testing of a mobile app will be part of a <em>Project</em>.</p>
-<p>A Project is a logical place for all builds, test cases, test suites, test runs and test reports associated with the testing of the app. It also facilitates collaboration within the team.</p>
-<p><strong>Creating a project</strong></p>
-<ol class="arabic">
-<li><p class="first">Once you have logged into RobusTest, you will find a ‘Create Project’ button on the landing page. To create a project, click on this button.</p>
-</li>
-<li><p class="first">On the ‘Create New Project’ page that opens up, you need to enter the following information:
-* <em>Project Name</em> - in case of app testing, this is usually the name of the app under test (AUT). This field is mandatory
-* <em>Project Description</em> - provide a brief description of the purpose of cresating this project
-* <em>Project Type</em> - you have the option to create one out of 4 types of projects:</p>
-<blockquote>
-<div><ol class="loweralpha simple">
-<li><em>Android App Project</em></li>
-<li><em>iOS App Project</em>.</li>
-<li><em>Mobile Webapp Project</em></li>
-<li><em>Device Only Project</em></li>
-</ol>
-<p>You can find more information here: <a class="reference internal" href="projecttypes.html#project-types"><span class="std std-ref">Types of Projects</span></a></p>
-</div></blockquote>
-</li>
-</ol>
+<h1>Create Project<a class="headerlink" href="#create-project" title="Permalink to this headline">¶</a></h1>
+<p>Almost all activity that to test mobile app will be part of a project. With RobusTest the user can create a project to facilitate collaboration within the team and also to act as a logical place for all builds, test cases, test suites, test runs and test reports.</p>
 <blockquote>
 <div><img alt="_images/createproject.png" class="align-center" src="_images/createproject.png" />
+<p>While creating the project the user can choose the type of project which he/she wants from the drop down provided. For example if the user wants to create Android project then he/she can choose Android app, similarly if the user wants to create iOS project or Mobile Webapp project or Device only proejct then he/she can choose accrodingly.</p>
+<p>After creating Android project the project dashboard looks like below image.</p>
+<img alt="_images/projectdashboard.png" class="align-center" src="_images/projectdashboard.png" />
 </div></blockquote>
-<ol class="arabic" start="3">
-<li><p class="first">Click on the ‘Create Project’ button. The project has now been created and you will find yourself on the Project Dashboard.</p>
-<p>E.g., after creating an Android project the project dashboard looks like below image.</p>
-</li>
-</ol>
-<blockquote>
-<div><img alt="_images/projectdashboard.png" class="align-center" src="_images/projectdashboard.png" />
-</div></blockquote>
-<ol class="arabic" start="4">
-<li><p class="first">Now that you have created a project, the next step is to upload the app build to be tested
-* For an Android project, this will be an apk file
-* For an iOS project, this will be an ipa file</p>
-<p>To upload a build, click on the ‘Upload new build’ button (i.e., the ‘+’ icon) on the Project Dashboard</p>
-<p><em>This step is not applicable to Mobile WebApp and Device Only projects</em></p>
-</li>
-</ol>
-<p>You are now all set up to begin testing</p>
-<p>Before we do so, let’s get to understand the Project Dashboard a little more</p>
+<p>After creating the project the user can proceed with the following actions like uploading the builds, adding team members to the project and adding jira settings.</p>
+<p>The user can add more builds to the project and also has to provide a build description to uniquely identify build from other builds in the project.</p>
+<img alt="_images/projectdashboard2.png" class="align-center" src="_images/projectdashboard2.png" />
+<p>Apps that are part of a particular project can be accessed by everyone who is part of that project.
+Project members have the ability to test, automate and view reports for any build that is part of their project.</p>
+<p>After user selecting the project, the user can select the appropriate build that he/she wish to test.
+The user can select build from the build details section by selecting either the app name, version name or version code. The build description helps user to identify the right build.</p>
+<p>If the user wishes to upload upload remotely, then he/she can upload build through postman calls.</p>
+<p>The user can configure project with bug management settings. Right now we support Jira</p>
 </div>
 
 
@@ -216,15 +188,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="projectdashboard.html" class="btn btn-neutral float-right" title="4. Project Dashboard" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="gettingstarted.html" class="btn btn-neutral" title="2. Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

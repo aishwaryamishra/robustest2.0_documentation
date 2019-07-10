@@ -3,16 +3,6 @@
 Creating and Managing Test Cases
 ================================
 
-
-1. Save Test Case
-2. Update Test Case
-3. Save New Test case
-4. Import Test Scripts
-5. Remove imported test scripts
-
-
-
-
 On the top right corner of your Automation session, you will see a group of buttons that help you manage your test cases
 
 .. image:: _static/teststep3.png

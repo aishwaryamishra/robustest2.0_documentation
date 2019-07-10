@@ -1,41 +1,47 @@
 Create Project
 ==============
 
-Almost all activity that to test mobile app will be part of a project. With RobusTest the user can create a project to facilitate collaboration within the team and also to act as a logical place for all builds, test cases, test suites, test runs and test reports.
+On RobusTest, all activity related to the testing of a mobile app will be part of a *Project*. 
+
+A Project is a logical place for all builds, test cases, test suites, test runs and test reports associated with the testing of the app. It also facilitates collaboration within the team.
+
+**Creating a project**
+
+1. Once you have logged into RobusTest, you will find a 'Create Project' button on the landing page. To create a project, click on this button. 
+
+2. On the 'Create New Project' page that opens up, you need to enter the following information:
+   * *Project Name* - in case of app testing, this is usually the name of the app under test (AUT). This field is mandatory
+   * *Project Description* - provide a brief description of the purpose of cresating this project
+   * *Project Type* - you have the option to create one out of 4 types of projects:
+     a. *Android App Project*   
+     b. *iOS App Project*.      
+     c. *Mobile Webapp Project*
+     d. *Device Only Project* 
+
+     You can find more information here: :ref:`project-types`
 
  .. image:: _static/createproject.png
  	:align: center
 
- While creating the project the user can choose the type of project which he/she wants from the drop down provided. For example if the user wants to create Android project then he/she can choose Android app, similarly if the user wants to create iOS project or Mobile Webapp project or Device only proejct then he/she can choose accrodingly.
 
- After creating Android project the project dashboard looks like below image.
+3. Click on the 'Create Project' button. The project has now been created and you will find yourself on the Project Dashboard.
+
+   E.g., after creating an Android project the project dashboard looks like below image.
 
  .. image:: _static/projectdashboard.png
  	:align: center
 
 
-After creating the project the user can proceed with the following actions like uploading the builds, adding team members to the project and adding jira settings.
 
-The user can add more builds to the project and also has to provide a build description to uniquely identify build from other builds in the project.
+4. Now that you have created a project, the next step is to upload the app build to be tested
+   * For an Android project, this will be an apk file
+   * For an iOS project, this will be an ipa file
 
-.. image:: _static/projectdashboard2.png
- 	:align: center
+   To upload a build, click on the 'Upload new build' button (i.e., the '+' icon) on the Project Dashboard
 
-
-Apps that are part of a particular project can be accessed by everyone who is part of that project.
-Project members have the ability to test, automate and view reports for any build that is part of their project.
-
-After user selecting the project, the user can select the appropriate build that he/she wish to test.
-The user can select build from the build details section by selecting either the app name, version name or version code. The build description helps user to identify the right build.
-
-If the user wishes to upload upload remotely, then he/she can upload build through postman calls.
-
-The user can configure project with bug management settings. Right now we support Jira
+   *This step is not applicable to Mobile WebApp and Device Only projects*
 
 
+You are now all set up to begin testing
 
-
-
-
-
-
+Before we do so, let's get to understand the Project Dashboard a little more

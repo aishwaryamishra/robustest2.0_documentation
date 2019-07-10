@@ -1,15 +1,18 @@
-Project Dashboard
-=================
+Create Project
+==============
 
-The Project Dashboard
+Almost all activity that to test mobile app will be part of a project. With RobusTest the user can create a project to facilitate collaboration within the team and also to act as a logical place for all builds, test cases, test suites, test runs and test reports.
 
+ .. image:: _static/createproject.png
+ 	:align: center
 
+ While creating the project the user can choose the type of project which he/she wants from the drop down provided. For example if the user wants to create Android project then he/she can choose Android app, similarly if the user wants to create iOS project or Mobile Webapp project or Device only proejct then he/she can choose accrodingly.
 
+ After creating Android project the project dashboard looks like below image.
 
+ .. image:: _static/projectdashboard.png
+ 	:align: center
 
-
-
-----
 
 After creating the project the user can proceed with the following actions like uploading the builds, adding team members to the project and adding jira settings.
 
@@ -28,3 +31,11 @@ The user can select build from the build details section by selecting either the
 If the user wishes to upload upload remotely, then he/she can upload build through postman calls.
 
 The user can configure project with bug management settings. Right now we support Jira
+
+
+
+
+
+
+
+
