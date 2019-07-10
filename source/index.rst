@@ -19,12 +19,12 @@ Contents:
    projectdashboard
    manualtesting
    automationtesting
-   advancedautomationconcepts
    runsettings
    testrunexecution
    liveview
    performancetesting
    automationreports
+   advancedautomationconcepts
    scheduling
    robustesthub
    userprofile
