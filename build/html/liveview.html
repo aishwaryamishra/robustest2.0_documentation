@@ -167,14 +167,37 @@
             
   <div class="section" id="live-view">
 <h1>9. Live View<a class="headerlink" href="#live-view" title="Permalink to this headline">¶</a></h1>
-<p>On the header in the RobusTest application you will find a link for Live View.
-This page displays a list of all the open sessions belonging to the user logged in. This page will show all active manual, recording and automation run sessions. Even test runs made using RobusTest Hub can be accessed here.</p>
+<p>On the header, in the RobusTest application, you will find a link for Live View.</p>
+<p>This page displays a list of all active manual, recording and automation run sessions belonging to the user who has logged in. Even Appium test runs made using RobusTest Hub can be accessed here.</p>
+<p>Each session entry provides you information about:</p>
+<ul class="simple">
+<li>the app build being tested</li>
+<li>the device that the app is running on</li>
+<li>the ADB ID of the device being used</li>
+<li>the type of test session - i.e., Manual, automation or test run</li>
+<li>the user who has started the test</li>
+<li>the date and time of commencement of the test session</li>
+</ul>
 <blockquote>
-<div><img alt="_images/liveview.png" src="_images/liveview.png" />
+<div><img alt="_images/liveviewsessions.png" src="_images/liveviewsessions.png" />
 </div></blockquote>
-<p>User can end an active manual test or test recording session from this page by clicking on the eject button.</p>
-<p>To view the live screen of a device currently being used by the user, just click on the monitor icon. A new window will open with the screen of the device. In case of a test run, one can also see the test steps on the live screen.</p>
-<img alt="_images/liveview2.png" src="_images/liveview2.png" />
+<p>In addition to the above info, you will also find the following buttons:-</p>
+<ul class="simple">
+<li><em>Live Screen button</em> - You can view the live screen of a device currently being used by the user by cicking on this button(i.e., the monitor icon). A new window will open with the screen of the device. In case of a test run, one can also see the test steps on the live screen.</li>
+</ul>
+<img alt="_images/liveview1.png" src="_images/liveview1.png" />
+<ul class="simple">
+<li><em>Resume Session</em> - This button is denoted by a green coloured ‘Play’ button icon on the live sesssion entry. This button comes in handy when you have accidentally closed the browser tab on which your Manual or Automation test session is running. Now, on clicking this button, you can resume your Manual or Automation test session.</li>
+<li><em>Release Device</em> - You can end an active manual test or test recording session from this page by clicking on the this button. This frees up the device for a new test session.</li>
+</ul>
+<p><em>View multiple device screens in parallel</em></p>
+<p>On the Live View Sessions page, you also have the option to view multiple device screens at the same time on your monitor.</p>
+<p>For this:-</p>
+<ol class="arabic simple">
+<li>enable the check box at the left side of each live view session entry, whose device screens you would like to view. At least two live session entries should be selected</li>
+<li>Click on the ‘Start Multiplexing’ button</li>
+<li>The user can now view the selected devices in Multi-device mode</li>
+</ol>
 </div>
 
 
