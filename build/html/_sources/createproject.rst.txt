@@ -10,9 +10,11 @@ A Project is a logical place for all builds, test cases, test suites, test runs 
 1. Once you have logged into RobusTest, you will find a 'Create Project' button on the landing page. To create a project, click on this button. 
 
 2. On the 'Create New Project' page that opens up, you need to enter the following information:
+
    * *Project Name* - in case of app testing, this is usually the name of the app under test (AUT). This field is mandatory
    * *Project Description* - provide a brief description of the purpose of cresating this project
    * *Project Type* - you have the option to create one out of 4 types of projects:
+   
      a. *Android App Project*   
      b. *iOS App Project*.      
      c. *Mobile Webapp Project*

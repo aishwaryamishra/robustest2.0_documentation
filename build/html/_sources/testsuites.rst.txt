@@ -3,6 +3,12 @@
 Understanding Test Suites
 =========================
 
+.. role:: bolditalic
+   :class: bolditalic
+
+.. role:: underline
+    :class: underline
+
 A Test Suite is a collection of test cases that you would like to execute. When a test suite is submitted for a run, all test cases present within the test suite are executed.
 
 A test suite can also be a logical grouping of test cases.

@@ -14,15 +14,11 @@ Now that we know how to create and modify a test suite, let us understand how to
 
 A test run constitutes of a combination of the following 5 components:-
 
-*a. Test Suite*
-
-*b. Run Settings*
-
-*c. App build*
-
-*d. Devices*
-
-*e. Data sets* 
+a. *Test Suite*
+b. *Run Settings*
+c. *App build*
+d. *Devices*
+e. *Data sets* 
 
 **a. Test Suite**
 

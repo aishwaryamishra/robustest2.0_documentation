@@ -87,19 +87,20 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
 </ul>
 
             
@@ -166,6 +167,61 @@
             
   <div class="section" id="project-dashboard">
 <h1>4. Project Dashboard<a class="headerlink" href="#project-dashboard" title="Permalink to this headline">¶</a></h1>
+<p>The Project Dashboard provides you information about the project you have created - i.e., the app under test, the build details, project members, CI settings, etc.</p>
+<img alt="_images/projectdashboard2.png" class="align-center" src="_images/projectdashboard2.png" />
+<p>Let’s have a look at the Dashboard in detail.</p>
+<p>The Project Dashboard constitiyes of the following 4 sections:</p>
+<ol class="arabic simple">
+<li>Builds</li>
+<li>Team</li>
+<li>Upload Build - Remote</li>
+<li>Settings</li>
+</ol>
+<p><strong>1. Builds</strong></p>
+<p>This is the section of the Dashboard on which you land by default on clicking on a project.</p>
+<p>The Build section provides you information about:</p>
+<ul class="simple">
+<li><em>Build details</em> (i.e., build name, version name, version code, package name and launch action)</li>
+<li><em>Description about the build</em></li>
+<li><em>Build file size</em></li>
+<li><em>Name of the team member who uploaded the build to the project</em></li>
+<li><em>Date of upload of the build to the project</em></li>
+</ul>
+<p>You can upload multiple builds to a project. You can choose the build to be tested upon from the ‘Build’ drop down field.</p>
+<p>In addition to providing you the details about the build, this section of the Dashboard also allows you to perform the following tasks:</p>
+<ul class="simple">
+<li><em>Upload New Build</em> - Clicking on this button enables you to manually upload an app build from a chosen location to the project</li>
+<li><em>Get selected Build URL</em> - Clicking on this button copies to the clipboard, the URL to download the currently selected build in the project. On pasting this URL on a browsr tab and hitting enter, the user is able to download the currently selected build onto their computer.</li>
+<li><em>Delete Selected Build</em> - Clicking on this button deletes the currently selected build from the project. Only a project member with admin privileges can delete a build.</li>
+</ul>
+<p><strong>2. Team</strong></p>
+<p>All members who are added to the project are listed on the Team setion. Apps that are part of a particular project can be accessed by everyone who is part of that project.</p>
+<p>Project members have the ability to test, automate and view reports for any build that is part of their project.</p>
+<p>Each team has 2 kinds of memebers - Admin and non-admin</p>
+<p>Admin members have a few additonal privileges when compared to non-admin members. They can:-</p>
+<ul class="simple">
+<li>Delete a build from the project</li>
+<li>Add/remove members from the project</li>
+<li>Grant to/Revoke from a team member admin privileges</li>
+<li>Execute a CURL command to upload an app build remotely</li>
+</ul>
+<p>By default, a member who creates a project has admin privileges on that project.</p>
+<p>Note: <em>An Admin member of a project is different from a RobusTest Admin</em> The former’s privileges are restricted to the project the member is a part of while the latter has special prvileges on the entire RobusTest platform</p>
+<p><strong>3. Upload Build - Remote</strong></p>
+<p>This section is visible only to admin members of the project.</p>
+<p>Here, a CURL command is provided which enables the user to upload an app build to the current project remotely</p>
+<p>The general format of this command is as follows:</p>
+<p><span class="bolditalic">curl -X PUT ‘&lt;PROJECT IDENTIFIER&gt;h’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt;</span></p>
+<p>Here the app build preent in the location  or path mentioned in the command is uoloaded to the project that is identified by the Project Idenitifier.</p>
+<p>The ‘Project Identifier’ is provided in the section while the path to the location from where the build may be picked up can be specified by a team member.</p>
+<p>You can now run the above command directly on the command line OR choose to invoke the above build-upload API through a programming script in a language of your choice.</p>
+<p>E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new bui;d gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build that is uploaded to the project.</p>
+<p><strong>4. Settings</strong></p>
+<p>This section provides you the following options:</p>
+<p><em>a. Enable notifications</em> - On enabling this checkbox, each member of the team is notified whenever a new build is uploaded to the project</p>
+<p><em>b. Choose Bug Tracker configuration</em> - RobusTest supports Continuous Integration with your existing CI tools through APIs.</p>
+<p>Once you have integrated your Bug Tracker tool wih RobusTest, this configuration will be available for selection in the ‘Bug Tracker’ drop down. Once the required configuration is selected, all bugs encountered during your testing can be logged directly, from RobusTest, into the tool of your choice.</p>
+<p>You can configure your project with the tool of your choice through the ‘Integration’ section of the RobueTest Admin Console.</p>
 </div>
 
 
