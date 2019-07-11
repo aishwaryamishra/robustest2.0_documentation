@@ -95,19 +95,20 @@
 <li class="toctree-l2"><a class="reference internal" href="managetestcases.html">6. Creating and Managing Test Cases</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
 </ul>
 
             
@@ -176,14 +177,28 @@
             
   <div class="section" id="test-session-session-management">
 <span id="id1"></span><h1>5. Test Session - Session Management<a class="headerlink" href="#test-session-session-management" title="Permalink to this headline">¶</a></h1>
-<ol class="arabic simple">
-<li>View Recorded Test Steps</li>
-<li>View Session Information</li>
-<li>View Device Logcat</li>
-<li>Run ADB command on device</li>
-<li>Copy session information</li>
-<li>Turn ON image-based element verification</li>
+<p>The vertical menu to the left of the test step table provides you various options regarding management of the test session</p>
+<p><strong>1. Show Recorded Steps</strong></p>
+<p>Tapping on this button displays the test step table. You can use this option to get back to recording your automation test steps, in case you had earlier moved away from it while using any of the options to be described below</p>
+<p><strong>2. Session Information</strong></p>
+<p>Clicking on this button provides you all details regarding the automation test session in progress. This includes information about:-</p>
+<blockquote>
+<div><ol class="loweralpha simple">
+<li>the build - App name, build version, last uploaded, etc</li>
+<li>the device - Device name, ADB ID, OS version, etc,</li>
+<li>the project - Project name, Last build uploaded, etc</li>
 </ol>
+</div></blockquote>
+<p><strong>3. Device Log</strong></p>
+<p>You can view the logcat report in a tabular format with options to filter by the log level. You also have the option to download the log in CSV format.</p>
+<p><strong>4. Run ADB command on device</strong></p>
+<p>Sometimes, as part of your testing, you may want to run a few ADB commands on the device under testing. You can do so by clicking on the ‘Run ADB commands on device’ button.</p>
+<p>This brings up the Command Line Interfce from where you can execute adb commands directly on the device.</p>
+<p><strong>5. Copy session information</strong></p>
+<p>Clicking on this button captures all relevant information about the session in progress onto the clipboard. This information includes information about when the test session began, details of the app build, details of the device being used, etc.</p>
+<p>If you face an issue while in an automation test session, you can capture the session details using this option and then paste this  info in a support ticket that you log.</p>
+<p><strong>6. Turn ON image-based element verification</strong></p>
+<p>Clicking on this enables image-based verification. You can read more about this in the section on <a class="reference internal" href="imagebasedverification.html#image-based-verification"><span class="std std-ref">Image-based Verification</span></a></p>
 </div>
 
 

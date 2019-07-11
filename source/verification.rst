@@ -49,7 +49,6 @@ The 'Verification' feature on RobusTest provides you a powerful way to perform a
 
 1. :ref:`verify-element-exists`
 2. :ref:`invert-verification`
-3. Image based element verification
-
+3. :ref:`image-based-verification`
 
 
