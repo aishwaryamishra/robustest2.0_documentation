@@ -87,19 +87,20 @@
 <li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
 </ul>
 
             
@@ -166,6 +167,188 @@
             
   <div class="section" id="admin-console">
 <h1>17. Admin Console<a class="headerlink" href="#admin-console" title="Permalink to this headline">¶</a></h1>
+<p>Users who have Admin access on the RobusTest platform will find an extra icon on the platform header to access the same</p>
+<img alt="_images/adminconsole.png" src="_images/adminconsole.png" />
+<p>The Admin Console enables you:-</p>
+<ol class="loweralpha simple">
+<li>to perform administrative tasks on RobusTest.</li>
+<li>to monitor and capture important and useful info on usage of the platform</li>
+</ol>
+<p>Let’s have a look at each section of the Admin Console:</p>
+<p><strong>1. Activity</strong></p>
+<p>This section captures all user activity with respect to device groups. These include:</p>
+<ul class="simple">
+<li>creation of a device group</li>
+<li>modification of a device group
+* addition/removal of devices in a group
+* addition/removal of projects in a group</li>
+<li>deletion of a device group</li>
+</ul>
+<p><strong>2. Project</strong></p>
+<p>This section provides details of all active and inactive projects on RobusTest</p>
+<p>On selecting a project by clicking on it, the following additional information pertaining to that project are available:</p>
+<ul>
+<li><ol class="first loweralpha simple">
+<li><em>Sessions</em> - The last 100 test sessions that were opened on the project are visible. For each test session the following info are displayed:</li>
+</ol>
+<ul class="simple">
+<li><em>Type of test session</em> (Manual, Automation, Run, Hub)</li>
+<li><em>Device used in the test session</em></li>
+<li><em>Name of user who created the test session</em></li>
+<li><em>Start and End time of test session</em></li>
+<li><em>Duration of the test session</em></li>
+<li><em>Reason for termination of test session</em> (Appropriate messages are displayed for normal and abnormal termination of a test session)</li>
+</ul>
+</li>
+<li><ol class="first loweralpha simple" start="2">
+<li><em>Usage</em> - This tab provides the breakup of the total duration of each type of test session (Manual, Automation, Run &amp; Hub) that was created in this project</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="3">
+<li><em>Builds</em> - This tab displays details of each build that was added to the project</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="4">
+<li><em>Members</em> - This tab provides:</li>
+</ol>
+<ul class="simple">
+<li>details of all memebers within a project</li>
+<li>privileges available for each member</li>
+<li>a means to add/remove members</li>
+<li>a means to grant/revoke admin rights</li>
+</ul>
+</li>
+<li><ol class="first loweralpha simple" start="5">
+<li><em>Devices</em> - This tab provides a list of devices that have been reserved for the project</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="6">
+<li><em>Settings</em> - In this tab, you can do the following:-</li>
+</ol>
+<ul class="simple">
+<li><em>Activate or Deactivate a project</em> - You can do so by enabling/disabling the checkbox</li>
+<li><em>Making the project a Universal Project</em> - When a project is designated as a universal project, any new user who signs up onto the RobusTest platform gets access to the Universal project</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. User</strong></p>
+<p>This section provides details of all active and inactive users on RobusTest</p>
+<p>On selecting a user by clicking on their name, the following additional information pertaining to that user are available:</p>
+<ul>
+<li><ol class="first loweralpha simple">
+<li><em>Sessions</em> - Details of the last 100 test sessions that were started by the user are visible.</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="2">
+<li><em>Usage</em> - This tab provides the breakup of the total duration spent on each type of test session by the user</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="3">
+<li><em>Projects</em> - This section provides a list of all projects that the user is a part of</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="4">
+<li><em>Settings</em> - This section enables you to:-</li>
+</ol>
+<ul class="simple">
+<li>Activate/Deactivate a user on RobusTest</li>
+<li>Grant/Revoke admin privileges for a user on RobusTest</li>
+</ul>
+</li>
+</ul>
+<p><strong>4. Model</strong></p>
+<p>This section provides details of all active and inactive mobile device <em>models</em> being used on RobusTest.</p>
+<p>A device model is a combination of the Model name (e.g. Mi A2, Samsung Galaxy S7, iPhone 7, etc.) and the Android/iOS version</p>
+<p>On selecting a model name, the following additional information pertaining to that device model are available:</p>
+<ul>
+<li><ol class="first loweralpha simple">
+<li><em>Devices</em> - This provides a list of all devices on RobusTest that have the same model and OS version running on them</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="2">
+<li><em>Settings</em> - Under this section, you can:</li>
+</ol>
+<ul class="simple">
+<li>provide various information pertaining to the model such as Model name, Model brand, Model manufacturer, CPU, RAM, Screen Ratio, Screen Size, Resolution, etc.</li>
+<li>enable the device navigation bar/menu to be displayed in the device screen. This is menu where you would have buttons such as Back, Home, History, ec</li>
+<li>make available for automation all devices belonging to the mmodel by enabling the ‘Support Automation’ checkbox. If this check box is not selected, the all devices that fall under the model category will only be available for Manual testing</li>
+</ul>
+</li>
+</ul>
+<p><strong>5. Device</strong></p>
+<p>This section provides details of all devices available on RobusTest. You can view a list of devices that are connected, disconected or in a busy (in-use) state.</p>
+<p>Android and iOS devices can be visually differentiated by the logo displayed on the left of the device name. The logo also helps determine the state of the device by the colour in which the logo is displayed</p>
+<ul class="simple">
+<li>Green colour - the device is connected and available for use</li>
+<li>Red colour - the device is in use</li>
+<li>Grey colour - the device is disconnected</li>
+<li>Blue colour - the device is in the state of being added to RobusTest. This is seen under the following circumstances:
+* when a device is being added for the first time
+* when an existing device is being restarted
+* when the RobusTest server to which the device is connected to is being restarted</li>
+</ul>
+<p>On selecting a device by clicking on its name, the following information are visible:</p>
+<ul class="simple">
+<li>device name</li>
+<li>OS version running on the device</li>
+<li>device model</li>
+<li>device ID</li>
+<li>ADB ID</li>
+<li>device IMEI number</li>
+<li>Node server name and IP to which the device is connected</li>
+<li>date and time when device was last used</li>
+</ul>
+<p>You can also perform the following actions using the buttons displayed on the top right:</p>
+<ul class="simple">
+<li><em>Free device</em> - This button is visible only if the device is in use in a test session. Clicking on it, releases the device from its current test session and makes it available for a new test session</li>
+<li><em>Restart device</em> - This button can be used to restart a connected device remotely</li>
+<li><em>Flash Screen</em> - On clicking on this button, a red screen appears on the device for a few seconds and then goes away. This button can be used for identifying a specific device when there are multiple devices of the same make and model. It can help with proper labelling of devices for later identification</li>
+</ul>
+<p>On selecting a device, a few more tabs become visble. These tabs provide the following additional information pertaining to that device:</p>
+<ul>
+<li><ol class="first loweralpha simple">
+<li><em>Sessions</em> - Details of the last 100 test sessions that were started on the device are visible.</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="2">
+<li><em>Usage</em> - This tab provides the breakup of the total duration of each type of test session in which the device was used</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="3">
+<li><em>Apps</em> - This tab provides a list of apps that have been pre-installed on the device</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="4">
+<li><em>History</em> - This tab provides the history of the connection and disconnection events of the device with the RobusTest server along with the date &amp; time of these events as well as the reason for the same</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="5">
+<li><em>Contact</em> - Any contact provided here will receive notification emails in the event of the device getting disconnected from the RobusTest server. To add a contact to a device, first create a contact in the ‘Contacts’ section of the Admin Consle. Once the contact has been added in the ‘Contacts’ section, you can add the same to the device from the current tab</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="6">
+<li><em>Shell</em> - You can run adb commands on the device from here</li>
+</ol>
+</li>
+<li><ol class="first loweralpha simple" start="7">
+<li><em>Settings</em> - This section enables you to:</li>
+</ol>
+<ul class="simple">
+<li>provide a name for the device</li>
+<li>opt in or out of receiving a device disconnection email</li>
+<li>provide a mobile number associated with the device</li>
+<li>add device tags to identify the device</li>
+<li>identify the device groups to which the device belongs, if any</li>
+<li>identify the contacts associated with the device</li>
+</ul>
+</li>
+</ul>
+<p><strong>6. Group</strong></p>
+<p><strong>7. Session</strong></p>
+<p><strong>8. Node</strong></p>
+<p><strong>9. Integrations</strong></p>
+<p><strong>10. Contact</strong></p>
+<p><strong>11. Settings</strong></p>
 </div>
 
 
