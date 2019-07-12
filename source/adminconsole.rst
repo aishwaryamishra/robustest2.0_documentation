@@ -28,7 +28,7 @@ This section provides details of all active and inactive projects on RobusTest
 
 On selecting a project by clicking on it, the following additional information pertaining to that project are available:
 
-* a. *Sessions* - The last 100 test sessions that were opened on the project are visible. For each test session the following info are displayed:
+a. *Sessions* - The last 100 test sessions that were opened on the project are visible. For each test session the following info are displayed:
 
   * *Type of test session* (Manual, Automation, Run, Hub)
   * *Device used in the test session*
@@ -37,20 +37,21 @@ On selecting a project by clicking on it, the following additional information p
   * *Duration of the test session*
   * *Reason for termination of test session* (Appropriate messages are displayed for normal and abnormal termination of a test session)
 
-* b. *Usage* - This tab provides the breakup of the total duration of each type of test session (Manual, Automation, Run & Hub) that was created in this project
+b. *Usage* - This tab provides the breakup of the total duration of each type of test session (Manual, Automation, Run & Hub) that was created in this project
+     
 
-* c. *Builds* - This tab displays details of each build that was added to the project
+c. *Builds* - This tab displays details of each build that was added to the project
 
-* d. *Members* - This tab provides:
+d. *Members* - This tab provides:
 
   * details of all memebers within a project 
   * privileges available for each member 
   * a means to add/remove members
   * a means to grant/revoke admin rights 
 
-* e. *Devices* - This tab provides a list of devices that have been reserved for the project
+e. *Devices* - This tab provides a list of devices that have been reserved for the project
 
-* f. *Settings* - In this tab, you can do the following:-
+f. *Settings* - In this tab, you can do the following:-
 
   * *Activate or Deactivate a project* - You can do so by enabling/disabling the checkbox
   * *Making the project a Universal Project* - When a project is designated as a universal project, any new user who signs up onto the RobusTest platform gets access to the Universal project
@@ -61,13 +62,13 @@ This section provides details of all active and inactive users on RobusTest
 
 On selecting a user by clicking on their name, the following additional information pertaining to that user are available:
 
-* a. *Sessions* - Details of the last 100 test sessions that were started by the user are visible. 
+a. *Sessions* - Details of the last 100 test sessions that were started by the user are visible. 
 
-* b. *Usage* - This tab provides the breakup of the total duration spent on each type of test session by the user
+b. *Usage* - This tab provides the breakup of the total duration spent on each type of test session by the user
 
-* c. *Projects* - This section provides a list of all projects that the user is a part of
+c. *Projects* - This section provides a list of all projects that the user is a part of
 
-* d. *Settings* - This section enables you to:-
+d. *Settings* - This section enables you to:-
 
   * Activate/Deactivate a user on RobusTest
   * Grant/Revoke admin privileges for a user on RobusTest
@@ -80,9 +81,9 @@ A device model is a combination of the Model name (e.g. Mi A2, Samsung Galaxy S7
 
 On selecting a model name, the following additional information pertaining to that device model are available:
 
-* a. *Devices* - This provides a list of all devices on RobusTest that have the same model and OS version running on them
+a. *Devices* - This provides a list of all devices on RobusTest that have the same model and OS version running on them
 
-* b. *Settings* - Under this section, you can: 
+b. *Settings* - Under this section, you can: 
 
   * provide various information pertaining to the model such as Model name, Model brand, Model manufacturer, CPU, RAM, Screen Ratio, Screen Size, Resolution, etc.
 
@@ -125,19 +126,19 @@ You can also perform the following actions using the buttons displayed on the to
 
 On selecting a device, a few more tabs become visble. These tabs provide the following additional information pertaining to that device:
 
-* a. *Sessions* - Details of the last 100 test sessions that were started on the device are visible. 
+a. *Sessions* - Details of the last 100 test sessions that were started on the device are visible. 
 
-* b. *Usage* - This tab provides the breakup of the total duration of each type of test session in which the device was used
+b. *Usage* - This tab provides the breakup of the total duration of each type of test session in which the device was used
 
-* c. *Apps* - This tab provides a list of apps that have been pre-installed on the device
+c. *Apps* - This tab provides a list of apps that have been pre-installed on the device
 
-* d. *History* - This tab provides the history of the connection and disconnection events of the device with the RobusTest server along with the date & time of these events as well as the reason for the same
+d. *History* - This tab provides the history of the connection and disconnection events of the device with the RobusTest server along with the date & time of these events as well as the reason for the same
 
-* e. *Contact* - Any contact provided here will receive notification emails in the event of the device getting disconnected from the RobusTest server. To add a contact to a device, first create a contact in the 'Contacts' section of the Admin Consle. Once the contact has been added in the 'Contacts' section, you can add the same to the device from the current tab
+e. *Contact* - Any contact provided here will receive notification emails in the event of the device getting disconnected from the RobusTest server. To add a contact to a device, first create a contact in the 'Contacts' section of the Admin Consle. Once the contact has been added in the 'Contacts' section, you can add the same to the device from the current tab
 
-* f. *Shell* - You can run adb commands on the device from here
+f. *Shell* - You can run adb commands on the device from here
 
-* g. *Settings* - This section enables you to:
+g. *Settings* - This section enables you to:
   
   * provide a name for the device
   * opt in or out of receiving a device disconnection email
@@ -148,12 +149,96 @@ On selecting a device, a few more tabs become visble. These tabs provide the fol
 
 **6. Group**
 
+A group or a device group is a means by which you can restrict the usage of specific devices to specific projects.
+
+In other words, it is a binding between one or more devices and one or more projects.
+
+Devices that are part of a group can only be accessed by members of the projects that are part of the same group. These devices will **NOT** be available for members of other projects which are not part of the group.
+
+This functionality comes in handy when there are mutiple teams accessing the same device cloud and each team has their own set of devices on the cloud. Grouping your devices helps you ensure that the devices that you need for testing your projects are always available to your team.
+
 **7. Session**
+
+This section displays details of the last 100 test sessions created by all users on RobusTest. It also displays the count of test sessions that are in progress at that moment of time.
 
 **8. Node**
 
+This section provides details of all nodes available on RobusTest. 
+
+Each node is basically a RobusTest server to which devices are connected. The RobusTest device cloud is made up of a number of interconnected nodes or servers with devices attached to one or more of them.
+
+On selecting a node by clicking on its name, the following information are visible:
+
+* node name
+* node IP
+* date & time the node was last updated
+* date & time till which the node will function (this is usually in sync with the RobusTest license period)
+
+You can also perform the following actions using the buttons displayed on the top right:
+
+* *Flash Screen* - On clicking on this button, a red screen appears for a few seconds on each device conected to the server/node and then goes away. This button can be used for identifying all Android devices connected to that node.
+
+* *Create Snapshot* - Clicking on this button captures details of all devices that are successfully connected to the server at that point in time. These details are now visible on the 'Snapshot' tab for each node. This can be used for comparison at a later point of time to identify the devices that are no longer seen connected to the server.
+
+* *Delete Node* - This button is to delete a node entry under the Node section for a node that is no longer valid.
+
+On selecting a node, a few more tabs become visble. These tabs provide the following additional information pertaining to that node:
+
+a. *Devices* - This provides a list and details of all devices that are connected to the RobusTest node
+
+b. *History* - This tab provides the history of the connection and disconnection events of the RobusTest server along with the date & time of these events as well as the reason for the same.
+
+c. *Snapshot* - Clicking on the 'Create Snapshot' button captures details of all devices that are successfully connected to the server at that point in time. This can be used for comparison at a later point of time to identify the devices that are no longer seen connected to the server
+
+d. *Contact* - Any contact provided here will receive notification emails in the event of the node getting disconnected (i.e, the machine is either switched off or is unreachable). To add a contact to a node, first create a contact in the 'Contacts' section of the Admin Consle. Once the contact has been added in the 'Contacts' section, you can add the same to the node from the current tab.
+
+e. *Settings* - This section enables you to update the following information about the node:
+  
+  * Node Name
+  * Node Location
+  * Node Mac Address
+  * Node Machine Serial
+
 **9. Integrations**
+
+RobusTest enables you to integrate with any API enabled CI tool like JIRA, Asana, etc.
+
+In order to integrate with such tools, you first need to create a configuration in the 'Integrations' section of the Admin Console.
+
+To integrate with a tool: 
+
+a. click on the 'Create New Integration' button
+b. select a tool from the drop down provided. A list of fields that enable integration with the tool are now displayed
+c. enter relevant values for the fields displayed and click on the 'Create Coinfiguration' button
+
+E.g., let's say you need to integrate with JIRA to log bugs encountered while testing your app. You need to do the following:
+* select JIRA from the tool drop down list
+* provide information such as the JIRA Server URL, JIRA username, JIRA API Token, etc.
+* create the configuration setting
+* now, on the Project Dashboad go to the 'Settings' tab and select the name of the configuration you created on the 'Bug Tracker' dropdown
+
+*In case you do not find the CI tool of your choice on the tool drop down list, please reach out to the RobusTest support team by emailing us at support@robustest.com and our team shall get back to you for further assistance with integration*
+
 
 **10. Contact**
 
+This section enables you to add contact details about one or more persons. These are folks who should be informed in the event of a device or node disconection.
+
+Once you have created contacts, you can add these to the contact list on the Device and Node sections of the Admin console so that they recieve notification emails.
+
 **11. Settings**
+
+This section enables you to configure different kinds of values on the RobusTest platform:
+
+* a. *Notification*
+
+  In this section, you can decide if a notification email should be sent out for the following events:
+
+  * Device Connections
+  * Device Disconnections
+  * Node Connections
+  * Node Disconnections
+
+* b. *Network Shaping*
+
+  *Under Contruction*
