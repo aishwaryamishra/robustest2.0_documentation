@@ -45,7 +45,7 @@ Each of the above steps in our example is a function. Each of these functions co
 
 E.g. the function '*Enter Customer Information*' above may constitute of the following functions:
 
-* Enter customer personal details
+* Enter customer Personal details
 * Enter customer Billing address
 * Enter customer Shipping address
 
