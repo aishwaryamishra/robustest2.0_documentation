@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>2. Functions &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>More about functions &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3. Parametrisation of Data" href="dataparametrisation.html" />
-    <link rel="prev" title="1.4. Invert Verification" href="invertverification.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,7 +78,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
@@ -92,12 +90,7 @@
 <li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
 <li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="verification.html">1. Verification</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Functions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="dataparametrisation.html">3. Parametrisation of Data</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
@@ -151,15 +144,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a> &raquo;</li>
-        
-      <li>2. Functions</li>
+      <li>More about functions</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/functions.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/moreonfunctions.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,67 +163,43 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="functions">
-<h1>2. Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
-<p>One of the most powerful features that the RobusTest platform provides is the use of <em>‘Functions’</em> in automating test cases.</p>
-<p>A function, in RobusTest, is a block of test steps that perform a particular task. E.g., a group of test steps that capture customer information.</p>
-<p><strong>Why use functions</strong></p>
-<p>Functions help:-</p>
+  <div class="section" id="more-about-functions">
+<span id="more-on-functions"></span><h1>More about functions<a class="headerlink" href="#more-about-functions" title="Permalink to this headline">¶</a></h1>
+<p><strong>1. Setup Functions</strong></p>
+<p>While creating a function, the user has to choose an option from the ‘Category’ drop down to determine the type of function being created.</p>
+<p>By default, this dropdown has the value ‘None’. Functions created using this default value are your regular functions. They are created with the intention of utilising the re-usability aspect of a function.</p>
+<p>The second category of functions are what are known as <em>Setup functions</em> They are a unique category of functions that RobusTest enables you to create.</p>
+<p>Sometimes, there occurs scenarios in which:</p>
+<p><strong>a.</strong> prior to a test case being executed, a series of actions need to be performed to set the test data bed and bring it to a specific state.
+<strong>b.</strong> after a test case has been executed, a series of actions need to be performed to reset the test data bed or bring it to a required state.
+<strong>c.</strong> both - points <strong>a.</strong> and <strong>b.</strong> above apply</p>
+<p>Such scenarios are recorded as part of <em>Setup functions</em>.</p>
 <ul class="simple">
-<li>in reducing the time &amp; effort spent in automating test cases through re-usability of code</li>
-<li>in easy maintenance and updating of test cases in case of any changes in the application flow</li>
-<li>with improved readability of test cases</li>
+<li><em>Setup functions</em> are used for setting up or tearing down of the test bed before or after the actual test case is executed.</li>
+<li><em>Setup functions</em> are not considered a part of the actual test case being executed.</li>
+<li>If a test step within a <em>Setup functon</em> fails, then, unlike a regular function, it does not result in the failure of the test case that calls the setup function.</li>
 </ul>
-<p>Use functions:-</p>
+<p><strong>2. Functions within a function</strong></p>
+<p>Another functionality that RobusTest provides is the ability to call one or more functions within a function.</p>
+<p>This capapbility allows you to create highly modular test cases that greatly helps to enhance the readability of your test cases as well as allows you to maintain and update your test cases more easily.</p>
+<p>E.g. Let us say, you want to create a test case that allows a customer to select a specific billing plan and then pay for it.</p>
+<p>This test case could include multiple functions to perform the following actions:</p>
 <ul class="simple">
-<li>wherever a series of steps form a logical unit, e.g. a series of test steps for selecting a rental plan, entering billing information, etc.</li>
-<li>whenever a group of actions are repeated across more than one scenario</li>
+<li>Login to the app</li>
+<li>Enter Customer information</li>
+<li>Select a type of purchase</li>
+<li>Select a billing option</li>
+<li>Execute a payment</li>
 </ul>
-<p>Using functions will significantly reduce the amount of future time spent in incorporating changes to app flows, data, element resource ids, etc.</p>
-<p>E.g. Say, there are a series of standalone test steps (i.e., test steps not within a function) where a 4G Plan is being selected and that these steps are repeated in a number of test cases. In future, if the specific plan being selected changes, you would have to go to each and every test case and update them.</p>
-<p>Instead, have these steps within a function named ‘Select Rental Plan’. Now, any change in the way a rental plan is created would only require a one time change within this function script. This change is reflected in all test cases that call this function.</p>
-<p>Let’s have a look at how we create and use functions in RobusTest</p>
-<p><strong>1. Creating a Function</strong></p>
-<p>RobusTest enables you to create functions out of existing test cases.</p>
-<blockquote>
-<div><p><strong>a.</strong> Open an automation test session</p>
-<p><strong>b.</strong> Record the test steps that you would like to be converted into a function</p>
-<p><strong>c.</strong> Save the test case</p>
-<p><strong>d.</strong> Go to the ‘Test Cases’ page</p>
-<p><strong>e.</strong> For the test case that you created, click on the ‘Create Function’ button</p>
-<img alt="_images/createfunction1.png" src="_images/createfunction1.png" />
-<dl class="docutils">
-<dt><strong>f.</strong>  On the pop-up window that opens:</dt>
-<dd><ul class="first last simple">
-<li>provide an appropriate name for the function</li>
-<li>choose the type of function to be created from the ‘<em>Category</em>’ drop down</li>
-</ul>
-</dd>
-</dl>
-<img alt="_images/createfunction2.png" src="_images/createfunction2.png" />
-<p><strong>g.</strong>  Click on the ‘Save’ button</p>
-</div></blockquote>
-<p>You have now created a new function</p>
-<p><strong>2. Using a Function</strong></p>
-<p>Now that you have created a function, let’s see how we can use them</p>
-<blockquote>
-<div><p><strong>1.</strong> In an Automation test session, create a new test case or open an existing test case in which you would like to use the function.</p>
-<p><strong>2.</strong> Click on the ‘<em>Import Function</em>’ button.</p>
-<p><strong>3.</strong> On the ‘<em>Import Function</em>’ window that opens, click on the function you would like to use in the test case.</p>
-<p><strong>4.</strong> Click on the ‘<em>Save</em>’ button.</p>
-<p><strong>5.</strong> Save/Update your test case.</p>
-</div></blockquote>
-<p>The function you created earlier is now a part of the test case.</p>
-<p>It is seen as a separate test step in the test case.</p>
-<p>On expanding this test step, you can see a tab named ‘Function Steps’</p>
-<p>On clicking on the above tab, you can view the following information:</p>
+<p>Each of the above steps in our example is a function. Each of these functions could themselves constitute of one or more functions.</p>
+<p>E.g. the function ‘<em>Enter Customer Information</em>’ above may constitute of the following functions:</p>
 <ul class="simple">
-<li>name of the test case that was converted into a function</li>
-<li>name of the function</li>
-<li>list of test steps that constitute the function</li>
+<li>Enter customer personal details</li>
+<li>Enter customer Billing address</li>
+<li>Enter customer Shipping address</li>
 </ul>
-<p><em>If any test step being executed within a function fails, then, the test case that calls the function also fails</em></p>
-<p>Click here to know <a class="reference internal" href="moreonfunctions.html#more-on-functions"><span class="std std-ref">More about functions</span></a></p>
+<p>Designing test cases in the above manner allows you to easily understand the scenario being tested and provides you more control when maintaining and updating test cases.</p>
+<p><strong>3. Functions and Parametrisation</strong></p>
 </div>
 
 
@@ -240,15 +207,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="dataparametrisation.html" class="btn btn-neutral float-right" title="3. Parametrisation of Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="invertverification.html" class="btn btn-neutral" title="1.4. Invert Verification" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>

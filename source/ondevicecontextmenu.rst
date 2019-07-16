@@ -47,7 +47,7 @@ Left-clicking on a highlighted element opens up a context menu which lets you do
 
   This option allows user to create a check or an assertion on an object. If the verification condition fails, the test step fails.
 
-  You can know more on the :ref:`typing-text` page.
+  You can know more on the :ref:`verification-main-page` page.
 
 **3. Store element** 
 
