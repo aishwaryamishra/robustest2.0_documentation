@@ -68,10 +68,7 @@ Here, a CURL command is provided which enables the user to upload an app build t
 
 The general format of this command is as follows:
 
-#:bolditalic:`curl -X PUT '<PROJECT IDENTIFIER>h' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>`
-
 **curl -X PUT '<PROJECT IDENTIFIER>h' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>**
-
 
 Here the app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.
 
