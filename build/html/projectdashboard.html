@@ -212,7 +212,7 @@
 <p>Here, a CURL command is provided which enables the user to upload an app build to the current project remotely</p>
 <p>The general format of this command is as follows:</p>
 <p><span class="bolditalic">curl -X PUT ‘&lt;PROJECT IDENTIFIER&gt;h’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt;</span></p>
-<p>Here the app build preent in the location  or path mentioned in the command is uoloaded to the project that is identified by the Project Idenitifier.</p>
+<p>Here the app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.</p>
 <p>The ‘Project Identifier’ is provided in the section while the path to the location from where the build may be picked up can be specified by a team member.</p>
 <p>You can now run the above command directly on the command line OR choose to invoke the above build-upload API through a programming script in a language of your choice.</p>
 <p>E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new bui;d gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build that is uploaded to the project.</p>

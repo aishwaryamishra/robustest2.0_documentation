@@ -70,7 +70,7 @@ The general format of this command is as follows:
 
 :bolditalic:`curl -X PUT '<PROJECT IDENTIFIER>h' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>`
 
-Here the app build preent in the location  or path mentioned in the command is uoloaded to the project that is identified by the Project Idenitifier.
+Here the app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.
 
 The 'Project Identifier' is provided in the section while the path to the location from where the build may be picked up can be specified by a team member.
 
