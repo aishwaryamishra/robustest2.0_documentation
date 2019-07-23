@@ -90,19 +90,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
 </ul>
 
             
@@ -204,17 +205,19 @@
 </ol>
 <p><strong>a. Horizontal menu</strong></p>
 <p>This menu provides you options to perform various configurations related to the device. Let’s have a look at each of them</p>
-<p><span class="bolditalic">1. Location Simulation</span></p>
-<p>This feature allows you to test as if the device is present at a different location than where it actually is. This is done by simulating the location on the device.</p>
+<p><strong>1. Location Simulation</strong></p>
+<p>This feature allows you to test as if the device is present at a different location than where it actually is. This is done by  simulating the location on the device.</p>
 <p>Pre-requisites:</p>
 <blockquote>
 <div><p>On the device:</p>
-<ol class="arabic simple">
+<blockquote>
+<div><ol class="arabic simple">
 <li>in Developer options:
 * enable ‘Mock Locations’
 * set the Nizedha app as your mock location app</li>
 <li>in ‘Locations’, set the ‘Location Mode’ to ‘Device only’</li>
 </ol>
+</div></blockquote>
 </div></blockquote>
 <p>Once the pre-requisites have been met, you can simulate any location as follows:</p>
 <ol class="arabic simple">
@@ -222,31 +225,32 @@
 <li>Type the name of the location in the ‘Enter a location’ field and select from the drop down. Alternatively, you can manually pin the location of your choice on the map</li>
 <li>Once your location has been pinned, click on the ‘Set Location’ button</li>
 </ol>
-<p>You device will now behave as if it is situated at the location chosen by you</p>
-<p><span class="bolditalic">2. Run ADB commands on device</span></p>
+<blockquote>
+<div>You device will now behave as if it is situated at the location chosen by you</div></blockquote>
+<p><strong>2. Run ADB commands on device</strong></p>
 <blockquote>
 <div><p>Sometimes, as part of your testing, you may want to run a few ADB commands on the device under testing. You can do so by clicking on the ‘Run ADB commands on device’ button.</p>
 <p>This brings up the Command Line Interfce from where you can execute adb commands directly on the device.</p>
 </div></blockquote>
-<p><span class="bolditalic">3. Enable/Disable Navigation menu on device</span></p>
+<p><strong>3. Enable/Disable Navigation menu on device</strong></p>
 <blockquote>
 <div>This button enables/disables the Android navigation menu bar at the botton of the device screen.</div></blockquote>
-<p><span class="bolditalic">4. Device screen size configuration</span></p>
+<p><strong>4. Device screen size configuration</strong></p>
 <blockquote>
 <div>These buttons enable you to increase the screen size, decrease the screen size and to reset the device screen size to its default setting. This is useful in case you want to look at the app in more detail and want to verify the rendering of various objects on the screen.</div></blockquote>
-<p><span class="bolditalic">5. Device screen ratio configuration</span></p>
+<p><strong>5. Device screen ratio configuration</strong></p>
 <blockquote>
 <div><p>These buttons enable you to increase or decrease the screen ratio.</p>
 <p>This feature is helpful in scenarios, where the network bandwidth is low and the user would still like to test.</p>
 <p>Increasing the screen ratio decreases the resolution of the device screen and enables the user to continue testing at a lower bandwidth.</p>
 <p>Decreasing the screen ratio enables the user to test on the device screen at higher reslution</p>
 </div></blockquote>
-<p><span class="bolditalic">6. Device screen rotation</span></p>
+<p><strong>6. Device screen rotation</strong></p>
 <blockquote>
 <div>You can test the device in Landscape and Portrait modes by rotating the device screen using these buttons</div></blockquote>
 <p><strong>b. Vertical menu</strong></p>
 <p>This menu provides the user information that would aid in the testing process. Let’s go through each of them.</p>
-<p><span class="bolditalic">1. Session Information</span></p>
+<p><strong>1. Session Information</strong></p>
 <blockquote>
 <div><p>Clicking on this button provides you all details regarding the manual test session in progress. This includes information about:-</p>
 <ol class="loweralpha simple">
@@ -255,24 +259,24 @@
 <li>the project - Project name, Last build uploaded, etc</li>
 </ol>
 </div></blockquote>
-<p><span class="bolditalic">2. Focused View</span></p>
+<p><strong>2. Focused View</strong></p>
 <blockquote>
 <div>Clicking on this button provides you a distraction-free view of the device screen so that you can focus solely on your testing</div></blockquote>
-<p><span class="bolditalic">3. View Contacts</span></p>
+<p><strong>3. View Contacts</strong></p>
 <blockquote>
 <div><p>The ‘Contacts’ feature is useful in use cases where you need to make calls or send SMSs to specific contacts or phone numbers.</p>
 <p>You can add names to the contact list and specify their contact numbers. Now you can call or send an SMS to these contacts from the device on which you are testing.</p>
 </div></blockquote>
-<p><span class="bolditalic">4. Device Screenshot</span></p>
+<p><strong>4. Device Screenshot</strong></p>
 <blockquote>
 <div>This feature enables you to take capture the device screen at any point during testing. You can use this to highlight an issue and share it with your colleagues</div></blockquote>
-<p><span class="bolditalic">5. Device Log</span></p>
+<p><strong>5. Device Log</strong></p>
 <blockquote>
 <div>You can view the logcat report in a tabular format with options to filter by the log level. You also have the option to download the log in CSV format.</div></blockquote>
-<p><span class="bolditalic">6. ANR Log</span></p>
+<p><strong>6. ANR Log</strong></p>
 <blockquote>
 <div>The ANR log or the ‘Application Not Responding’ report is generated in the event that your app crashes. This log gives you significant information in determining the casue of the crash and is also availble for download.</div></blockquote>
-<p><span class="bolditalic">7. Share Test Session</span></p>
+<p><strong>7. Share Test Session</strong></p>
 <blockquote>
 <div><p>If you encounter a situation where you find a specific scenario in your app flows that you would like to cross-check with or show to your colleagues but they aren’t nearby, don;t worry, we got your back.</p>
 <p>The ‘Share Test Session’ featuer enables you to collaborate with colleagues by sharing your device screen with them.</p>
@@ -281,17 +285,17 @@ a. by sending them a link to your device link by clicking on the ‘Copy Share-L
 b. by scanning the QR code displayed with a mobile phone</p>
 <p>Once your colleagues click on the link you shared or fininsh scanning the QR code, not only can they see you perform various actions on the device screen, they can also interact with the same device screen through their computer or mobile device.</p>
 </div></blockquote>
-<p><span class="bolditalic">8. Connecting to ADB remotely</span></p>
+<p><strong>8. Connecting to ADB remotely</strong></p>
 <blockquote>
 <div><p>This feature was developed with the intention to help your dev team.</p>
 <p>Let’s say you find an issue while testing and reach out to a developer for support. If this developer would like to access the ADB on the same device for further investigation, she or he can do so remotely by running the command displayed on your screen.</p>
 <p>They can now work on the device as if it is connected directly to their own computer.</p>
 <p>This feature is also of use to developers who may want to test their code while developing on Android Studio</p>
 </div></blockquote>
-<p><span class="bolditalic">9. Switch to multiplexing</span></p>
+<p><strong>9. Switch to multiplexing</strong></p>
 <blockquote>
 <div>You can toggle between multi-device testing and testing in a single device using this button</div></blockquote>
-<p><span class="bolditalic">10. Log bug</span></p>
+<p><strong>10. Log bug</strong></p>
 <blockquote>
 <div><p>Use this feature to directly logs bugs that you encounter while testing into your bug tracking system, without moving away from your test session.</p>
 <p>RobusTest supports API integration with a host of third-party bug tracking software such as JIRA, Bugzilla, etc.</p>
