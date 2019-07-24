@@ -5,23 +5,15 @@ Test Step Details
 
 For any recorded test step, if you click on the 'Show Step Details' button, you can see that the test step expands to reveal the following tabs:
 
-**1. Basic** 
-
-**2. Settings**
-
-**3. User Data**
-
-**4. Return Data** 
-
-**5. XPath** 
-
-**6. Script** 
-
-**7. References** 
-
-**8. Dependencies**
-
-**9. Function Steps**
+1. Basic
+2. Settings
+3. User Data
+4. Return Data
+5. XPath
+6. Script 
+7. References 
+8. Dependencies
+9. Function Steps
 
 These tabs provide you more information about and control over the automation test steps you have created. Let's have a look at each of these tabs in detail.
 
