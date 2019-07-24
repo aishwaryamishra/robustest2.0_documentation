@@ -66,7 +66,7 @@ The Manual Test Session, consists of 2 parts:
 
   This feature allows you to test as if the device is present at a different location than where it actually is. This is done by  simulating the location on the device.
 
-  Pre-requisites:
+  *Pre-requisites*:
 
     On the device:
 
@@ -79,10 +79,10 @@ The Manual Test Session, consists of 2 parts:
   Once the pre-requisites have been met, you can simulate any location as follows:
 
   1. Click on the 'Simulate Location' button
-  2. Type the name of the location in the 'Enter a location' field and select from the drop down. Alternatively, you can manually pin the location of your choice on the map
+  2. Type the name of the location in the 'Search location here' field and select from the drop down. Alternatively, you can manually pin the location of your choice on the map
   3. Once your location has been pinned, click on the 'Set Location' button
 
-    You device will now behave as if it is situated at the location chosen by you
+    Your device will now behave as if it is situated at the location chosen by you
 
   .. :bolditalic:`2. Run ADB commands on device`
 
