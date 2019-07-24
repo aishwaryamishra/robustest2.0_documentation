@@ -53,6 +53,6 @@ The icons to the left side of the test step relate to actions you can perform on
 
 .. image:: _static/teststep5.png
 
-* *test step execution status* this icon indicates the status after execution of the test step.
+* *Test step execution status* -  this icon indicates the status after execution of the test step.
 
 
