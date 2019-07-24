@@ -92,6 +92,8 @@ Once an option is selected, a test step is created to enable/disable the selecte
 
 **11. Verification**
 
+Check out the :ref:`verification-global` page to understand this functionality
+
 **12. Execute REST API**
 
 **13. Import Function**
