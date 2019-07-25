@@ -90,19 +90,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a></li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">19. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
 </ul>
 
             
@@ -170,7 +171,72 @@
            <div itemprop="articleBody">
             
   <div class="section" id="multi-device-testing">
-<h1>1. Multi-device testing<a class="headerlink" href="#multi-device-testing" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>1. Multi-device testing<a class="headerlink" href="#multi-device-testing" title="Permalink to this headline">¶</a></h1>
+<p>The ability to perform manual testing on multiple devices in parallel is one of the defining features of the RobusTest platform.</p>
+<p>We refer to this ability as <strong>Multiplexing</strong></p>
+<p><strong>Advantages of Multiplexing</strong></p>
+<p>Multiplexing provides you an advantage in the following scenarios:</p>
+<ol class="arabic simple">
+<li>You can perform manual testing on multiple devices of different screen sizes and running different OS versions and view all device screens simultaneously.</li>
+<li>It is useful in scenarios where testing involves interaction between two devices.<ul>
+<li>E.g. 1: Making a phone call from one device to another</li>
+<li>E.g. 2: Sending an SMS from one device to another</li>
+<li>E.g. 3; Testing the chat feature in an app using two or more devices</li>
+</ul>
+</li>
+<li>The ‘Replication’ feature (described below) enables you to execute the same action on multiple devices by performing the action on one device</li>
+</ol>
+<p><strong>How to start a Multiplexing session</strong></p>
+<p>There are two ways to begin a Manual multiplexing test session:</p>
+<blockquote>
+<div><p>Method 1: <em>Starting a multi-device test session directly</em></p>
+<ol class="arabic simple">
+<li>Click on the ‘Manual’ icon on the Project Dashboard.</li>
+<li>Select the devices you wish to test on by clicking on the ‘Select’ button under those devices.</li>
+<li>Once you have selected the devices, click on the ‘Play’ button on the top right corner. The multiplexing session is now in progress.</li>
+</ol>
+<p>Method 2: <em>Switching to a multi-device test session from a single device manual test session</em></p>
+<ol class="arabic simple">
+<li>Click on the ‘Manual’ icon on the Project Dashboard.</li>
+<li>Select one device you wish to test on by clicking on the ‘Select’ button under those devices.</li>
+<li>Once you have selected the device, click on the ‘Play’ button on the top right corner. The single device manual test session is now in progress.</li>
+<li>Click on the ‘Switch to Multiplexing’ button on the horizontal menu. You are now in a multiplexing test session and can add more devices to this session for testing.</li>
+</ol>
+</div></blockquote>
+<p><strong>Understanding the Multiplexing test session</strong></p>
+<p>Now that you have started a multiplexing session, let’s see what operations and features are available to you to aid you in your testing.</p>
+<p>There are two menus you need to familiarize yourself with in a multiplexing test session:</p>
+<ol class="arabic simple">
+<li>The Vertical menu along the left border of the multiplexing test session</li>
+<li>The Horizontal menu above each device screen</li>
+</ol>
+<p><strong>1. Vertical menu on the left of the test session</strong></p>
+<p>The following buttons are visible on this menu:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p class="first"><em>Enable Replication</em> - Clicking on this button enables you to replicate an action that you perform on one device in the multiplexing test session on all other devices in the same test session.</p>
+<p>This feature works in cases where all devices being used in the multiplexing test session are of comparable screen size and resolution.</p>
+<p>It helps you to considerably reduce the time spent in testing on multiple devices.</p>
+</li>
+<li><p class="first"><em>Add more devices</em> - You can add more devices to a multiplexing session by clicking on this button.</p>
+<p>Clicking on this button brings up the device selection dialog. Click on the ‘<em>Select</em>’ button for the device that you wish to add to the multiplexing test session and then click on the ‘<em>Play</em>’ button. The new device screens will now be visible in the multiplexing test session.</p>
+</li>
+<li><p class="first"><em>Take Screenshot</em> - On clicking on this button, a screenshot of all device screens in the test session is taken and downloaded to your computer.</p>
+</li>
+<li><p class="first"><em>End Test Session</em> - Clicking on this button ends the multiplexing test session in its entirety and all devices that are used in the test session are freed and made available for new test sessions.</p>
+</li>
+</ol>
+</div></blockquote>
+<p><strong>2. Horizontal menu above each device screen</strong></p>
+<p>This menu is visible above ech device screen in the test session and is specific to that device. The following buttons are visibleon this menu:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><em>Switch to Manual mode</em> - Clicking on this button, opens that specific device in a single-device manual test session. You can always go back to your multiplexing test session by clicking on the ‘<em>Switch to Mutliplexing</em>’ button in the manual test session.</li>
+<li><em>Download device logcat</em> - As the name suggests, clicking on this button downloads the logcat report for that device.</li>
+<li><em>View device logcat</em> - Clicking on this button displays the logcat for that device on a new browser tab.</li>
+<li><em>End Test Session</em> - You can remove a specific device from a multiplexing test session by clicking on ‘End Test Session’ button on the horizontal menu bar on that device.</li>
+</ol>
+</div></blockquote>
 </div>
 
 

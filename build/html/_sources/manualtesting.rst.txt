@@ -27,7 +27,7 @@ To start a Manual test session:
  
 2. Select the device you wish to test on by clicking on the 'Select' button under the device
 
-   RobusTest provides you a way to select multiple devices in parallel to perform your manual testing. Click here to know how 
+   *Note:* RobusTest provides you a way to select multiple devices in parallel to perform your manual testing. To know more go to the page on :ref:`multi-device-testing` 
   
 3. Once you have selected the device, click on the 'Play' button on the top right corner
  
