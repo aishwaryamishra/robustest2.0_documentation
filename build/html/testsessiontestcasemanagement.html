@@ -178,7 +178,9 @@
   <div class="section" id="test-session-test-case-management">
 <span id="test-session-testcase-management"></span><h1>4. Test Session - Test Case Management<a class="headerlink" href="#test-session-test-case-management" title="Permalink to this headline">¶</a></h1>
 <p><strong>1. Call a phone number</strong></p>
+<p>Under Construction</p>
 <p><strong>2. Read OTP from phone</strong></p>
+<p>Under Construction</p>
 <p><strong>3. Send Instruction to device</strong></p>
 <p>At times, you may want to execute commands through the device keyboard. You can use the ‘Send Instruction to device’ button to execute actions performed on the device keyboard.</p>
 <img alt="_images/sendinstructiontodevice.png" src="_images/sendinstructiontodevice.png" />
@@ -223,6 +225,28 @@
 <p><strong>11. Verification</strong></p>
 <p>Check out the <a class="reference internal" href="verificationglobal.html#verification-global"><span class="std std-ref">Using the ‘Verification’ button option</span></a> page to understand this functionality</p>
 <p><strong>12. Execute REST API</strong></p>
+<p>RobusTest enables you to record test steps to make REST API calls. You can then check the response of these calls for later verification.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>On clicking on the ‘Execute REST API’ button, a window pops up</li>
+</ol>
+<img alt="_images/executerestapi.png" src="_images/executerestapi.png" />
+<ol class="arabic simple" start="2">
+<li>On the pop-up window, there are 3 secions available:<ol class="loweralpha">
+<li>Basic
+* Provide the REST API and the Request Type (i.e., GET, POST, DELETE, etc) here
+* If required provide a timeout for the API call</li>
+<li>Authorization
+* You can specify the type of Authorization to be used for the API and provide appropriate credential values as required. E.g. For Basic Authorization you need to provide the username and password.</li>
+<li>Header
+* Specify in this section any additional parameters that need to be passed as part of the REST API call</li>
+</ol>
+</li>
+<li>Provide details to invoke the REST API and click on the ‘SAVE’ button.</li>
+<li>A test step corresponding to the invoking of the API is now seen created.</li>
+<li>The response of the API call can be seen in the ‘Return Data’ section of the test step. These values can be used for verification.</li>
+</ol>
+</div></blockquote>
 <p><strong>13. Import Function</strong></p>
 <p>User can import functions created by clicking on the ‘Import Function’ button</p>
 <img alt="_images/importfunction1.png" src="_images/importfunction1.png" />
@@ -231,10 +255,57 @@
 <p>The function is now seen in a test step as part of the test case</p>
 <img alt="_images/importfunction3.png" src="_images/importfunction3.png" />
 <p><strong>14. Execute Deeplink</strong></p>
+<p>You can use this functionality to rcord a test step to execute a deeplink in your app. For this, provide the deeplink URL (and a Package name, if required) and click on the ‘Save’ button.</p>
 <p><strong>15. Get Current Context</strong></p>
 <p><strong>16. Set Current Context</strong></p>
 <p><strong>17. Execute Database calls</strong></p>
+<p>Clicking on this button enables you to execute Database queries.</p>
+<blockquote>
+<div><blockquote>
+<div><img alt="_images/executedbquery.png" src="_images/executedbquery.png" />
+</div></blockquote>
+<ol class="arabic simple">
+<li>On the ‘Execute DB Query’ window that opens, enter the following information:<ul>
+<li><em>DB Provider</em> - Presently we support Oracle</li>
+<li><em>Connection String</em> - This should be in the format: <em>username/password&#64;db_host:port/db_name</em></li>
+<li><em>DB Query</em> - provide the database query to be executed</li>
+<li><em>Result Row</em></li>
+</ul>
+</li>
+<li>Click on the ‘Save’ button to execute the query</li>
+<li>A corresponding test step is created in the test step table. The output of the query is viisble in the ‘Return Data’ section of the test step.</li>
+</ol>
+</div></blockquote>
 <p><strong>18. Manage Android Permission Alerts</strong></p>
+<p>On Android version 6.0 and later, Android provides the user the option to ‘<em>Allow</em>’ or ‘<em>Deny</em>’ different kinds of permissions to an app on the user’s mobile device. These include permissions to access ‘Contacts’, make phone calls, send SMS, access location, etc.</p>
+<p>On RobusTest, after you have started an automation test session for an app, if Android Permission Alerts pop-up, then, <em>the default way of handling these alerts is to ‘Allow’ all such requests</em>.</p>
+<p>No test steps are created for the handling of these alerts.</p>
+<p>However, RobusTest provides you a highly customisable way to handle these permissions too.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Click on the ‘<em>Manage Android Permission Alerts</em>’ button on the header</li>
+</ol>
+<blockquote>
+<div><img alt="_images/managepermissionalerts.png" src="_images/managepermissionalerts.png" />
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p class="first">On the pop window that opens, you have the following options:</p>
+<ul class="simple">
+<li><em>Auto - Allow All Alerts</em>: This is the default option on RobusTest. If this option is selected, then the ‘<em>Allow</em>’ button is clicked on for all Android Permission Alerts that pop up.</li>
+</ul>
+<p>These alerts are handled automatically. No test step is created for the same.</p>
+<ul class="simple">
+<li><em>Auto - Deny All Alerts</em>: If this option is selected, then the ‘<em>Deny</em>’ button is clicked on for all Android Permission Alerts that pop up.</li>
+</ul>
+<p>These alerts are handled automatically. No test step is created for the same.</p>
+<ul class="simple">
+<li><em>Handle in test case</em>: If this option is selected, then the user is provided the flexibility to determine how each permission alert is to be handled.</li>
+</ul>
+<p>For each Android Permission Alert that pops up, you can choose to click either on the ‘<em>Allow</em>’ button or on the ‘<em>Deny</em>’ button.</p>
+<p>A corresponding test step is created for the same. This will be a part of the test case.</p>
+</li>
+</ol>
+</div></blockquote>
 </div>
 
 

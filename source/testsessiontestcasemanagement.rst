@@ -5,16 +5,17 @@ Test Session - Test Case Management
 
 **1. Call a phone number**
 
+Under Construction
+
 **2. Read OTP from phone**
 
-
+Under Construction
 
 **3. Send Instruction to device**
 
 At times, you may want to execute commands through the device keyboard. You can use the 'Send Instruction to device' button to execute actions performed on the device keyboard.
 
 .. image:: _static/sendinstructiontodevice.png
-
 
 
 **4. Hide keyboard if displayed**
@@ -96,6 +97,28 @@ Check out the :ref:`verification-global` page to understand this functionality
 
 **12. Execute REST API**
 
+RobusTest enables you to record test steps to make REST API calls. You can then check the response of these calls for later verification.
+
+  1. On clicking on the 'Execute REST API' button, a window pops up
+
+  .. image:: _static/executerestapi.png
+
+  2. On the pop-up window, there are 3 secions available:
+
+     a. Basic
+        * Provide the REST API and the Request Type (i.e., GET, POST, DELETE, etc) here
+        * If required provide a timeout for the API call
+     b. Authorization
+        * You can specify the type of Authorization to be used for the API and provide appropriate credential values as required. E.g. For Basic Authorization you need to provide the username and password.
+     c. Header
+        * Specify in this section any additional parameters that need to be passed as part of the REST API call
+
+  3. Provide details to invoke the REST API and click on the 'SAVE' button.
+
+  4. A test step corresponding to the invoking of the API is now seen created.
+
+  5. The response of the API call can be seen in the 'Return Data' section of the test step. These values can be used for verification.
+
 **13. Import Function**
 
 User can import functions created by clicking on the 'Import Function' button
@@ -114,10 +137,59 @@ The function is now seen in a test step as part of the test case
 
 **14. Execute Deeplink**
 
+You can use this functionality to rcord a test step to execute a deeplink in your app. For this, provide the deeplink URL (and a Package name, if required) and click on the 'Save' button.
+
 **15. Get Current Context**
 
 **16. Set Current Context**
 
 **17. Execute Database calls**
 
+Clicking on this button enables you to execute Database queries.
+
+   .. image:: _static/executedbquery.png
+
+  1. On the 'Execute DB Query' window that opens, enter the following information:
+     
+     * *DB Provider* - Presently we support Oracle
+
+     * *Connection String* - This should be in the format: *username/password@db_host:port/db_name* 
+
+     * *DB Query* - provide the database query to be executed
+
+     * *Result Row*
+
+  2. Click on the 'Save' button to execute the query
+
+  3. A corresponding test step is created in the test step table. The output of the query is viisble in the 'Return Data' section of the test step.
+
+
 **18. Manage Android Permission Alerts**
+
+On Android version 6.0 and later, Android provides the user the option to '*Allow*' or '*Deny*' different kinds of permissions to an app on the user's mobile device. These include permissions to access 'Contacts', make phone calls, send SMS, access location, etc.
+
+On RobusTest, after you have started an automation test session for an app, if Android Permission Alerts pop-up, then, *the default way of handling these alerts is to 'Allow' all such requests*. 
+
+No test steps are created for the handling of these alerts.
+
+However, RobusTest provides you a highly customisable way to handle these permissions too.
+
+  1. Click on the '*Manage Android Permission Alerts*' button on the header
+
+    .. image:: _static/managepermissionalerts.png
+
+  2. On the pop window that opens, you have the following options:
+
+     * *Auto - Allow All Alerts*: This is the default option on RobusTest. If this option is selected, then the '*Allow*' button is clicked on for all Android Permission Alerts that pop up. 
+
+     These alerts are handled automatically. No test step is created for the same.
+
+     * *Auto - Deny All Alerts*: If this option is selected, then the '*Deny*' button is clicked on for all Android Permission Alerts that pop up. 
+
+     These alerts are handled automatically. No test step is created for the same.
+
+     * *Handle in test case*: If this option is selected, then the user is provided the flexibility to determine how each permission alert is to be handled. 
+
+     For each Android Permission Alert that pops up, you can choose to click either on the '*Allow*' button or on the '*Deny*' button. 
+
+     A corresponding test step is created for the same. This will be a part of the test case.
