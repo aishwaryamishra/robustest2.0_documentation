@@ -211,11 +211,31 @@
 <p>This section is visible only to admin members of the project.</p>
 <p>Here, a CURL command is provided which enables the user to upload an app build to the current project remotely</p>
 <p>The general format of this command is as follows:</p>
-<p><strong>curl -X PUT ‘&lt;PROJECT IDENTIFIER&gt;h’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt;</strong></p>
-<p>Here the app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.</p>
-<p>The ‘Project Identifier’ is provided in the section while the path to the location from where the build may be picked up can be specified by a team member.</p>
-<p>You can now run the above command directly on the command line OR choose to invoke the above build-upload API through a programming script in a language of your choice.</p>
-<p>E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new bui;d gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build that is uploaded to the project.</p>
+<p><strong>curl -X PUT ‘&lt;RobusTest URL&gt;/v3/project/&lt;PROJECT IDENTIFIER&gt;/build?accesskey=&lt;USER ACCESS KEY&gt;’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt;</strong></p>
+<p>Let’s break down the different components of this command for better understanding:</p>
+<ul>
+<li><p class="first"><strong>RobusTest URL</strong>: This refers to the URL that you use to access the RobusTest platform. It would be of the form <em>http://’&lt;RobusTest IP&gt;’</em> or <em>http://’&lt;RobusTest domain&gt;’</em> E.g. <a class="reference external" href="http://robustest.this.instance.com:8085">http://robustest.this.instance.com:8085</a></p>
+</li>
+<li><p class="first"><strong>PROJECT IDENTIFIER</strong>: The ‘Project Identifier’ is how we identify the project to which we want to upload the new app build. This can be obatined as follows:</p>
+<ul class="simple">
+<li>On RobusTest, go to the Project Dashboard of the project to which the build is to be uploaded</li>
+<li>The URL displayed there is of the form <em>&lt;RobusTest IP&gt;/#/project/&lt;Project ID&gt;/dashboard</em></li>
+<li>Copy the <em>Project ID</em> value from above URL</li>
+<li>E.g. if the URL says <em>http://robustest.this.intance.com:8085/#/project/5d176ffef0238be8f3b7afa5/dashboard</em> , then, the value <em>5d176ffef0238be8f3b7afa5</em> above, is your project ID</li>
+</ul>
+</li>
+<li><p class="first"><strong>USER ACCESS KEY</strong>: Each user has a unique User Access Key associated with their profile on RobusTest.</p>
+<p>By default, the user access key will be populated in the ‘Remote build upload’ command provided on the Project Dashboard. All builds will be uploaded using the RobusTest ID of the team member whose access key is being used.</p>
+<p>Later, if you would like to upload the build using a different team member’s RobusTest ID, you need to change the value of the ‘User Access Key’ in the ‘remote build upload’ command.</p>
+<p>Please have a look at the <a class="reference internal" href="userprofile.html#user-profile"><span class="std std-ref">User Profile</span></a> page for more details on how to obtain the <em>User Access Key</em>.</p>
+</li>
+<li><p class="first"><strong>BUILD NAME WITH PATH</strong>: The path to the location from where the build can be picked is specified here. The app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.</p>
+</li>
+</ul>
+<p>A sample remote build upload command would look as follows:</p>
+<p><strong>curl -X PUT ‘http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4’ -H ‘content-Type: multipart/form-data’ -F build=&#64;/username/build/new/latestbuild.apk</strong></p>
+<p>You can now run the above command directly on the Command Line OR choose to invoke this build-upload API through a programming script in a language of your choice.</p>
+<p>E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new build gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build is uploaded to the project.</p>
 <p><strong>4. Settings</strong></p>
 <p>This section provides you the following options:</p>
 <p><em>a. Enable notifications</em> - On enabling this checkbox, each member of the team is notified whenever a new build is uploaded to the project</p>

@@ -68,15 +68,40 @@ Here, a CURL command is provided which enables the user to upload an app build t
 
 The general format of this command is as follows:
 
-**curl -X PUT '<PROJECT IDENTIFIER>h' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>**
+**curl -X PUT '<RobusTest URL>/v3/project/<PROJECT IDENTIFIER>/build?accesskey=<USER ACCESS KEY>' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>**
 
-Here the app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.
+Let's break down the different components of this command for better understanding:
 
-The 'Project Identifier' is provided in the section while the path to the location from where the build may be picked up can be specified by a team member.
+* **RobusTest URL**: This refers to the URL that you use to access the RobusTest platform. It would be of the form *http://'<RobusTest IP>'* or *http://'<RobusTest domain>'* E.g. http://robustest.this.instance.com:8085
 
-You can now run the above command directly on the command line OR choose to invoke the above build-upload API through a programming script in a language of your choice.
+* **PROJECT IDENTIFIER**: The 'Project Identifier' is how we identify the project to which we want to upload the new app build. This can be obatined as follows:
+  
+  * On RobusTest, go to the Project Dashboard of the project to which the build is to be uploaded
 
-E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new bui;d gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build that is uploaded to the project.
+  * The URL displayed there is of the form *<RobusTest IP>/#/project/<Project ID>/dashboard* 
+
+  * Copy the *Project ID* value from above URL
+
+  * E.g. if the URL says *http://robustest.this.intance.com:8085/#/project/5d176ffef0238be8f3b7afa5/dashboard* , then, the value *5d176ffef0238be8f3b7afa5* above, is your project ID
+
+* **USER ACCESS KEY**: Each user has a unique User Access Key associated with their profile on RobusTest. 
+
+  By default, the user access key will be populated in the 'Remote build upload' command provided on the Project Dashboard. All builds will be uploaded using the RobusTest ID of the team member whose access key is being used.
+
+  Later, if you would like to upload the build using a different team member's RobusTest ID, you need to change the value of the 'User Access Key' in the 'remote build upload' command.
+
+  Please have a look at the :ref:`user-profile` page for more details on how to obtain the *User Access Key*. 
+
+* **BUILD NAME WITH PATH**: The path to the location from where the build can be picked is specified here. The app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.
+
+
+A sample remote build upload command would look as follows:
+
+**curl -X PUT 'http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4' -H 'content-Type: multipart/form-data' -F build=@/username/build/new/latestbuild.apk**
+
+You can now run the above command directly on the Command Line OR choose to invoke this build-upload API through a programming script in a language of your choice.
+
+E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new build gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build is uploaded to the project.
 
 
 **4. Settings**
