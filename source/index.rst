@@ -30,6 +30,7 @@ Contents:
    userprofile
    healthpage
    adminconsole
+   continuousintegration
    bugtrackerintegration
    otherusefulinfo
    troubleshooting
