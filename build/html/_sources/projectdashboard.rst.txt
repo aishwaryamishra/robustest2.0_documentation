@@ -7,6 +7,10 @@ Project Dashboard
 .. role:: underline
     :class: underline
 
+.. |br| raw:: html
+
+    <br>
+
 The Project Dashboard provides you information about the project you have created - i.e., the app under test, the build details, project members, CI settings, etc.
 
 .. image:: _static/projectdashboard2.png
@@ -68,12 +72,12 @@ Here, a CURL command is provided which enables the user to upload an app build t
 
 The general format of this command is as follows:
 
-**curl -X PUT '<RobusTest URL>/v3/project/<PROJECT IDENTIFIER>/build?accesskey=<USER ACCESS KEY>' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH>**
+**curl -X PUT '<RobusTest URL>/v3/project/<PROJECT IDENTIFIER>/build?accesskey=<USER ACCESS KEY>' -H 'content-Type: multipart/form-data' -F build=@<BUILD NAME WITH PATH> -F  buildInfo='{"desc":"<build description>", "label":"<label>","activityClass":"<launch actvity>"}'**
 
 Let's break down the different components of this command for better understanding:
 
 * **RobusTest URL**: This refers to the URL that you use to access the RobusTest platform. It would be of the form *http://'<RobusTest IP>'* or *http://'<RobusTest domain>'* E.g. http://robustest.this.instance.com:8085
-
+  |br|
 * **PROJECT IDENTIFIER**: The 'Project Identifier' is how we identify the project to which we want to upload the new app build. This can be obatined as follows:
   
   * On RobusTest, go to the Project Dashboard of the project to which the build is to be uploaded
@@ -94,10 +98,11 @@ Let's break down the different components of this command for better understandi
 
 * **BUILD NAME WITH PATH**: The path to the location from where the build can be picked is specified here. The app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.
 
+* **buildINFO section**: This section is used to provide additional details about the build such as description, label or launch activity. It is not mandatory.
 
 A sample remote build upload command would look as follows:
 
-**curl -X PUT 'http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4' -H 'content-Type: multipart/form-data' -F build=@/username/build/new/latestbuild.apk**
+**curl -X PUT 'http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4' -H 'content-Type: multipart/form-data' -F build=@/username/build/new/latestbuild.apk -F  buildInfo='{"desc":"description from api"}'**
 
 You can now run the above command directly on the Command Line OR choose to invoke this build-upload API through a programming script in a language of your choice.
 

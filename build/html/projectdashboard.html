@@ -212,10 +212,11 @@
 <p>This section is visible only to admin members of the project.</p>
 <p>Here, a CURL command is provided which enables the user to upload an app build to the current project remotely</p>
 <p>The general format of this command is as follows:</p>
-<p><strong>curl -X PUT ‘&lt;RobusTest URL&gt;/v3/project/&lt;PROJECT IDENTIFIER&gt;/build?accesskey=&lt;USER ACCESS KEY&gt;’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt;</strong></p>
+<p><strong>curl -X PUT ‘&lt;RobusTest URL&gt;/v3/project/&lt;PROJECT IDENTIFIER&gt;/build?accesskey=&lt;USER ACCESS KEY&gt;’ -H ‘content-Type: multipart/form-data’ -F build=&#64;&lt;BUILD NAME WITH PATH&gt; -F  buildInfo=’{“desc”:”&lt;build description&gt;”, “label”:”&lt;label&gt;”,”activityClass”:”&lt;launch actvity&gt;”}’</strong></p>
 <p>Let’s break down the different components of this command for better understanding:</p>
 <ul>
-<li><p class="first"><strong>RobusTest URL</strong>: This refers to the URL that you use to access the RobusTest platform. It would be of the form <em>http://’&lt;RobusTest IP&gt;’</em> or <em>http://’&lt;RobusTest domain&gt;’</em> E.g. <a class="reference external" href="http://robustest.this.instance.com:8085">http://robustest.this.instance.com:8085</a></p>
+<li><p class="first"><strong>RobusTest URL</strong>: This refers to the URL that you use to access the RobusTest platform. It would be of the form <em>http://’&lt;RobusTest IP&gt;’</em> or <em>http://’&lt;RobusTest domain&gt;’</em> E.g. <a class="reference external" href="http://robustest.this.instance.com:8085">http://robustest.this.instance.com:8085</a>
+<br></p>
 </li>
 <li><p class="first"><strong>PROJECT IDENTIFIER</strong>: The ‘Project Identifier’ is how we identify the project to which we want to upload the new app build. This can be obatined as follows:</p>
 <ul class="simple">
@@ -232,9 +233,11 @@
 </li>
 <li><p class="first"><strong>BUILD NAME WITH PATH</strong>: The path to the location from where the build can be picked is specified here. The app build present in the location  or path mentioned in the command is uploaded to the project that is identified by the Project Idenitifier.</p>
 </li>
+<li><p class="first"><strong>buildINFO section</strong>: This section is used to provide additional details about the build such as description, label or launch activity. It is not mandatory.</p>
+</li>
 </ul>
 <p>A sample remote build upload command would look as follows:</p>
-<p><strong>curl -X PUT ‘http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4’ -H ‘content-Type: multipart/form-data’ -F build=&#64;/username/build/new/latestbuild.apk</strong></p>
+<p><strong>curl -X PUT ‘http://robustest.this.instance.com:8085/v3/project/5d176ffef0238be8f3b7afa5/build?accesskey=aY33cDmkt7B2nAjxBl6Tp2FWv4’ -H ‘content-Type: multipart/form-data’ -F build=&#64;/username/build/new/latestbuild.apk -F  buildInfo=’{“desc”:”description from api”}’</strong></p>
 <p>You can now run the above command directly on the Command Line OR choose to invoke this build-upload API through a programming script in a language of your choice.</p>
 <p>E.g. you can add the above line to your Jenkins shell script that creates a new build. As a result, whenever a new build gets created, it also gets uploaded to the project. Using RobusTest, you can now build a process, say, to test this new build by running a sanity or smoke test each time a new build is uploaded to the project.</p>
 <p><strong>4. Settings</strong></p>
