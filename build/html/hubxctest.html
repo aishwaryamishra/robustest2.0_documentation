@@ -175,26 +175,42 @@
             
   <div class="section" id="running-test-cases-on-xctest">
 <span id="hub-xctest"></span><h1>Running test cases on XCTest<a class="headerlink" href="#running-test-cases-on-xctest" title="Permalink to this headline">¶</a></h1>
-<p><strong>A.</strong> Create a project in RobusTest which you shall be using for running your tests. This needs to be done only once. Note down the project ID. Project ID is the alphanumeric number in the URL of the project dashboard.</p>
-<p><strong>B.</strong> Upload the app enterprise build to your project and note down the build ID. This needs to be done everytime you have a new app build. Build ID is the name of the file that you get when you copy the URL to the build.</p>
-<p><strong>C.</strong> Upload zipped up App XCUITests file to your project and note down the build ID. This needs to be done everytime along with a new App enterprise build. Build ID is the name of the file that you get when you copy the URL to the build.</p>
-<p><strong>D.</strong> Get your ACCESS KEY from your profile page in RobusTest.</p>
-<p><strong>E.</strong> Once you have the three pieces of information above, invoke the test using the following API</p>
+<p><strong>1.</strong> Create a project in RobusTest which you shall be using for running your tests and note down the Project ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done only once.</li>
+<li><em>Project ID</em> is the alphanumeric number in the URL of the project dashboard.</li>
+</ul>
+</div></blockquote>
+<p><strong>2.</strong> Upload the app enterprise build to your project and note down the build ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done everytime you have a new app build.</li>
+<li><em>Build ID</em> is the name of the file that you get when you copy the URL to the build.</li>
+</ul>
+</div></blockquote>
+<p><strong>3.</strong> Upload zipped up App XCUITests file to your project and note down the build ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done everytime along with a new app enterprise build.</li>
+<li>Build ID is the name of the file that you get when you copy the URL to the build. Let’s refer to this as the <em>Test Build ID</em>.</li>
+</ul>
+</div></blockquote>
+<p><strong>4.</strong> Get your ACCESS KEY from your profile page in RobusTest.</p>
+<p><strong>5.</strong> Once you have the three pieces of information above, invoke the test using the following API:</p>
 <ul class="simple">
 <li><em>API URL:</em> <strong>&lt;RobusTest URL&gt;/v3/xcuitest/job/new?accesskey=&lt;ACCESS KEY&gt;</strong></li>
 <li><em>API REQUEST TYPE:</em> <strong>POST</strong></li>
 <li><em>POST REQUEST BODY:</em></li>
 </ul>
-<div class="line-block">
-<div class="line"><strong>{</strong></div>
-<div class="line-block">
-<div class="line"><strong>“identifier”:”&lt;PR_NAME_GIVEN_BY_ENTERPRISE&gt;”,</strong></div>
-<div class="line"><strong>“deviceVersion”:”&lt;iOS version of the device&gt;”,</strong></div>
-<div class="line"><strong>“project”:”&lt;Project ID&gt;”,</strong></div>
-<div class="line"><strong>“build”:”&lt;Build ID&gt;”,</strong></div>
-<div class="line"><strong>“testBuild”:”&lt;Test Build ID&gt;”</strong></div>
-</div>
-<div class="line"><strong>}</strong></div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;PR_NAME_GIVEN_BY_ENTERPRISE&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deviceVersion&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;iOS version of the device&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;project&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Project ID&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;build&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Build ID&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;testBuild&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Test Build ID&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
 </div>
 </div>
 
