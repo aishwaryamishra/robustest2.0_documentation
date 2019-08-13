@@ -35,7 +35,7 @@ Left-clicking on a highlighted element opens up a context menu which lets you do
 
   :bolditalic:`Pinch.         -` this records a 'Pinch' action on the object that you have selected
 
-  :bolditalic:`Swipe          -` this records a 'Swipe' action on the object that you have selected
+  :bolditalic:`Swipe          -` this records a 'Swipe' action on the object that you have selected. For more details, go to the :ref:`swipe-on-page` section
 
   :bolditalic:`Swipe Till.    -` this records a 'Swipe Till' action on the object that you have selected
 

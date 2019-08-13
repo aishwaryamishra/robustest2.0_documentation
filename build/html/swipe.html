@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>6. Automation testing &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>Swipe &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -29,9 +29,7 @@
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Recording user actions" href="ondevicecontextmenu.html" />
-    <link rel="prev" title="1. Multi-device testing" href="multidevicetesting.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -80,21 +78,13 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Automation testing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="ondevicecontextmenu.html">1. Recording user actions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="teststepmanagement.html">2. Test Step Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testsessiondevicemanagement.html">3. Test Session - Device Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testsessiontestcasemanagement.html">4. Test Session - Test Case Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="testsessionsessionmanagement.html">5. Test Session - Session Management</a></li>
-<li class="toctree-l2"><a class="reference internal" href="managetestcases.html">6. Creating and Managing Test Cases</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
@@ -155,13 +145,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>6. Automation testing</li>
+      <li>Swipe</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/automationtesting.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/swipe.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -174,41 +164,41 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="automation-testing">
-<h1>6. Automation testing<a class="headerlink" href="#automation-testing" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<p>Creating and running automation test cases considerably speeds up the testing process and helps reduce human error.</p>
-<p>RobusTest enables you to create automation test cases in a quick and easy way with minimal to zero coding.</p>
-<p>Any Automation testing plan should comprise of the following 3 processes:</p>
+  <div class="section" id="swipe">
+<span id="swipe-on-page"></span><h1>Swipe<a class="headerlink" href="#swipe" title="Permalink to this headline">¶</a></h1>
+<p>Recording a ‘Swipe’ action on RobusTest essentially consists of providing two parameters:</p>
 <ol class="arabic simple">
-<li>Creating an automation test case</li>
-<li>Running or Executing an automation test case</li>
-<li>Generating test run reports</li>
+<li>the <em>direction</em> is which you want to swipe; and;</li>
+<li>the <em>number of times</em> you want to perform the swipe action</li>
 </ol>
-<p>In this section, let’s look at how we can create automation test cases</p>
-<p>In order to start an automation test session:</p>
-<ol class="arabic">
-<li><p class="first">Click on the ‘Automation’ icon on the Project Dashboard</p>
-<p>A device selection screen now pops up. You may search for a device on the ‘Device selection screen’ based on device name, platform version, screen size, hardware configuration (e.g. Memory and CPU),  node name, node IP, etc. <br/></p>
-</li>
-<li><p class="first">Select the device you wish to test on by clicking on the ‘Select’ button under the device</p>
-<p>The device screen now comes up and you can see that your app is installed on the device.</p>
-<p>Your automation test creation session is now in progress.</p>
-</li>
-</ol>
-<p><strong>Creating Automation Test Cases</strong></p>
-<p>RobusTest not only allows you to record different kinds of user actions but also provides you with a host of features that enable you to automate a wide variety of complex user scenarios.</p>
-<p>Let’s have a look at how RobusTest helps you create automation test cases</p>
+<img alt="_images/swipe.png" src="_images/swipe.png" />
+<p>RobusTest provides you two ways of recording a swipe action. These are:</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="ondevicecontextmenu.html#ondevice-context-menu"><span class="std std-ref">Recording user actions</span></a></li>
-<li><a class="reference internal" href="teststepmanagement.html#teststep-management"><span class="std std-ref">Test Step Management</span></a></li>
-<li><a class="reference internal" href="testsessiondevicemanagement.html#test-session-device-management"><span class="std std-ref">Test Session - Device Management</span></a></li>
-<li><a class="reference internal" href="testsessiontestcasemanagement.html#test-session-testcase-management"><span class="std std-ref">Test Session - Test Case Management</span></a></li>
-<li><a class="reference internal" href="testsessionsessionmanagement.html#test-session-session-management"><span class="std std-ref">Test Session - Session Management</span></a></li>
-<li><a class="reference internal" href="managetestcases.html#manage-testcases"><span class="std std-ref">Creating and Managing Test Cases</span></a></li>
+<li>Swipe</li>
+<li>Swipe Till</li>
 </ol>
-<p>You can click on the ‘End Session’ button to end the recording session.</p>
+<p>Both the above options can be seen on the context menu that opens up on executing a left-click with your mouse on the device screen.</p>
+<p>Let’s have a look at the difference between these two.</p>
+<p><strong>1. Swipe</strong></p>
+<p>This option allows you to record a swipe from any point on the page for the number of times that you specify. It is not dependent on any element present on the page. It just executes the ‘Swipe’ action.</p>
+<blockquote>
+<div><p><strong>a.</strong> <em>Hover the mouse over *any</em> element on the app screen so that it is highlighted by a rectangle.*</p>
+<p><strong>b.</strong> <em>Left-click on the element and select the ‘Swipe’ option on the context menu.</em></p>
+<p><strong>c.</strong> <em>Ensure that you have provided the correct values for *direction</em> and <em>number of times to scroll</em> on the pop-up window that opens up.*</p>
+<p><strong>d.</strong> <em>Click on the ‘Save’ button. A swipe test step is now created.</em></p>
+</div></blockquote>
+<p><strong>2. Swipe Till</strong></p>
+<p>You can use this option to scroll down until a specific element on the app page is arrived at.</p>
+<blockquote>
+<div><p><strong>a.</strong> Switch to Manual mode in the Automation test session</p>
+<p><strong>b.</strong> Manually scroll until you arrive at the element till which you would like to scroll</p>
+<p><strong>c.</strong> Switch back to Automation mode</p>
+<p><strong>d.</strong> Hover the mouse over the above element so that it is highlighted by a rectangle</p>
+<p><strong>e.</strong> Left-click on the element and select the ‘Swipe Till’ option on the context menu</p>
+<p><strong>f.</strong> Ensure that you have provided the correct values for <em>direction</em> and <em>number of times to scroll</em> on the pop-up window that opens up</p>
+<p><strong>g.</strong> Click on the ‘Save’ button. A swipe test step is now created.</p>
+</div></blockquote>
+<p>If the element specified is not present OR if it is not arrived at on the page within the number of scroll tries specified, then an error message is displayed.</p>
 </div>
 
 
@@ -216,15 +206,6 @@
            
           </div>
           <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="ondevicecontextmenu.html" class="btn btn-neutral float-right" title="1. Recording user actions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="multidevicetesting.html" class="btn btn-neutral" title="1. Multi-device testing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
   
 
   <hr/>
