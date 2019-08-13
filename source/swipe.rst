@@ -27,27 +27,27 @@ This option allows you to record a swipe from any point on the page for the numb
 
   **b.** *Left-click on the element and select the 'Swipe' option on the context menu.*
 
-  **c.** *Ensure that you have provided the correct values for *direction* and *number of times to scroll* on the pop-up window that opens up.*
+  **c.** *Ensure that you have provided the correct values for 'direction' and 'number of times to scroll' on the pop-up window that opens up*
 
-  **d.** *Click on the 'Save' button. A swipe test step is now created.*
+  **d.** *Click on the 'Save' button. A swipe test step is now created*
 
 
 **2. Swipe Till**
 
 You can use this option to scroll down until a specific element on the app page is arrived at. 
 
-  **a.** Switch to Manual mode in the Automation test session
+  **a.** *Switch to Manual mode in the Automation test session*
 
-  **b.** Manually scroll until you arrive at the element till which you would like to scroll
+  **b.** *Manually scroll until you arrive at the element till which you would like to scroll*
 
-  **c.** Switch back to Automation mode
+  **c.** *Switch back to Automation mode*
 
-  **d.** Hover the mouse over the above element so that it is highlighted by a rectangle
+  **d.** *Hover the mouse over the above element so that it is highlighted by a rectangle*
 
-  **e.** Left-click on the element and select the 'Swipe Till' option on the context menu
+  **e.** *Left-click on the element and select the 'Swipe Till' option on the context menu*
 
-  **f.** Ensure that you have provided the correct values for *direction* and *number of times to scroll* on the pop-up window that opens up
+  **f.** *Ensure that you have provided the correct values for  'direction' and 'number of times to scroll' on the pop-up window that opens up*
 
-  **g.** Click on the 'Save' button. A swipe test step is now created.
+  **g.** *Click on the 'Save' button. A swipe test step is now created*
 
 If the element specified is not present OR if it is not arrived at on the page within the number of scroll tries specified, then an error message is displayed.
