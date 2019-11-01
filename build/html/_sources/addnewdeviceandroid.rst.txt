@@ -54,9 +54,20 @@ cable for better data transfer, reliable connectivity and better device charging
 :bolditalic:`1.Security App`
 
 a. Tap on the Security App
-b. Tap on the Permissions Icon
+b. Tap on the Permissions Icon 
 c. Tap on the Settings icon on the top right
 d. Make sure Install via USB is TURNED OFF
+
+
+For new device models:
+
+a. Tap on the Security App
+b. Tap on the Settings icon on the top right
+c. Tap on 'Security Scan'
+d. Disable 'Scan before installing'
+e. Disable 'Auto-updates'
+f. Disable 'System Updates'
+
 
 :bolditalic:`2. Developer Settings`
 

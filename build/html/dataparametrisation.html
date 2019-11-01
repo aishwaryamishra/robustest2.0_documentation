@@ -17,36 +17,37 @@
   
 
   
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
     
 
   
-
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="8. Run Settings" href="runsettings.html" />
+    <link rel="next" title="13. Scheduling your tests" href="scheduling.html" />
     <link rel="prev" title="2. Functions" href="functions.html" /> 
-
-  
-  <script src="_static/js/modernizr.min.js"></script>
-
 </head>
 
 <body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
-
     
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
-        <div class="wy-side-nav-search">
+        <div class="wy-side-nav-search" >
           
 
           
@@ -87,25 +88,26 @@
 <li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
 <li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="verification.html">1. Verification</a></li>
 <li class="toctree-l2"><a class="reference internal" href="functions.html">2. Functions</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">3. Parametrisation of Data</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="runsettings.html">8. Run Settings</a></li>
-<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">9. Executing Test Runs</a></li>
-<li class="toctree-l1"><a class="reference internal" href="liveview.html">10. Live View</a></li>
-<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">11. Performance Testing</a></li>
-<li class="toctree-l1"><a class="reference internal" href="automationreports.html">12. Automation Reports</a></li>
 <li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
 <li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
 <li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
-<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">18. Integrating Bug Tracker with Robustest</a></li>
-<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">19. Other Useful  Information</a></li>
-<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">20. Troubleshooting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
 </ul>
 
             
@@ -151,7 +153,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-          <li><a href="advancedautomationconcepts.html">7. Advanced Automation Concepts</a> &raquo;</li>
+          <li><a href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a> &raquo;</li>
         
       <li>3. Parametrisation of Data</li>
     
@@ -189,10 +191,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="runsettings.html" class="btn btn-neutral float-right" title="8. Run Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="scheduling.html" class="btn btn-neutral float-right" title="13. Scheduling your tests" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="functions.html" class="btn btn-neutral" title="2. Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="functions.html" class="btn btn-neutral float-left" title="2. Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -218,26 +220,16 @@
   
 
 
-  
-
-    
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
-    
-
-  
-
-  <script type="text/javascript" src="_static/js/theme.js"></script>
-
   <script type="text/javascript">
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+
+  
+  
+    
+   
 
 </body>
 </html>
