@@ -3,7 +3,7 @@
 Running test cases on XCTest
 ============================
 
-**1.** Create a project in RobusTest which you shall be using for running your tests and note down the Project ID.
+**1.** Identify the project which you shall use for running your tests. If you do not already have such a project, then you need to first create a project. Once identified, note down the Project ID for the project.
 
   * This needs to be done only once. 
   * *Project ID* is the alphanumeric number in the URL of the project dashboard.
