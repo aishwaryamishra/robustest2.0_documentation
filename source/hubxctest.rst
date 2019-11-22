@@ -20,13 +20,13 @@ Running test cases on XCTest
 
 **4.** Get your ACCESS KEY from your profile page in RobusTest.
 
-**5.** Once you have the three pieces of information above, invoke the test using the following API:
+**5.** Once you have the three pieces of information above, invoke the test using the following API details:
 
-* *API URL:* **<RobusTest URL>/v3/xcuitest/job/new?accesskey=<ACCESS KEY>**
+* *URL:* **<RobusTest URL>/v3/xcuitest/job/new?accesskey=<ACCESS KEY>**
 
-* *API REQUEST TYPE:* **POST**
+* *METHOD:* **POST**
 
-* *POST REQUEST BODY:*
+* *PAYLOAD:*
 
 ::
 
