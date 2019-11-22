@@ -31,7 +31,7 @@ Running test cases on XCTest
 ::
 
    { 
-     "identifier":"<PR_NAME_GIVEN_BY_ENTERPRISE>",
+     "identifier":"<IDENTIFIER_NAME_GIVEN_BY_ENTERPRISE>",
      "deviceVersion":"<iOS version of the device>",
      "project":"<Project ID>",
      "build":"<Build ID>",
