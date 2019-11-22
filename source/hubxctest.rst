@@ -13,7 +13,7 @@ Running test cases on XCTest
   * This needs to be done everytime you have a new app build. 
   * *Build ID* is the name of the file that you get when you copy the URL to the build.
 
-**3.** Upload zipped up App XCUITests file to your project and note down the build ID.
+**3.** Upload the zipped up xctest file to your project and note down the build ID.
 
   * This needs to be done everytime along with a new app enterprise build. 
   * Build ID is the name of the file that you get when you copy the URL to the build. Let's refer to this as the *Test Build ID*.
