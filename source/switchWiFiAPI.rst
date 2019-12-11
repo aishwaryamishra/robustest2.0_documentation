@@ -1,5 +1,5 @@
-API to execute ADB commands from within an Espresso test
-========================================================
+API to switch to specific SSID
+==============================
 
 .. role:: bolditalic
    :class: bolditalic
@@ -9,21 +9,23 @@ API to execute ADB commands from within an Espresso test
 
 **API Definiton**
 
-​Method: POST
+
+​HTTP Method: PUT
 
 ​
-URL:
+*URL:*
 
-http://<RobusTest URL>/v3/device/shell?accesskey=<user_access_key>
+http://<RobusTest URL>/v3/testsession/<testsession_id>/changewifi?accesskey=<access key>
+
 ​
-Payload:
+*Payload:*
 
 .. code-block:: JSON
 
- {
-    "_id" : "device_id",
-    "command" : "<ADB SHELL COMMAND>"
- }
+  {
+    "ssid" : "<ssid value>",
+    "password" : "<password value>"
+  }
 
 ​
 Since Device ID needs to be provided as part of the API payload, you can find the device id through the following Java code
@@ -35,18 +37,19 @@ Since Device ID needs to be provided as part of the API payload, you can find th
 
 **Sample API Invocation**
 
-Method: POST
-​
+HTTP Method: PUT
 
-URL:
-
-http://devicelab.robustest.com/v3/device/shell?accesskey=1234DFFGG24FDSD
 ​
-Payload:
+*URL:*
+
+http://devicelab.robustest.com/v3/testsession/123SFSAD312313SDF/changewifi?accesskey=1234DFFGG24FDSD
+
+​
+*Payload:*
 
 .. code-block:: JSON
 
   {
-    "_id" : "2132SDSFDSFDSF",
-    "command" : "ls /data/local/tmp/"
+    "ssid" : "RobusTest_WiFi",
+    "password" : "AlwaysKeepTesting"
   }

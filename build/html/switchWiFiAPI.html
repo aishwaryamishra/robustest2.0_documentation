@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API to execute ADB commands from within an Espresso test &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>API to switch to specific SSID &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -144,13 +144,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>API to execute ADB commands from within an Espresso test</li>
+      <li>API to switch to specific SSID</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/adbEspressoAPI.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/switchWiFiAPI.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,18 +163,18 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="api-to-execute-adb-commands-from-within-an-espresso-test">
-<h1>API to execute ADB commands from within an Espresso test<a class="headerlink" href="#api-to-execute-adb-commands-from-within-an-espresso-test" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="api-to-switch-to-specific-ssid">
+<h1>API to switch to specific SSID<a class="headerlink" href="#api-to-switch-to-specific-ssid" title="Permalink to this headline">¶</a></h1>
 <p><strong>API Definiton</strong></p>
-<p>​Method: POST</p>
+<p>​HTTP Method: PUT</p>
 <p>​
-URL:</p>
-<p><a class="reference external" href="http:/">http:/</a>/&lt;RobusTest URL&gt;/v3/device/shell?accesskey=&lt;user_access_key&gt;
-​
-Payload:</p>
+<em>URL:</em></p>
+<p><a class="reference external" href="http:/">http:/</a>/&lt;RobusTest URL&gt;/v3/testsession/&lt;testsession_id&gt;/changewifi?accesskey=&lt;access key&gt;</p>
+<p>​
+<em>Payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-   <span class="nt">&quot;_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;device_id&quot;</span><span class="p">,</span>
-   <span class="nt">&quot;command&quot;</span> <span class="p">:</span> <span class="s2">&quot;&lt;ADB SHELL COMMAND&gt;&quot;</span>
+  <span class="nt">&quot;ssid&quot;</span> <span class="p">:</span> <span class="s2">&quot;&lt;ssid value&gt;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span> <span class="p">:</span> <span class="s2">&quot;&lt;password value&gt;&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -185,15 +185,15 @@ Since Device ID needs to be provided as part of the API payload, you can find th
 </pre></div>
 </div>
 <p><strong>Sample API Invocation</strong></p>
-<p>Method: POST
-​</p>
-<p>URL:</p>
-<p><a class="reference external" href="http://devicelab.robustest.com/v3/device/shell?accesskey=1234DFFGG24FDSD">http://devicelab.robustest.com/v3/device/shell?accesskey=1234DFFGG24FDSD</a>
-​
-Payload:</p>
+<p>HTTP Method: PUT</p>
+<p>​
+<em>URL:</em></p>
+<p><a class="reference external" href="http://devicelab.robustest.com/v3/testsession/123SFSAD312313SDF/changewifi?accesskey=1234DFFGG24FDSD">http://devicelab.robustest.com/v3/testsession/123SFSAD312313SDF/changewifi?accesskey=1234DFFGG24FDSD</a></p>
+<p>​
+<em>Payload:</em></p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-  <span class="nt">&quot;_id&quot;</span> <span class="p">:</span> <span class="s2">&quot;2132SDSFDSFDSF&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;command&quot;</span> <span class="p">:</span> <span class="s2">&quot;ls /data/local/tmp/&quot;</span>
+  <span class="nt">&quot;ssid&quot;</span> <span class="p">:</span> <span class="s2">&quot;RobusTest_WiFi&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span> <span class="p">:</span> <span class="s2">&quot;AlwaysKeepTesting&quot;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
