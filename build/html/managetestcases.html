@@ -1,0 +1,279 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6. Creating and Managing Test Cases &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="7. Run Settings" href="runsettings.html" />
+    <link rel="prev" title="5. Test Session - Session Management" href="testsessionsessionmanagement.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="automationtesting.html">6. Automation testing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ondevicecontextmenu.html">1. Recording user actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teststepmanagement.html">2. Test Step Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessiondevicemanagement.html">3. Test Session - Device Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessiontestcasemanagement.html">4. Test Session - Test Case Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessionsessionmanagement.html">5. Test Session - Session Management</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6. Creating and Managing Test Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="automationtesting.html">6. Automation testing</a> &raquo;</li>
+        
+      <li>6. Creating and Managing Test Cases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/managetestcases.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="creating-and-managing-test-cases">
+<span id="manage-testcases"></span><h1>6. Creating and Managing Test Cases<a class="headerlink" href="#creating-and-managing-test-cases" title="Permalink to this headline">¶</a></h1>
+<p>On the top right corner of your Automation session, you will see a group of buttons that help you manage your test cases</p>
+<img alt="_images/teststep3.png" src="_images/teststep3.png" />
+<p>Let’s go through each of them</p>
+<ul>
+<li><p class="first"><em>Import test case</em> - You can import an existing test case into an automation test session by clicking on this button.</p>
+<blockquote>
+<div><ul class="simple">
+<li>On clicking on the ‘Import test case button’, a window pops up with a list of all test cases being displayed.</li>
+<li>Click on the test case you want to import and then click on the ‘Save’ button</li>
+<li>The test case is now seen loaded into the test session. You can now execute test steps in the test case</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first"><em>Remove imported test case</em> - Let’s say you imported a test case, worked on it and updated it. Now you would like to create a new test case afresh. How do you clear the test step table?</p>
+</li>
+</ul>
+<p>You can do so by clicking on the ‘Remove imported test case’ button. This removes the test case from the test session and clears the test step table. You can now go ahead and start recording a new test case.</p>
+<p>This button will be visible only after an existing test case has been imported or a new test case is created &amp; saved.</p>
+<ul class="simple">
+<li><em>Update test case</em> - Sometimes you may want to update an existing test case. In such cases, you first import the test case into a test session and then proceed to make the necessary changes.</li>
+</ul>
+<p>Once your changes are complete, click on the ‘Update test case’ button. An ‘Update test case’ window pops up.</p>
+<p>You can choose to modify the name or description of the test case on this window.</p>
+<p>You also have the option to add tags to mark the test case. E.g. Smoke, Regression, Login, Payments, etc.</p>
+<dl class="docutils">
+<dt>To create a tag:</dt>
+<dd><ul class="first last simple">
+<li>Enter a tag name on the ‘Test case tag’ field</li>
+<li>Hit ‘Enter’. The tag is now created</li>
+</ul>
+</dd>
+</dl>
+<p>Now click on the ‘Update’ button to save the changes made to the test case.</p>
+<p>This button will be visible only after an existing test case has been imported or a new test case is created &amp; saved.</p>
+<ul class="simple">
+<li><em>Save new test case</em> - You can save a newly created automation test case clicking on this button.</li>
+</ul>
+<p>If you have imported an existing test case, then, on clicking on the ‘Save new test case’ button, you can save this test case with a new name and create a new test case. The originally imported test case remains the same as it were.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="runsettings.html" class="btn btn-neutral float-right" title="7. Run Settings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="testsessionsessionmanagement.html" class="btn btn-neutral" title="5. Test Session - Session Management" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

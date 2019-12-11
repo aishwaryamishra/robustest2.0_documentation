@@ -1,0 +1,346 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Best Practices in Automating Tests using RobusTest &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="21. Troubleshooting" href="troubleshooting.html" />
+    <link rel="prev" title="Adding new devices to RobusTest - iOS" href="addnewdeviceios.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceandroid.html">Adding new devices to RobusTest - Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="addnewdeviceios.html">Adding new devices to RobusTest - iOS</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Best Practices in Automating Tests using RobusTest</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="otherusefulinfo.html">20. Other Useful  Information</a> &raquo;</li>
+        
+      <li>Best Practices in Automating Tests using RobusTest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/bestpracticesautomation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="best-practices-in-automating-tests-using-robustest">
+<span id="best-practices-in-automation"></span><h1>Best Practices in Automating Tests using RobusTest<a class="headerlink" href="#best-practices-in-automating-tests-using-robustest" title="Permalink to this headline">¶</a></h1>
+<p><strong>1. Name test steps appropriately</strong></p>
+<ul>
+<li><p class="first">When recording a test case, RobusTest automatically generates test steps based on the actions performed. Test steps are created with the intention of being easily understandable.</p>
+</li>
+<li><p class="first">However, in many cases the test steps are not intuitive because of various reasons e.g. no content-desc provided for the element.</p>
+</li>
+<li><p class="first">It is, therefore, recommended that the test steps are reviewed and checked for easy understanding for all users. In case required, test steps can be easily renamed.</p>
+</li>
+<li><dl class="first docutils">
+<dt>This will help in :-</dt>
+<dd><ul class="first last">
+<li><p class="first">easily understanding the test case</p>
+</li>
+<li><p class="first">faster and easier debugging of errors from the functional reports</p>
+<p>E.g. the default step name that says ‘Tap on Relative Layout’. This makes it difficult to understand from the reports or from the test script on what the intended action is.</p>
+<p>Instead, the test step should be renamed in a more meaningful manner such as ‘Tap on the option Recharge’.</p>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>2. Use functions wherever possible</strong></p>
+<ul>
+<li><p class="first">RobusTest enables creation of functions out of existing test cases. This is a powerful feature that helps in reducing the time &amp; effort to automate. It also enables easy maintenance and update of test code in case of changes in the mobile application.</p>
+</li>
+<li><p class="first">Use functions wherever a series of steps form a logical unit, e.g. series of steps that capture customer data, selecting a usage plan, selecting a rental plan, etc.</p>
+</li>
+<li><p class="first">For actions that are repeated across more than one test scenarios, the use of functions helps with re-usability, thereby reducing the time spent in automation.</p>
+</li>
+<li><p class="first">Using functions will significantly reduce the amount of future time spent in incorporating changes to app flows, data, element resource ids, etc.</p>
+</li>
+<li><p class="first">At the very minimum have one function to capture the actions performed on each screen of the app.</p>
+</li>
+<li><p class="first">You can break this down further based on how a particular app screen is structured. Eg., on a single page where you are entering customer details, capturing images, selecting a number, etc, each can have a function of its own. The ‘customer details’ function can itself be broken down into functions for ‘personal details’, customer address’, etc. as applicable</p>
+<p>E.g. Say, there are a series of standalone test steps (i.e., test steps not inside a function) where a 4G Plan is being selected and that these steps are repeated in a number of test cases. In future, if the specific plan being selected changes, you would have to go to each and every test case and update them.</p>
+<p>Instead, have these steps within a function named ‘Select Rental Plan’. Now, any change in the way a rental plan is created would only require a one time change within this function script. This change is reflected in all test cases that call this function.</p>
+</li>
+</ul>
+<p><strong>3. Perform a ‘Swipe’ action in small increments</strong></p>
+<ul class="simple">
+<li>While automating a ‘Swipe Up’ or a ‘Swipe Down’ action, it is recommended to do so in small incremental movements, instead of one single long swipe across the screen. This would ensure that the same automation script will work across device screens of different sizes.</li>
+</ul>
+<p><strong>4. Use the element attributes to define better XPaths</strong></p>
+<ul class="simple">
+<li>RobusTest is designed to create highly accurate and robust XPaths for elements in the mobile app. However, in certain cases the auto-generated XPaths may not work due to various reasons e.g. duplicate resource ids, non-existing resource ids.</li>
+<li>When tapping on a button or a link with a text, which is not subject to frequent changes, it would be a good practice to improve the XPath by adding to it element attribute values that can help in identifying the element uniquely e.g. ‘text’ or ‘content-desc’.</li>
+<li>The XPath, thus modified to make it further unique, makes it easier to identify elements when the resource id is not unique or non-existent.</li>
+</ul>
+<p><strong>5. Use the ‘Find Concurrent Elements’ functionality</strong></p>
+<ul class="simple">
+<li>Often times  we find multiple elements overlaying one another around the same geographical area within a screen of an app. Using the ‘Find Concurrent Elements’ option will help in this scenario to identify the correct element that the user wants to perform an action on.</li>
+<li>Using the ‘Find Concurrent Elements’ option will display a list of elements that occupy the area within the app where the user has performed a left-click action. Select the required element and click on ‘OK’. Now, any subsequent action performed, such as Tap, Store, Verify, etc, is done on the element selected in the previous step from the list.</li>
+</ul>
+<p><strong>6. Use meaningful names for Stored variable</strong></p>
+<ul>
+<li><p class="first">When storing a value in a variable, ensure that the variable name is something meaningful and unique.</p>
+<p>E.g Initial Data Balance for Postpaid, Customer First Name, etc. This makes it easier to pick the right variable when doing a verification against it.</p>
+</li>
+</ul>
+<p><strong>7. Mention the variable name in test step while using the ‘Store’ option</strong></p>
+<ul>
+<li><p class="first">When using the ‘Store’ option to store a value in a variable, by default, the test step gets generated with a description in the format: Store &lt;value&gt; for later verification.</p>
+<p>E.g. Store “10” for later verification  &lt;- Here 10 may be the initial data balance in GB for a postpaid customer</p>
+</li>
+<li><p class="first">Mentioning the variable name in the test step makes it easier to understand the test script and the functional reports. E.g. Store initial postpaid data balance for later verification</p>
+</li>
+</ul>
+<p><strong>8. Provide proper descriptions for test cases</strong></p>
+<ul class="simple">
+<li>While saving an automation test script, ensure that a meaningful name and description is provided.</li>
+<li>When a test case fails, a relevant description helps the user to identify the business flow correctly without spending too much time on it.</li>
+<li>In the ‘Test Cases’ page, the user can search for a test case based on test case name and test case description. A meaningful description goes a long way in identifying the test case and reducing the time spent in looking for it</li>
+</ul>
+<p><strong>9. Name functions appropriately</strong></p>
+<ul class="simple">
+<li><dl class="first docutils">
+<dt>When converting a test case into a function:-</dt>
+<dd><ul class="first last">
+<li>give the function a name that makes its purpose very clear to all users</li>
+<li>name it in a way that the test case name/description can be easily associated with the function name. This helps if the user wants to make a change in the function and is looking for the corresponding test case</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><strong>10. Use Reports for debugging functional and performance issues</strong></p>
+<ul>
+<li><p class="first">The Functional and Analytic reports can help a lot in debugging errors in scripts</p>
+<p><span class="bolditalic">a. Functional Reports</span></p>
+<blockquote>
+<div><ul class="simple">
+<li>The error message at the top of the functional report for a test case run tells you why the test case failed.</li>
+<li>The test step at which the test case failed can be seen in ‘Red’.</li>
+<li>Make sure you have a look at the test step and screenshot just before the above failed step. Often the real reason for failure can be observed in this step.</li>
+</ul>
+</div></blockquote>
+<p><span class="bolditalic">b. Analytic Reports</span></p>
+<blockquote>
+<div><ul class="simple">
+<li>If you observe that the app suddenly gives way to the device Home screen, have a look at the device logcat section within the Analytic report</li>
+<li>Go to the section named ‘Log’ under Analytic report and scroll down to the bottom. If the last few entries in this section show that the app is being closed or a ‘Kill App’ instruction is being executed, it means that the App is crashing at this point.</li>
+<li>If the App seems to be taking an inordinately long period of time to load a page or transition between screens, have a look at the usage of CPU, Memory, Network, etc. This would provide the developers an idea on where to focus on to improve the app performance.</li>
+<li>Look at the number of external calls to the Garbage Collector (GC). A huge number of external GC calls within a small time period indicates inefficient usage of memory leading to slower performance of the app.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="troubleshooting.html" class="btn btn-neutral float-right" title="21. Troubleshooting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="addnewdeviceios.html" class="btn btn-neutral" title="Adding new devices to RobusTest - iOS" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

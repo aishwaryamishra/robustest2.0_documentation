@@ -1,0 +1,275 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Running test cases on XCTest &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="15. User Profile" href="userprofile.html" />
+    <link rel="prev" title="Running test cases on Espresso" href="hubespresso.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="hubappium.html">Running test cases on Appium</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hubespresso.html">Running test cases on Espresso</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Running test cases on XCTest</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="robustesthub.html">14. RobusTest Hub</a> &raquo;</li>
+        
+      <li>Running test cases on XCTest</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/hubxctest.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="running-test-cases-on-xctest">
+<span id="hub-xctest"></span><h1>Running test cases on XCTest<a class="headerlink" href="#running-test-cases-on-xctest" title="Permalink to this headline">¶</a></h1>
+<p><strong>1.</strong> Identify the project which you shall use for running your tests. If you do not already have such a project, then you need to first create a project. Once identified, note down the Project ID for the project.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done only once.</li>
+<li><em>Project ID</em> is the alphanumeric number in the URL of the project dashboard.</li>
+</ul>
+</div></blockquote>
+<p><strong>2.</strong> Upload the app enterprise build to your project and note down the build ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done everytime you have a new app build.</li>
+<li><em>Build ID</em> is the name of the file that you get when you copy the URL to the build.</li>
+</ul>
+</div></blockquote>
+<p><strong>3.</strong> Upload the zipped up xctest file to your project and note down the build ID.</p>
+<blockquote>
+<div><ul class="simple">
+<li>This needs to be done everytime along with a new app enterprise build.</li>
+<li>Build ID is the name of the file that you get when you copy the URL to the build. Let’s refer to this as the <em>Test Build ID</em>.</li>
+</ul>
+</div></blockquote>
+<p><strong>4.</strong> Get your ACCESS KEY from your profile page in RobusTest.</p>
+<p><strong>5.</strong> Once you have the three pieces of information above, invoke the test using the following API details:</p>
+<ul class="simple">
+<li><em>URL:</em> <strong>&lt;RobusTest URL&gt;/v3/xcuitest/job/new?accesskey=&lt;ACCESS KEY&gt;</strong></li>
+<li><em>METHOD:</em> <strong>POST</strong></li>
+<li><em>PAYLOAD:</em></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+  <span class="s2">&quot;identifier&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;IDENTIFIER_NAME_GIVEN_BY_ENTERPRISE&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;deviceVersion&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;iOS version of the device&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;project&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Project ID&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;build&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Build ID&gt;&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;testBuild&quot;</span><span class="p">:</span><span class="s2">&quot;&lt;Test Build ID&gt;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="userprofile.html" class="btn btn-neutral float-right" title="15. User Profile" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="hubespresso.html" class="btn btn-neutral" title="Running test cases on Espresso" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

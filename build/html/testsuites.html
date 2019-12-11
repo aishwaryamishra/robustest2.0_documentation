@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Understanding Test Suites &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Creating and Executing a Test Run" href="createtestrun.html" />
+    <link rel="prev" title="8. Executing Test Runs" href="testrunexecution.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationtesting.html">6. Automation testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Understanding Test Suites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="createtestrun.html">Creating and Executing a Test Run</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="testrunexecution.html">8. Executing Test Runs</a> &raquo;</li>
+        
+      <li>Understanding Test Suites</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/testsuites.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="understanding-test-suites">
+<span id="test-suites"></span><h1>Understanding Test Suites<a class="headerlink" href="#understanding-test-suites" title="Permalink to this headline">¶</a></h1>
+<p>A Test Suite is a collection of test cases that you would like to execute. When a test suite is submitted for a run, all test cases present within the test suite are executed.</p>
+<p>A test suite can also be a logical grouping of test cases.</p>
+<p>E.g. You can create test suites consisting of test cases that pertain to a Smoke Test or a Regression Test or one that groups together test cases specific to a module, say, payment, customer acquisition, order creation, etc.</p>
+<blockquote>
+<div><p><strong>a. Creating a test suite</strong></p>
+<ol class="arabic simple">
+<li>Click on the Test Suites icon on theProject Dashboard. You are now on the ‘Test Suite’ page.</li>
+<li>Click on the ‘Create Test Suite’ button (i..e., the ‘<em>+</em>’ icon) on the top right corner. The ‘Create Test Suite’ page opens up.</li>
+<li>On the ‘Create Test Suite’ page, enter a name and description for the test suite and hit the Enter key. You now see that the ‘Add Test Cases’ button is enabled. (<em>Note: Entering the test suite description is not mandatory</em>)</li>
+<li>Click on the ‘Add Test Cases’ button.
+* You are now on the ‘Modify Test Suite’ page.
+* On this page you can see a list of all automation test cases that you have created.
+* You can search for a test case using the ‘Search’ text box provided, if required.
+* Once you have identified the test case or test cases you would like to execute, add them to the test suite by clicking on the green coloured ‘plus’ icon to the left of the test case name. On being selected the ‘plus’ icon changes into a red coloured ‘minus’ icon.
+* You can removea test case that has already been added by cicking on the red coloured ‘minus’ icon.
+* Test cases are executed in the order in which they are present in the test suite. You can change the order by dragging and dropping the test case entries in the test suite.
+* You can view the list of test cases you have selected by clicking on ‘Show selected test cases’. Only the selected test cases are now displayed. This is how your final test suite would look like.
+* You can view the complete list of test cases at any time by clicking on the ‘Show all test cases’ button.</li>
+<li>Now that you have selected the required test cases, save your changes by clicking on the ‘Save Test Suite Details’ button at the top right.</li>
+</ol>
+<p>You have now created a Test Suite!</p>
+<p><strong>b. Modifying Test Suites</strong></p>
+<p>All test suites that have been created are visible on the ‘Test Suites’ page.</p>
+<p>For each test suite, the following information is visible:
+* test suite name
+* test suite description
+* name of the user who created the test suite
+* name of the user who last updated the test suite and the date and time of updation</p>
+<p>To the right side of each test suite entry there are a set of ‘action’ buttons provided.</p>
+<p>Let’s have a look at each of these buttons:</p>
+<p><span class="bolditalic">Run Test Suite:</span> This option is denoted by the ‘Play’ button icon. Clicking enables the user to execute a test run. We shall cover this functionality in the “<a class="reference internal" href="createtestrun.html#create-test-run"><span class="std std-ref">Creating and Executing a Test Run</span></a>” section</p>
+<p><span class="bolditalic">Modify Test Suite:</span> You can add or remove test cases or rearrange their order in the test suite by cicking on this button</p>
+<p><span class="bolditalic">Clone Test Suite:</span> This option enables you to create a copy of the test suite. You can then rename and modify the test suite as required.</p>
+<p><span class="bolditalic">Delete Test Suite:</span> You can delete a test suite by ckicking on this button and providing confirmation.</p>
+</div></blockquote>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="createtestrun.html" class="btn btn-neutral float-right" title="Creating and Executing a Test Run" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="testrunexecution.html" class="btn btn-neutral" title="8. Executing Test Runs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

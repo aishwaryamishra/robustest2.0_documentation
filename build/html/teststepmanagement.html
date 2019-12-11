@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. Test Step Management &mdash; RobusTest 2.0 Documentation  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/mycustom.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Test Session - Device Management" href="testsessiondevicemanagement.html" />
+    <link rel="prev" title="1. Recording user actions" href="ondevicecontextmenu.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> RobusTest 2.0 Documentation
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gettingstarted.html">2. Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="createproject.html">3. Create Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="projectdashboard.html">4. Project Dashboard</a></li>
+<li class="toctree-l1"><a class="reference internal" href="manualtesting.html">5. Manual Testing</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="automationtesting.html">6. Automation testing</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="ondevicecontextmenu.html">1. Recording user actions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2. Test Step Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessiondevicemanagement.html">3. Test Session - Device Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessiontestcasemanagement.html">4. Test Session - Test Case Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="testsessionsessionmanagement.html">5. Test Session - Session Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="managetestcases.html">6. Creating and Managing Test Cases</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="runsettings.html">7. Run Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="testrunexecution.html">8. Executing Test Runs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="liveview.html">9. Live View</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performancetesting.html">10. Performance Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="automationreports.html">11. Automation Reports</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advancedautomationconcepts.html">12. Advanced Automation Concepts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scheduling.html">13. Scheduling your tests</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robustesthub.html">14. RobusTest Hub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="userprofile.html">15. User Profile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="healthpage.html">16. Health page</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adminconsole.html">17. Admin Console</a></li>
+<li class="toctree-l1"><a class="reference internal" href="continuousintegration.html">18. Continuous Integration with RobusTest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bugtrackerintegration.html">19. Integrating Bug Tracker with Robustest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otherusefulinfo.html">20. Other Useful  Information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">21. Troubleshooting</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RobusTest 2.0 Documentation</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="automationtesting.html">6. Automation testing</a> &raquo;</li>
+        
+      <li>2. Test Step Management</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/teststepmanagement.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="test-step-management">
+<span id="teststep-management"></span><h1>2. Test Step Management<a class="headerlink" href="#test-step-management" title="Permalink to this headline">¶</a></h1>
+<p>For each action you record on the app, a corresponding test step is created in the ‘test step table’ to the right of the device screen</p>
+<img alt="_images/teststep1.png" src="_images/teststep1.png" />
+<p>As you can see, RobusTest provides a default test step name for each test step by attempting to identify the user action. You can customise the name as required (more on this later).</p>
+<p>Let’s have a look at the different operations available to the user to perform on a test step</p>
+<p>The icons to the right side of the test step relate to actions you can perform on that specific test step (see screenshot below)</p>
+<img alt="_images/teststep2.png" src="_images/teststep2.png" />
+<ul class="simple">
+<li><em>Copy step</em> - this enables you to create a duplicate test step performing the same action as the original test step. This saves you time taken in re-recording the same test step , when you have to repeatedly perform the same action in the test case</li>
+<li><em>Update Screenshot</em> - when you first record a test step, RobusTest captures a screenshot of the app page as it was at that moment. If you feel that this screenshot does not adequately represent the test step that was recorded (say, because the page took too long to load), then you can use the ‘Update Screenshot’ button to capture a new screenshot.</li>
+</ul>
+<p>The screenshot that is thus captured is displayed as the ‘Original’ screenshot in your run report when you execute the test case as part of a test run.</p>
+<ul class="simple">
+<li><em>Play step</em> - this enables you to execute the test step while in the Automation test session</li>
+<li><em>Delete step</em> - this enables you to delete the test step that you have recorded</li>
+<li><em>Show step details</em>  - clicking on this expands the test step to reveal more options. You can know more by clicking on <a class="reference internal" href="teststepdetails.html#test-step-details"><span class="std std-ref">Test Step Details</span></a></li>
+</ul>
+<p>The icons to the left side of the test step relate to actions you can perform on one or more test steps (see screenshot below)</p>
+<img alt="_images/teststep3.png" src="_images/teststep3.png" />
+<ul class="simple">
+<li><dl class="first docutils">
+<dt><em>Re-arrange icon</em> - this icon helps in two ways:</dt>
+<dd><ol class="first last loweralpha">
+<li>By pressing and holding the mouse pointer over this icon and then dragging it, the user can re-arrange the position of this specific test step within the test case.</li>
+<li>By clicking on this icon, the user can pin the test step. This means that any new test step that is now recorded will be positioned after the pinned test step.</li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+<img alt="_images/teststep4.png" src="_images/teststep4.png" />
+<ul>
+<li><p class="first"><em>Checkbox to select test step</em> - when the checkbox on a test step is selected, two more buttons become at the top of the Test Step table - ‘Group Play’ button and the ‘Group Delete’ button</p>
+<blockquote>
+<div><ul class="simple">
+<li><em>Group Play button</em> - when this button is clicked, all test steps in the test case, that have been selected by enabling the checkbox on the test step, are executed in the order in which they are present in the test case.</li>
+<li><em>Group Delete button</em> - when this button is clicked, all test steps in the test case, that have been selected by enabling the checkbox on the test step, are deleted in the order in which they are present in the test case.</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<img alt="_images/teststep5.png" src="_images/teststep5.png" />
+<ul class="simple">
+<li><em>Test step execution status</em> -  this icon indicates the status after execution of the test step.</li>
+</ul>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="testsessiondevicemanagement.html" class="btn btn-neutral float-right" title="3. Test Session - Device Management" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="ondevicecontextmenu.html" class="btn btn-neutral" title="1. Recording user actions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Izinga Software Pvt Ltd
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
