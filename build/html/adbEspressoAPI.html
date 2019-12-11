@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>RobusTest As Hub &mdash; RobusTest 2.0 Documentation  documentation</title>
+  <title>API to execute ADB commands from within an Espresso test &mdash; RobusTest 2.0 Documentation  documentation</title>
   
 
   
@@ -144,13 +144,13 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>RobusTest As Hub</li>
+      <li>API to execute ADB commands from within an Espresso test</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/hub.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/adbEspressoAPI.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -163,17 +163,38 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="robustest-as-hub">
-<h1>RobusTest As Hub<a class="headerlink" href="#robustest-as-hub" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="appium.html">1. Appium</a></li>
-<li class="toctree-l1"><a class="reference internal" href="espresso.html">2. Espresso</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="xctest.html">3. XCTest</a></li>
-</ul>
-</div>
+  <div class="section" id="api-to-execute-adb-commands-from-within-an-espresso-test">
+<h1>API to execute ADB commands from within an Espresso test<a class="headerlink" href="#api-to-execute-adb-commands-from-within-an-espresso-test" title="Permalink to this headline">¶</a></h1>
+<p><strong>API Definiton</strong></p>
+<p>​Method: POST
+​
+URL:</p>
+<p><a class="reference external" href="http:/">http:/</a>/&lt;RobusTest URL&gt;/v3/device/shell?accesskey=&lt;user_access_key&gt;
+​
+Payload:</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd>“_id” : “device_id”,
+“command” : “&lt;ADB SHELL COMMAND&gt;”</dd>
+</dl>
+<p>}</p>
+<p>​
+Since Device ID needs to be provided as part of the API payload, you can find the device id through the following Java code</p>
+<p>Bundle testBundle = InstrumentationRegistry.getArguments();
+string deviceID = testBundle.getString(“deviceID”);</p>
+<p><strong>Sample API Invocation</strong></p>
+<p>Method: POST
+​
+URL:</p>
+<p><a class="reference external" href="http://devicelab.robustest.com/v3/device/shell?accesskey=1234DFFGG24FDSD">http://devicelab.robustest.com/v3/device/shell?accesskey=1234DFFGG24FDSD</a>
+​
+Payload:</p>
+<dl class="docutils">
+<dt>{</dt>
+<dd>“_id” : “2132SDSFDSFDSF”,
+“command” : “ls /data/local/tmp/”</dd>
+</dl>
+<p>}</p>
 </div>
 
 

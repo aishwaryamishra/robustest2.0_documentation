@@ -1,6 +1,13 @@
 Espresso
 ========
 
+.. toctree::
+   :maxdepth: 3
+   :numbered: 1
+   :includehidden:
+
+   APIs
+
 Introduction to Espresso
 
 Espresso is a testing framework for Android that makes it easy to write reliable UI tests for an app. More information at https://developer.android.com/training/testing/espresso/
