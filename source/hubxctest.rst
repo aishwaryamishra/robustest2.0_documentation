@@ -13,12 +13,18 @@ Running test cases on XCTest
   * This needs to be done everytime you have a new app build. 
   * *Build ID* is the name of the file that you get when you copy the URL to the build.
 
+Refer to the following link for build upload API 
+
 **3.** Upload the zipped up xctest file to your project and note down the build ID.
 
   * This needs to be done everytime along with a new app enterprise build. 
   * Build ID is the name of the file that you get when you copy the URL to the build. Let's refer to this as the *Test Build ID*.
 
+Refer to the following link for build upload API 
+
 **4.** Get your ACCESS KEY from your profile page in RobusTest.
+
+Refer to the following link to get help with getting your Access Key
 
 **5.** Once you have the three pieces of information above, invoke the test using the following API details:
 
