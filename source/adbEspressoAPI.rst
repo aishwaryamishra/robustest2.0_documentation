@@ -28,7 +28,7 @@ Payload:
 ​
 Since Device ID needs to be provided as part of the API payload, you can find the device id through the following Java code
 
-.. code-block:: Java
+.. code-block:	: Java
 
  Bundle testBundle = InstrumentationRegistry.getArguments();
  string deviceID = testBundle.getString("deviceID");
