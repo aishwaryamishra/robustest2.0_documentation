@@ -120,7 +120,7 @@ The Manual Test Session, consists of 2 parts:
 
   **6. Device screen rotation**
 
-   You can test the device in Landscape and Portrait modes by rotating the device screen using these buttons
+   You can test the device in Landscape and Portrait modes by rotating the device screen using these buttons.
 
   **b. Vertical menu**
 
