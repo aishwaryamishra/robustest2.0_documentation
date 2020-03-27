@@ -194,7 +194,7 @@ The Manual Test Session, consists of 2 parts:
 
    They can now work on the device as if it is connected directly to their own computer.
 
-   This feature is also of use to developers who may want to test their code while developing on Android Studio
+   This feature is also of use to developers who may want to test their code while developing on Android Studio.
 
   .. :bolditalic:`9. Switch to multiplexing`    
 
